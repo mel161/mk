@@ -1,0 +1,69 @@
+.link {
+  //  Styles
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+
+  // States
+  // Default
+  &:link {
+  }
+  // Visited
+  &:visited {
+  }
+  // Hover
+  &:hover {
+    color: $brand-color;
+  }
+  // Focus
+  &:focus {
+  }
+  // Active
+  &:active {
+  }
+  // Modifiers
+  // Nav Link
+  &--nav {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  // Text link
+  &--text {
+  }
+  // Button Link
+  &--btn {
+    // Styles
+
+    @media screen and (min-width: 1000px) {
+      font-size: 14px;
+      line-height: 55px;
+    }
+
+    // States
+    // Default
+    &:link {
+      color: $white;
+    }
+    // Visited
+    &:visited {
+      color: $white;
+    }
+    // Hover
+    &:hover {
+      color: $white;
+    }
+    // Focus
+    &:focus {
+    }
+    // Active
+    &:active {
+    }
+  }
+  // Block Link
+  &--block {
+    display: block;
+  }
+}

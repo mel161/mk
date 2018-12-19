@@ -1,0 +1,77 @@
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn {
+  // Styles
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 0;
+  padding: 0 1em;
+  font-size: 14px;
+  background-color: $gray;
+  color: $white;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+  position: relative;
+
+  //  Media Queries
+  @media screen and (max-width: 999px) {
+  }
+  @media screen and (min-width: 1000px) {
+    width: 250px;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 56px 0 55px;
+  }
+
+  // Modifiers
+  // Base button
+  &--base {
+    background-color: $brand-color;
+    color: $white;
+  }
+  // Secondary button
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white;
+    text-align: left;
+  }
+  // Transparent button
+  &--transparent {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  // Round button
+  &--round {
+    background-color: $brand-color;
+    width: 31px;
+    height: 31px;
+    border-radius: 500px;
+    padding: 0;
+    min-height: 0;
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+  // Square button
+  &--square {
+  }
+  // Full-width button
+  &--full-width {
+  }
+  // Filter Button
+  &--filter {
+    height: 60px;
+    width: 210px;
+    padding: 0 25px;
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+  }
+}

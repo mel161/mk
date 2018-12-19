@@ -1,0 +1,28 @@
+.icon {
+  //  Styles
+  fill: $base-color;
+  .btn--round & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $white;
+  }
+
+  //  Modifiers
+  // Facebook
+  &--fb {
+    width: 5px;
+    height: 10px;
+  }
+  // VK
+  &--vk {
+    width: 12px;
+    height: 7px;
+  }
+  // Instagram
+  &--insta {
+    width: 11px;
+    height: 11px;
+  }
+}

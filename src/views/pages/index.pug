@@ -2,6 +2,97 @@ extends ../main.layout.pug
 
 block variables
     - var title = 'Главная'
+    - var headerClass = 'header--transparent'
 
 block content
-    
+    // Hero
+    .hero
+        .hero__inner
+    // Hero End
+
+    // Section Flats Selection
+    .section
+        .section__inner
+            // Section Header
+            h2.title.title--section.section__title
+                | Квартиры с&nbsp;удобными планировками
+            // Section Header End
+            // Filters Block
+            .filters
+                // Button Group
+                ul.btn-group.filter
+                    li.btn-group__item
+                        span.text.text--normal.text--fw700 1
+                    li.btn-group__item
+                        span.text.text--normal.text--fw700 2
+                    li.btn-group__item
+                        span.text.text--normal.text--fw700 3
+                    li.btn-group__item
+                        span.text.text--normal.text--fw700 4
+                // Button Group End
+                // Range Price
+                .range.range--price.filter
+                    .range__info
+                        .range__from
+                            span.text.text--small.text--fw700
+                                | 1 500 000
+                        .range__divider
+                        .range__to
+                            span.text.text--small.text--fw700
+                                | 7 900 000
+                        .range__currency
+                            span.text.text--small.text--currency
+                                | a
+                    .range__inner
+                        input(type='range' min='0' max='150' value='4').range__input
+
+                        input(type='range' min='0' max='150' value='100').range__input
+                        .range__line
+                // Range Price End
+                // Range Area
+                .range.range--area.filter
+                    .range__info
+                        .range__from
+                            span.text.text--small.text--fw700
+                                | 27
+                        .range__divider
+                        .range__to
+                            span.text.text--small.text--fw700
+                                | 84
+                        .range__currency
+                            span.text.text--small.text--currency
+                                | м
+                                sup 2
+                    .range__inner
+                        input(type='range' min='0' max='150' value='4').range__input
+                        input(type='range' min='0' max='150' value='100').range__input
+                        .range__line
+                // Range Area End
+                // Select House
+                dl.dropdown.filter
+                    dt
+                        a
+                            span Дом
+                    dd
+                        ul
+                            li
+                                a.default Дом
+                            li
+                                a Дом № 1
+                            li
+                                a Дом № 2
+                            li
+                                a Дом № 3
+                            li
+                                a Дом № 4
+                // Select House End
+                // Button Submit
+                button(type="submit").btn.btn--secondary.btn--filter
+                    | Найти квартиру
+                    
+                // Button Submit End
+            // Filters Block End
+            .result
+
+block scripts
+    script(src='assets/scripts/index.bundle.js')

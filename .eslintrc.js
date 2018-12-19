@@ -6,10 +6,7 @@ module.exports = {
     node: true
   },
   plugins: ['import', 'promise', 'compat', 'node'],
-  extends: [
-    'plugin:promise/recommended',
-    'standard'
-  ],
+  extends: ['plugin:promise/recommended', 'standard'],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',

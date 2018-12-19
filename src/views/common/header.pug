@@ -1,32 +1,53 @@
-// Header
-.header
-    // Logo
-    h1.logo
-        a(href="/").logo__link.link.link--block
-            .
-    // Logo End
-    // Button to Select Flats
-    a.btn.btn--base.link.link--btn(href="")
-        | Выбрать квартиру
-    // Button to Select Flats End
-    // Nav Main
-    include ./menu.pug
-    // Nav Main End
-    // Link Phone
-    a(href="tel:+73433020668").link.link--text
-        | +7 (343) 302 06 68
-    // Link Phone End 
-    // Link Call Me
-    a(href="tel:+73433020668").link.link--text
-        | Перезвоните мне
-    // Link Call Me End
-    // Socials
-    nav.nav.nav--socials
-        ul.nav__list.nav__list--horizontal
-            li.nav__item
-                a(href="").link.link--nav fb
-            li.nav__item
-                a(href="").link.link--nav vk
-            li.nav__item
-                a(href="").link.link--nav insta 
-    // Socials End
+- if (typeof(headerClass) !== 'undefined')
+    - var logoImageUrl = "./assets/images/logo-white.png"
+- else
+    - var logoImageUrl = "./assets/images/logo-black.png"
+
+
+.header(class=headerClass)
+    // Header Inner
+    .header__inner
+        // Logo
+        h1.logo
+            a(href="./").logo__link.link.link--block
+                img(src=logoImageUrl, alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").logo__image.image.image--logo
+        // Logo End
+        // Button to Select Flats
+        a.btn.btn--base.link.link--btn(href="")
+            | Выбрать квартиру
+        // Button to Select Flats End
+        // Nav Main
+        include ./menu.pug
+        // Nav Main End
+        // Info
+        .info
+            // Info Contacts
+            .info__contacts
+                // Link Phone
+                a(href="tel:+73433020668").link.link--text.text--large
+                    | +7 (343) 302 06 68
+                // Link Phone End
+                // Link Call Me
+                a(href="tel:+73433020668").link.link--text.text.text--underline.text--normal
+                    | Перезвоните мне
+                // Link Call Me End
+            // Info Contacts End
+            .info__socials
+                // Socials
+                nav.nav.nav--socials
+                    ul.nav__list.nav__list--horizontal
+                        li.nav__item
+                            a(href="").link.link--nav.btn.btn--round
+                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 117.67 226.58').icon.icon--fb
+                                    path(d='M76.38 226.58V123.23h34.69l5.19-40.28H76.38V57.23c0-11.66 3.24-19.61 20-19.61h21.33v-36A285.42 285.42 0 0 0 86.59 0C55.84 0 34.78 18.77 34.78 53.24v29.71H0v40.28h34.78v103.35z')
+                        li.nav__item
+                            a(href="").link.link--nav.btn.btn--round
+                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 272.13 159.33').icon.icon--vk
+                                    path(d='M226.06 78.12s35.86-50.58 39.42-67.2c1.19-5.94-1.43-9.26-7.6-9.26h-31.11c-7.12 0-9.74 3.09-11.87 7.6 0 0-16.82 35.83-37.28 58.42-6.57 7.3-9.91 9.5-13.54 9.5-2.92 0-4.27-2.44-4.27-9V10.45c0-8.07-.95-10.45-7.6-10.45h-49.87c-3.8 0-6.17 2.21-6.17 5.22 0 7.6 11.64 9.32 11.64 29.92v42.5c0 8.55-.48 11.87-4.51 11.87-10.69.01-36.1-36.79-50.3-78.59C50.1 2.38 47 0 38.94 0H7.84C3.32 0 0 3.09 0 7.6c0 8.31 9.74 46.78 48 98.31 25.64 34.67 59.36 53.43 89.76 53.43 18.52 0 23-3.09 23-10.92v-26.6c0-6.65 2.61-9.5 6.41-9.5 4.27 0 11.82 1.37 29.44 18.76 20.9 19.95 22.32 28.26 33.72 28.26h34.91c3.56 0 6.89-1.66 6.89-7.6 0-7.84-10.21-21.85-25.88-38.47-6.41-8.55-16.86-17.81-20.18-22.08-4.76-4.99-3.34-7.84-.01-13.07z')
+                        li.nav__item
+                            a(href="").link.link--nav.btn.btn--round
+                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100.17 100.17').icon.icon--insta
+                                    path(d='M12.86 0h74.45a12.89 12.89 0 0 1 12.86 12.86v74.45a12.89 12.89 0 0 1-12.86 12.85H12.86A12.89 12.89 0 0 1 0 87.31V12.86A12.9 12.9 0 0 1 12.86 0zM73 11.12a4.53 4.53 0 0 0-4.51 4.52v10.79A4.52 4.52 0 0 0 73 30.94h11.29a4.52 4.52 0 0 0 4.51-4.51V15.64a4.53 4.53 0 0 0-4.51-4.52zm15.85 31.24H80A29.33 29.33 0 0 1 81.32 51c0 16.66-13.95 30.17-31.14 30.17S19 67.62 19 51a29.4 29.4 0 0 1 1.29-8.6h-9.2v42.28a4 4 0 0 0 4 4h69.78a4 4 0 0 0 4-4zm-38.67-12c-11.11 0-20.12 8.72-20.12 19.5s9 19.49 20.12 19.49S70.3 60.63 70.3 49.87s-9.01-19.5-20.12-19.5z')
+                // Socials End
+        // Info End
+    // Header Inner End

@@ -9,8 +9,16 @@ html(lang="ru")
         title #{title} - ЖК&nbsp;&laquo;Московский квартал&raquo;
         link(rel='stylesheet' href='assets/styles/main.min.css')
     body
-        .page
+        #up.page
+            // Header
+            include ./common/header.pug
+            // Header End
+            // Main
             main.main
                 block content
+            // Main End
+            // Footer
             include ./common/footer.pug
+            // Footer End
+        script(src='assets/scripts/vendors.bundle.js')
         block scripts

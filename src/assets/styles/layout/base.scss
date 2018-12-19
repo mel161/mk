@@ -1,23 +1,31 @@
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
+  background-color: $white;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: 'Roboto', Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.42;
-    color: $text-color;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "Museo Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $base-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
-    overflow: hidden;
-    min-height: 100%;
-    position: relative;
+.page {
+  width: 100vw;
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
 }
 
-.container {
-    margin: 0 auto;
-    width: 95%;
+// Filters
+.filters {
+  @include clearfix();
+
+  > .filter {
+    margin-right: 10px;
+  }
 }
