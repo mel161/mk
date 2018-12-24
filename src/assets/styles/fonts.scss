@@ -33,3 +33,10 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "ALSRubl";
+  src: url("../fonts/ALSRubl.woff2") format("woff2"),
+    url("../fonts/ALSRubl.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

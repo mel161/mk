@@ -5,6 +5,7 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 }
 .btn {
   // Styles
@@ -20,6 +21,32 @@ button {
   box-sizing: border-box;
   box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
   position: relative;
+  outline: none;
+
+  // States
+  // Default
+  &:link {
+  }
+  // Visited
+  &:visited {
+  }
+  // Hover
+  &:hover {
+    outline: none;
+    border: 0;
+    background-color: $tundora;
+  }
+  // Focus
+  &:focus {
+    outline: none;
+    border: 0;
+  }
+  // Active
+  &:active {
+    outline: none;
+    border: 0;
+    color: $gray;
+  }
 
   //  Media Queries
   @media screen and (max-width: 999px) {
@@ -28,7 +55,7 @@ button {
     width: 250px;
     height: 55px;
     line-height: 55px;
-    padding: 0 56px 0 55px;
+    padding: 0 25px;
   }
 
   // Modifiers
@@ -36,6 +63,10 @@ button {
   &--base {
     background-color: $brand-color;
     color: $white;
+
+    &:hover {
+      background-color: $accent;
+    }
   }
   // Secondary button
   &--secondary {
@@ -63,15 +94,50 @@ button {
   }
   // Square button
   &--square {
+    width: 40px;
+    height: 40px;
+    background-color: $brand-color;
+    color: $white;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
   }
   // Full-width button
   &--full-width {
+    width: 100%;
+
+    .card__footer & {
+      height: 60px;
+      padding: 0 19px;
+
+      > .icon {
+        fill: $white;
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+        right: 27px;
+      }
+    }
   }
   // Filter Button
   &--filter {
     height: 60px;
     width: 210px;
     padding: 0 25px;
+    margin: 0;
     box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+    > .icon {
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      right: 18px;
+    }
+
+    &:hover {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+    }
   }
 }

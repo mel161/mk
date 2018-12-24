@@ -1,8 +1,9 @@
+html {
+  overflow-x: hidden;
+}
 body,
 html {
-  height: 100%;
   background-color: $white;
-  overflow-x: hidden;
 }
 
 body {
@@ -12,20 +13,55 @@ body {
   color: $base-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // overflow: hidden;
 }
 
 .page {
   width: 100vw;
   overflow: hidden;
   min-height: 100%;
+  height: auto;
   position: relative;
 }
 
 // Filters
 .filters {
+  // Style
   @include clearfix();
+  margin-bottom: 60px;
 
   > .filter {
     margin-right: 10px;
   }
+}
+
+// Results
+.result {
+  @include clearfix();
+
+  > .card {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+// Features
+.features {
+  @include clearfix();
+
+  > .card {
+    margin-right: 8px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.specific {
+  @include clearfix();
+  margin-top: -8px;
 }

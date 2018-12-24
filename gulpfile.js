@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
+const fontsmin = require('gulp-fontmin');
+const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
 const del = require('del');
 const gulpWebpack = require('gulp-webpack');
@@ -15,6 +17,14 @@ const paths = {
         pages: './src/views/pages/*.pug',
         src: './src/views/**/*.pug',
         dest: './dist'
+    },
+    fonts: {
+        src: './src/assets/fonts/*',
+        dest: './dist/assets/fonts/'
+    },
+    images: {
+        src: './src/assets/images/*',
+        dest: './dist/assets/images/'
     },
     styles: { 
         main: './src/assets/styles/main.scss',
@@ -54,6 +64,20 @@ function templates() {
         .pipe(gulp.dest(paths.root));
 }
 
+// fonts
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(fontsmin())
+        .pipe(gulp.dest(paths.fonts.dest))
+}
+
+// images
+function images() {
+    return gulp.src(paths.images.src)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.images.dest))
+};
+
 // scss
 function styles() {
     return gulp.src(paths.styles.main)
@@ -72,12 +96,14 @@ function scripts() {
 }
 
 exports.templates = templates;
+exports.fonts = fonts;
+exports.images = images;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.clean = clean;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, scripts),
+    gulp.parallel(styles, images, fonts, templates, scripts),
     gulp.parallel(watch, server)
 ));

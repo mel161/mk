@@ -25,4 +25,17 @@
     width: 11px;
     height: 11px;
   }
+  // Arrows
+  &--arrow {
+    width: 7px;
+    height: 12px;
+
+    //  Arrow right
+    &.arrow--right {
+    }
+    //  Arrow down
+    &.arrow--down {
+      transform: rotate(90deg);
+    }
+  }
 }

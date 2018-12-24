@@ -14,10 +14,10 @@
   &__info {
     position: absolute;
     width: calc(100% - 40px);
-    height: 100%;
+    height: calc(100% - 40px);
     top: 0;
     left: 0;
-    padding: 20px;
+    padding: 18px 20px 20px;
   }
   // Inner Block
   &__inner {
@@ -40,6 +40,8 @@
   }
   // Text Currency
   &__currency {
+    float: right;
+    margin-left: 4px;
   }
   // Range Input
   &__input {

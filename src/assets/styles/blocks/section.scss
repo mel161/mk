@@ -1,0 +1,38 @@
+.section {
+  // Style
+  @include clearfix();
+
+  // Media Queries
+  @media screen and (min-width: 1000px) {
+  }
+
+  // Elements
+  &__inner {
+    // Style
+    @include clearfix();
+    padding: 31px 0 0;
+
+    &:first-of-type {
+      padding: 93px 0 0;
+    }
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    // Modifiers
+  }
+  &__title {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      text-align: center;
+    }
+
+    // Modifiers
+  }
+
+  // Modifiers
+}

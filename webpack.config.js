@@ -1,7 +1,10 @@
 const webpack = require('webpack')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
+const env = process.env.NODE_ENV
+
 const config = {
+  mode: env || 'development',
   entry: {
     index: './src/assets/scripts/index.js',
     about: './src/assets/scripts/about.js',
@@ -23,6 +26,9 @@ const config = {
         }
       }
     }
+  },
+  externals: {
+    ymaps: 'ymaps'
   },
   plugins: [
     new webpack.ProvidePlugin({

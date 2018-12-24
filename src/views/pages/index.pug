@@ -8,10 +8,68 @@ block content
     // Hero
     .hero
         .hero__inner
+            .map.map--hero
+                a(href="#", title="title").btn.btn--square.map__btn-1 1
+                .map_info.map_info--house-1
+                    .map__inner
+                        .text.text--large.text--fw-500.text--uppercase дом 1
+                        .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                        .text.text--small.text--fw300 25 этажей
+                        .text.text--small.text--fw300
+                            | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-2 2
+                .map_info.map_info--house-2
+                    .map__inner
+                        .text.text--large.text--fw-500.text--uppercase дом 2
+                        .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                        .text.text--small.text--fw300 25 этажей
+                        .text.text--small.text--fw300
+                            | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-3 3
+                .map_info.map_info--house-3
+                    .map__inner
+                            .text.text--large.text--fw-500.text--uppercase дом 3
+                            .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                            .text.text--small.text--fw300 25 этажей
+                            .text.text--small.text--fw300
+                                | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-4 4
+                .map_info.map_info--house-4
+                    .map__inner
+                            .text.text--large.text--fw-500.text--uppercase дом 4
+                            .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                            .text.text--small.text--fw300 25 этажей
+                            .text.text--small.text--fw300
+                                | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-5 5
+                .map_info.map_info--house-5
+                    .map__inner
+                        .text.text--large.text--fw-500.text--uppercase дом 5
+                        .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                        .text.text--small.text--fw300 25 этажей
+                        .text.text--small.text--fw300
+                            | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-6 6
+                .map_info.map_info--house-6
+                    .map__inner
+                        .text.text--large.text--fw-500.text--uppercase дом 6
+                        .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                        .text.text--small.text--fw300 25 этажей
+                        .text.text--small.text--fw300
+                            | 1-2-3-комнатные квартиры
+                a(href="#", title="title").btn.btn--square.map__btn-7 7
+                .map_info.map_info--house-7
+                    .map__inner
+                            .text.text--large.text--fw-500.text--uppercase дом 7
+                            .text.text--small.text--fw100.text--mutted сдача III кв. 2018
+                            .text.text--small.text--fw300 25 этажей
+                            .text.text--small.text--fw300
+                                | 1-2-3-комнатные квартиры
     // Hero End
 
     // Section Flats Selection
     .section
+        // Section Inner
         .section__inner
             // Section Header
             h2.title.title--section.section__title
@@ -37,12 +95,12 @@ block content
                             span.text.text--small.text--fw700
                                 | 1 500 000
                         .range__divider
-                        .range__to
-                            span.text.text--small.text--fw700
-                                | 7 900 000
                         .range__currency
                             span.text.text--small.text--currency
                                 | a
+                        .range__to
+                            span.text.text--small.text--fw700
+                                | 7 900 000
                     .range__inner
                         input(type='range' min='0' max='150' value='4').range__input
 
@@ -56,13 +114,13 @@ block content
                             span.text.text--small.text--fw700
                                 | 27
                         .range__divider
-                        .range__to
-                            span.text.text--small.text--fw700
-                                | 84
                         .range__currency
                             span.text.text--small.text--currency
                                 | м
                                 sup 2
+                        .range__to
+                            span.text.text--small.text--fw700
+                                | 84
                     .range__inner
                         input(type='range' min='0' max='150' value='4').range__input
                         input(type='range' min='0' max='150' value='100').range__input
@@ -85,14 +143,192 @@ block content
                                 a Дом № 3
                             li
                                 a Дом № 4
+                    svg.icon.icon--arrow.arrow--down(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                        g
+                            path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
                 // Select House End
                 // Button Submit
                 button(type="submit").btn.btn--secondary.btn--filter
                     | Найти квартиру
-                    
+                    svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                        g
+                            path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
                 // Button Submit End
             // Filters Block End
+            // Result Block
             .result
+                .card.card--flats
+                    .card__content
+                        .image-container
+                            img(src="assets/images/flat-1.png", alt="").image.image--card
+                        .title.title--card
+                            | от
+                            br
+                            strong
+                                | 1 670 000
+                            span.text.text--small.text--currency
+                                | a
+                    .card__footer
+                        button(type="submit").btn.btn--secondary.btn--full-width
+                            | 1-к квартиры
+                            svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                                g
+                                    path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+                .card.card--flats
+                    .card__content
+                        .image-container
+                            img(src="assets/images/flat-2.png", alt="").image.image--card
+                        .title.title--card
+                            | от
+                            br
+                            strong
+                                | 2 670 000
+                            span.text.text--small.text--currency
+                                | a
+                    .card__footer
+                        button(type="submit").btn.btn--secondary.btn--full-width
+                            | 2-к квартиры
+                            svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                                g
+                                    path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+                .card.card--flats
+                    .card__content
+                        .image-container
+                            img(src="assets/images/flat-3.png", alt="").image.image--card
+                        .title.title--card
+                            | от
+                            br
+                            strong
+                                | 3 670 000
+                            span.text.text--small.text--currency
+                                | a
+                    .card__footer
+                        button(type="submit").btn.btn--secondary.btn--full-width
+                            | 3-к квартиры
+                            svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                                g
+                                    path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+                .card.card--flats
+                    .card__content
+                        .image-container
+                            img(src="assets/images/flat-4.png", alt="").image.image--card
+                        .title.title--card
+                            | от
+                            br
+                            strong
+                                | 4 670 000
+                            span.text.text--small.text--currency
+                                | a
+                    .card__footer
+                        button(type="submit").btn.btn--secondary.btn--full-width
+                            | 4-к квартиры
+                            svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                                g
+                                    path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+            // Result Block End
+        // Section Inner End
+    // Section Flats Selection End
+
+    // Section Flats Selection
+    .section
+        // Section Inner
+        .section__inner
+            // Section Header
+            h2.title.title--section.section__title
+                | Расположение квартала
+            // Section Header End
+        // Section Inner End
+        // Map
+        #map.map.map--home
+        // Map End
+        // Section Inner
+        .section__inner
+            .features
+                .card.card--base
+                    .card__content
+                        .text.text--xlarge.text--fw-500 15
+                        .text.text--large.text--fw-500 минут
+                        .text.text--normal.text--fw-300.text--brand до центра
+                .card.card--base
+                    .card__content
+                        .text.text--xlarge.text--fw-500 5
+                        .text.text--large.text--fw-500 минут
+                        .text.text--normal.text--fw-300.text--brand до остановки
+                .card.card--base
+                    .card__content
+                        .text.text--xlarge.text--fw-500 2
+                        .text.text--large.text--fw-500 парка
+                        .text.text--normal.text--fw-300.text--brand рядом с домом
+                .card.card--base
+                    .card__content
+                        .text.text--xlarge.text--fw-500 2
+                        .text.text--large.text--fw-500 уровня
+                        .text.text--normal.text--fw-300.text--brand паркинга
+        // Section Inner End
+    // Section Flats Selection End
+
+    // Section Flats Selection
+    .section
+        // Section Inner
+        .section__inner
+            // Section Header
+            h2.title.title--section.section__title
+                | Преимущества жилого комплекса
+            // Section Header End
+        // Section Inner End
+        // Specific
+        .specific
+            .card.card--half-width
+                .card__image
+                    .image-container
+                        img(src="assets/images/spec-fitness.jpg", alt="").image.image--card
+                .card__inner
+                    .card__header
+                        .title.title--card.text--fw700 Фитнес-клуб во дворе
+                    .card__content
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа
+                            br
+                            | современных тренажеров
+            .card.card--half-width
+                .card__image
+                    .image-container
+                        img(src="assets/images/spec-street-retail.jpg", alt="").image.image--card
+                .card__inner
+                    .card__header
+                        .title.title--card.text--fw700 Зона стрит-ритейла
+                    .card__content
+                        .text.text--fw300.text--xlarge
+                            | на первых этажах: от гипермаркета
+                            br
+                            | до салона красоты
+            .card.card--half-width
+                .card__image
+                    .image-container
+                        img(src="assets/images/spec-designed-hall.jpg", alt="").image.image--card
+                .card__inner
+                    .card__header
+                        .title.title--card.text--fw700 Дизайнерские холлы
+                    .card__content
+                        .text.text--fw300.text--xlarge
+                            | с высокими потолками и приветливой
+                            br
+                            | консьерж-службой
+            .card.card--half-width
+                .card__image
+                    .image-container
+                        img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
+                .card__inner
+                    .card__header
+                        .title.title--card.text--fw700 Приватный двор
+                    .card__content
+                        .text.text--fw300.text--xlarge
+                            | с видеонаблюдением, детским городком
+                            br
+                            | и ворк-аут площадками
+        // Specific End
+    // Section Flats Selection End
 
 block scripts
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
     script(src='assets/scripts/index.bundle.js')

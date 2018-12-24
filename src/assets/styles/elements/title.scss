@@ -1,0 +1,37 @@
+.title {
+  // Style
+  color: $base-color;
+
+  //  Media Queries
+  @media screen and (min-width: 1000px) {
+  }
+
+  //  Modifiers
+  // Section Title
+  &--section {
+    // Style
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      margin: 0 250px 46px 230px;
+    }
+
+    // Modifiers
+  }
+  // Card Title
+  &--card {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      .card--half-width & {
+        font-size: 24px;
+      }
+    }
+
+    // Modifiers
+  }
+}

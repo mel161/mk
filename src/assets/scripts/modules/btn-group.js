@@ -9,4 +9,4 @@ function btnGroupInit () {
   })
 }
 
-module.exports = btnGroupInit
+export default btnGroupInit

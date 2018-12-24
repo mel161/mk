@@ -10,15 +10,54 @@
   }
   &--normal {
     font-size: 14px;
+
+    .card--base & {
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      .card--base & {
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
   }
   &--large {
     font-size: 16px;
+
+    .card--base & {
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      .card--base & {
+        font-size: 28px;
+        line-height: 1;
+        margin-top: 28px;
+      }
+    }
   }
   &--xlarge {
+    // Style
     font-size: 18px;
+
+    .card--base & {
+    }
+
+    .card--half-width & {
+      line-height: 21px;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      .card--base & {
+        font-size: 50px;
+        line-height: 110px;
+      }
+    }
   }
   // Font Weight
-  &--f100 {
+  &--fw100 {
     font-weight: 100;
   }
   &--fw300 {
@@ -33,9 +72,24 @@
   &--fw900 {
     font-weight: 900;
   }
+  // Uppercase
+  &--uppercase {
+    text-transform: uppercase;
+  }
   // Underline
   &--underline {
     text-decoration: underline;
+  }
+  // Colors
+  &--brand {
+    color: $brand-color;
+  }
+  &--mutted {
+    color: $gray;
+  }
+  // Currency
+  &--currency {
+    font-family: "ALSRubl";
   }
 }
 

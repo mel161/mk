@@ -1,0 +1,220 @@
+.card {
+  // Style
+  position: relative;
+  box-sizing: border-box;
+
+  // Media Queries
+  @media screen and (min-width: 1000px) {
+  }
+
+  // Elements
+  // Card Header
+  &__header {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+    }
+    // Modifiers
+  }
+  // Card Content
+  &__content {
+    // Style
+    // padding: 25px;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+    }
+    // Modifiers
+  }
+  // Card Footer
+  &__footer {
+    // Style
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    > .btn {
+      box-shadow: none;
+      margin: 0;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+    }
+    // Modifiers
+  }
+  // Card Image
+  &__image {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+    }
+    // Modifiers
+  }
+
+  // Modifiers
+  // Base Card
+  &--base {
+    // Style
+    @include clearfix();
+    float: left;
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+    // State
+    // Hover
+    &:hover {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+    }
+
+    .card__content {
+      padding: 0 25px;
+    }
+
+    .text {
+      display: block;
+      float: left;
+      min-width: 115px;
+      width: auto;
+
+      &:first-of-type {
+        float: left;
+        width: auto;
+        max-width: 50px;
+        min-width: 35px;
+        text-align: right;
+        margin-right: 12px;
+      }
+    }
+
+    &:first-of-type .text:first-of-type {
+      margin-right: 18px;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: calc(25% - 6px);
+      height: 110px;
+    }
+  }
+  // Flats Card
+  &--flats {
+    // Style
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+    .card__content {
+      height: calc(100% - 60px);
+
+      > .title {
+        margin-top: 50px;
+        width: auto;
+        float: right;
+        margin-right: 25px;
+      }
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: calc(25% - 8px);
+      // max-width: 233px;
+      height: 194px;
+      float: left;
+    }
+  }
+  // Half Width Card
+  &--half-width {
+    // Style
+    @include clearfix();
+    margin-bottom: 10px;
+
+    .card__image {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .card__inner {
+      z-index: 2;
+      position: absolute;
+      width: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      background: rgba(255, 255, 255, 0);
+      background: -moz-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(66, 66, 66, 1) 100%
+      );
+      background: -webkit-gradient(
+        left top,
+        left bottom,
+        color-stop(0%, rgba(255, 255, 255, 0)),
+        color-stop(100%, rgba(66, 66, 66, 1))
+      );
+      background: -webkit-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(66, 66, 66, 1) 100%
+      );
+      background: -o-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(66, 66, 66, 1) 100%
+      );
+      background: -ms-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(66, 66, 66, 1) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(66, 66, 66, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#424242', GradientType=0 );
+    }
+
+    .card__header,
+    .card__content {
+      width: 100%;
+    }
+
+    .card__header .title,
+    .card__content .text {
+      color: $white;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: calc(50% - 5px);
+      height: 468px;
+      float: left;
+      margin-right: 10px;
+
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+
+      .card__inner {
+        width: calc(100% - 60px);
+        height: 60%;
+        bottom: 0;
+        padding-bottom: 60px;
+        padding-left: 60px;
+      }
+
+      .card__header {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

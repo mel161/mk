@@ -3,7 +3,7 @@
 /* Variables */
 $width: 180px; // dropdown width
 $height: 60px; // dropdown height
-$ajust: 1em; // left & right padding in dropdown menu
+$ajust: 20px; // left & right padding in dropdown menu
 $radius: 3px;
 
 /* Colors */
@@ -18,8 +18,24 @@ $green: #2ecc71;
   margin: 0;
   float: left;
   box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+  position: relative;
 
   //   margin-bottom: 1em; // Cosmetic value
+
+  > .icon.icon--arrow {
+    position: absolute;
+    top: 46%;
+    transform: rotate(90deg) translate(-50%);
+    right: 22px;
+    fill: $base-color;
+    z-index: 2;
+  }
+
+  &:hover {
+    > .icon {
+      fill: $brand-color;
+    }
+  }
 
   dt {
     a {
@@ -27,7 +43,7 @@ $green: #2ecc71;
       height: $height;
       width: 100%;
 
-      border: 1px solid $grey;
+      // border: 1px solid $grey;
       border-radius: $radius;
       text-decoration: none;
 
@@ -46,6 +62,8 @@ $green: #2ecc71;
       //     no-repeat scroll right center;
       border-right: $ajust solid transparent;
       cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
     }
   }
 
