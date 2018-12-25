@@ -2,9 +2,43 @@ extends ../main.layout.pug
 
 block variables
     - var title = 'О квартале'
+    - var mainClass = 'main--about'
 
 block content
-    
+  #my-slider.slider(
+    se-min='-100',
+    se-step='1',
+    se-min-value='40',
+    se-max-value='40',
+    se-max='100')
+    .slider-touch-left
+      span
+    .slider-touch-right
+      span
+    .slider-line
+      span
+  #result Min: 0 Max: 140
+
+  // Range Price
+  .range.range--price.filter
+      .range__info
+          .range__from
+              span.text.text--small.text--fw700
+                  | 1 500 000
+          .range__divider
+          .range__currency
+              span.text.text--small.text--currency
+                  | a
+          .range__to
+              span.text.text--small.text--fw700
+                  | 7 900 000
+      .range__inner
+          input(type='range' min='0' max='150' value='4' step="100").range__input.range__input--from
+          input(type='range' min='0' max='150' value='100' step="100").range__input.range__input--to
+          .range__handler.range__handler--from
+          .range__handler.range__handler--to
+          .range__line
+  // Range Price End
 
 block scripts
     script(src='assets/scripts/about.bundle.js')

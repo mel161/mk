@@ -102,9 +102,10 @@ block content
                             span.text.text--small.text--fw700
                                 | 7 900 000
                     .range__inner
-                        input(type='range' min='0' max='150' value='4').range__input
-
-                        input(type='range' min='0' max='150' value='100').range__input
+                        input(type='range' min='0' max='150' value='4').range__input.range__input--from
+                        input(type='range' min='0' max='150' value='100').range__input.range__input--to
+                        .range__handler.range__handler--from
+                        .range__handler.range__handler--from
                         .range__line
                 // Range Price End
                 // Range Area
@@ -124,6 +125,8 @@ block content
                     .range__inner
                         input(type='range' min='0' max='150' value='4').range__input
                         input(type='range' min='0' max='150' value='100').range__input
+                        .range__handler.range__handler--from
+                        .range__handler.range__handler--from
                         .range__line
                 // Range Area End
                 // Select House

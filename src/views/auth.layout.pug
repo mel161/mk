@@ -1,11 +1,24 @@
+block variables
+
 doctype html
 html(lang="ru")
     head
         meta(charset="utf-8")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         meta(content="width=device-width, initial-scale=1" name="viewport")
-        title Portfolio | welcome page
+        title #{title} - ЖК&nbsp;&laquo;Московский квартал&raquo;
         link(rel='stylesheet' href='assets/styles/main.min.css')
     body
-        block content
-        include ./common/menu.pug
+        #up.page
+            // Header
+            include ./common/header.pug
+            // Header End
+            // Main
+            main.main
+                block content
+            // Main End
+            // Footer
+            include ./common/footer.pug
+            // Footer End
+        script(src='assets/scripts/vendors.bundle.js')
+        block scripts

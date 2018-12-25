@@ -1,5 +1,3 @@
-// import PerfectScrollbar from 'perfect-scrollbar'
-
 import './modules/select'
 import btnGroup from './modules/btn-group'
 import mapInit from './modules/map-home'

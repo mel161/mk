@@ -24,6 +24,15 @@ body {
   position: relative;
 }
 
+.main {
+  //
+  @include clearfix();
+
+  &--about {
+    margin-top: 150px;
+  }
+}
+
 // Filters
 .filters {
   // Style
