@@ -22,4 +22,4 @@ function init () {
   // myMap.setBounds(myMap.geoObjects.getBounds())
 }
 
-export default init
+export default init //#endregion
