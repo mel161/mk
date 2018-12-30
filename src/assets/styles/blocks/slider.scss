@@ -1,78 +1,56 @@
-#slides{
-    position: relative;
-    height: 300px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-}
-.slide{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 1s;
-}
-.showing{
-    opacity: 1;
-    z-index: 2;
-}
-.controls{
-    display: none;
+@import "../vendors/glide.core.scss";
+@import "../vendors/glide.theme.scss";
+
+.slider {
+  // Style
+  //   Media Queries
+  @media screen and (min-width: 1000px) {
+  }
+  // Elements
+  &__slide {
+    // Style
+    transition: all ease 0.3s;
+    // transform: scale(0.7);
+    .slider__header {
+      display: none;
+    }
+    &.prev {
+      //   transform: scale(1);
+    }
+    &.next {
+      //   transform: scale(1);
+    }
+    //   Media Queries
+    @media screen and (min-width: 1000px) {
+      //   width: 956px;
+      //   min-width: 956px;
+    }
+    // Modifiers
+    &--active {
+      transform: scale(1);
+      .slider__header {
+        display: block;
+      }
+      .slider__header.animated {
+        animation-duration: 0.5s;
+      }
+    }
+  }
+  // Modifiers
 }
 
-.slide{
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
-    background-size: cover;
-}
+// .slider__slide .image-container {
+//   transform: scale(0.7);
+//   transition: all ease 0.6s;
+// }
+// .slick-center .image-container {
+//   transform: scale(1);
+// }
 
-/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
-.slide:nth-of-type(1){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg');
-}
+// .slick-active:first-of-type .image-container {
+//   float: right;
+// }
 
-/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
-.slide:nth-of-type(2){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
-}
-
-/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
-.slide:nth-of-type(3){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
-}
-
-.controls{
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 20px 0px;
-    font-size: 20px;
-    cursor: pointer;
-    border: 2px solid #fff;
-    margin: 10px 0px 0px 10px;
-    width: 70px;
-}
-
-.controls:hover,
-.controls:focus{
-    background: #eee;
-    color: #333;
-}
-
-.container{
-    position: relative;
-}
-
-.buttons{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 10;
-    font-size: 0px;
-}
+// .slick-active:last-of-type .image-container {
+//   float: left;
+// }

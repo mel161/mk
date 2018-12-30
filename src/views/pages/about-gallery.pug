@@ -1,0 +1,143 @@
+extends ../inner.layout.pug
+
+block variables
+    - var title = 'Галерея'
+    - var mainClass = 'main--about'
+
+block content
+    // Header in Main
+    .header.header--main()
+        .title.title--header О квартале
+    // Header in Main End
+    // Nav Inner
+    nav.nav.nav--inner
+        ul.nav__list.nav__list--horizontal
+            li.nav__item
+                a(href="./about-concept.html").link.link--nav.text.text--normal.text--fw500
+                    | Концепция квартала
+            li.nav__item
+                a(href="./about-infrastructure.html").link.link--nav.text.text--normal.text--fw500
+                    | Инфраструктура
+            li.nav__item.is-active
+                a(href="./about-gallery.html").link.link--nav.text.text--normal.text--fw500
+                    | Галерея
+            li.nav__item
+                a(href="./about-camera.html").link.link--nav.text.text--normal.text--fw500
+                    | Веб-камера
+            li.nav__item
+                a(href="./about-docs.html").link.link--nav.text.text--normal.text--fw500
+                    | Документы
+    // Nav Inner
+
+    // Main Title
+    h2.title.title--main Дизайнерские холлы
+    // Main Title End
+
+    // Slider
+    //- .slider
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    //-     .slider__slide
+    //-         .image-container
+    //-             img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+    //-         .slider__header.animated
+    //-             .title.title--slider
+    //-                 | Фитнес-клуб во дворе
+    //-             .text.text--fw300.text--xlarge
+    //-                 | 25-ти метровый бассейн и три этажа современных тренажеров.
+    .slider
+        .slider__track(data-glide-el='track')
+            ul.slider__slides
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+                li.slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                    .slider__header.animated
+                        .title.title--slider.text--fw700
+                            | Фитнес-клуб во дворе
+                        .text.text--fw300.text--xlarge
+                            | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__arrows(data-glide-el='controls')
+            button.slider__arrow.slider__arrow--left(data-glide-dir='<') prev
+            button.slider__arrow.slider__arrow--right(data-glide-dir='>') next
+    // Slider End
+block scripts
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+    script(src='assets/scripts/aboutGallery.bundle.js')

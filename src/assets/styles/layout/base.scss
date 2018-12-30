@@ -29,7 +29,7 @@ body {
   @include clearfix();
 
   &--about {
-    margin-top: 150px;
+    margin-top: 135px;
   }
 }
 
@@ -37,7 +37,7 @@ body {
 .filters {
   // Style
   @include clearfix();
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   > .filter {
     margin-right: 10px;
@@ -73,4 +73,10 @@ body {
 .specific {
   @include clearfix();
   margin-top: -8px;
+}
+
+.concept {
+  margin-top: 94px;
+
+  counter-reset: section;
 }

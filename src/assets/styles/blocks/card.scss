@@ -67,10 +67,35 @@
     // Hover
     &:hover {
       box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+
+      .nav--map & {
+        .link {
+          color: $black;
+          text-decoration: underline;
+        }
+        .icon {
+          fill: $brand-color;
+        }
+      }
+    }
+
+    .nav--map & {
+      margin-bottom: 10px;
+      color: rgba(0, 0, 0, 0.5);
+
+      .icon {
+        fill: rgba(0, 0, 0, 0.5);
+      }
     }
 
     .card__content {
       padding: 0 25px;
+
+      .nav--map & {
+        @include clearfix();
+        display: block;
+        height: 100%;
+      }
     }
 
     .text {
@@ -78,6 +103,7 @@
       float: left;
       min-width: 115px;
       width: auto;
+      position: relative;
 
       &:first-of-type {
         float: left;
@@ -87,16 +113,92 @@
         text-align: right;
         margin-right: 12px;
       }
+
+      .nav--map & {
+        width: 120px;
+        min-width: 0;
+        max-width: none;
+        margin: 0;
+        text-align: left;
+      }
     }
 
     &:first-of-type .text:first-of-type {
       margin-right: 18px;
     }
 
+    .nav--map &.is-active {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+
+      .link {
+        color: $black;
+        text-decoration: underline;
+      }
+      .icon {
+        fill: $brand-color;
+      }
+    }
+
     // Media Queries
     @media screen and (min-width: 1000px) {
       width: calc(25% - 6px);
       height: 110px;
+
+      .nav--map & {
+        width: 313px;
+        height: 90px;
+        margin-right: 10px;
+
+        .text {
+          position: absolute;
+          top: 47%;
+          transform: translate(0, -50%);
+          left: 144px;
+        }
+
+        &:nth-child(1) {
+          .text {
+            top: 47%;
+            left: 144px;
+          }
+        }
+
+        &:nth-child(2) {
+          .text {
+            top: 47%;
+            left: 150px;
+          }
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+          .text {
+            top: 47%;
+            left: 130px;
+          }
+        }
+
+        &:nth-child(4) {
+          .text {
+            top: 47%;
+            left: 144px;
+          }
+        }
+
+        &:nth-child(5) {
+          .text {
+            top: 48%;
+            left: 149px;
+          }
+        }
+
+        &:nth-child(6) {
+          .text {
+            top: 48%;
+            left: 130px;
+          }
+        }
+      }
     }
   }
   // Flats Card
@@ -128,6 +230,14 @@
     // Style
     @include clearfix();
     margin-bottom: 10px;
+    transition: all ease 600ms;
+
+    // States
+    &:hover {
+      .image-container {
+        transform: scale(1.5);
+      }
+    }
 
     .card__image {
       position: absolute;
@@ -214,6 +324,86 @@
 
       .card__header {
         margin-bottom: 8px;
+      }
+    }
+  }
+
+  // Full Width Card
+  &--full-width {
+    // Style
+    @include clearfix();
+    position: relative;
+    margin-bottom: 10px;
+
+    .card__image,
+    .card__inner {
+      height: 100%;
+    }
+
+    .card__image {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+    }
+
+    .card__inner {
+      display: flex;
+      // align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      //
+      height: 450px;
+
+      .card__image {
+        overflow: hidden;
+        width: 50%;
+      }
+
+      .card__inner {
+        width: 50%;
+        position: relative;
+        box-sizing: border-box;
+        &::before {
+          counter-increment: section;
+          content: "0" counter(section);
+          font-size: 260px;
+          line-height: 1;
+          font-weight: 900;
+          color: rgba(67, 67, 67, 0.1);
+          position: absolute;
+          left: 88px;
+          top: 20px;
+          letter-spacing: -13px;
+        }
+      }
+
+      .card__content {
+        line-height: 20px;
+      }
+
+      &:nth-child(odd) {
+        .card__image {
+          float: left;
+        }
+        .card__inner {
+          float: right;
+          padding: 0 300px 97px;
+        }
+      }
+      &:nth-child(even) {
+        .card__image {
+          float: right;
+        }
+        .card__inner {
+          float: left;
+          padding: 0 289px 97px 317px;
+        }
+
+        .title--card {
+          margin-left: -2px;
+        }
       }
     }
   }

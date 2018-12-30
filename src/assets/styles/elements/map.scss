@@ -121,4 +121,15 @@
       display: none;
     }
   }
+
+  // Map Infrastructure
+  &--infrastructure {
+    // Style
+    width: 100%;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      height: 500px;
+    }
+  }
 }

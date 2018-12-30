@@ -7,7 +7,11 @@ const config = {
   mode: env || 'development',
   entry: {
     index: './src/assets/scripts/index.js',
-    about: './src/assets/scripts/about.js',
+    aboutConcept: './src/assets/scripts/about-concept.js',
+    aboutInfrastructure: './src/assets/scripts/about-infrastructure.js',
+    aboutGallery: './src/assets/scripts/about-gallery.js',
+    aboutCamera: './src/assets/scripts/about-camera.js',
+    aboutDocs: './src/assets/scripts/about-docs.js',
     commercial: './src/assets/scripts/commercial.js',
     contacts: './src/assets/scripts/contacts.js',
     news: './src/assets/scripts/news.js',

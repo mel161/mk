@@ -102,10 +102,10 @@ block content
                             span.text.text--small.text--fw700
                                 | 7 900 000
                     .range__inner
-                        input(type='range' min='0' max='150' value='4').range__input.range__input--from
-                        input(type='range' min='0' max='150' value='100').range__input.range__input--to
+                        input(type='range' min='1000000' max='8000000' value='1500000' step='10000').range__input.range__input--from
+                        input(type='range' min='1000000' max='8000000' value='7900000' step='10000').range__input.range__input--to
                         .range__handler.range__handler--from
-                        .range__handler.range__handler--from
+                        .range__handler.range__handler--to
                         .range__line
                 // Range Price End
                 // Range Area
@@ -116,17 +116,17 @@ block content
                                 | 27
                         .range__divider
                         .range__currency
-                            span.text.text--small.text--currency
+                            span.text.text--small
                                 | м
                                 sup 2
                         .range__to
                             span.text.text--small.text--fw700
                                 | 84
                     .range__inner
-                        input(type='range' min='0' max='150' value='4').range__input
-                        input(type='range' min='0' max='150' value='100').range__input
+                        input(type='range' min='27' max='84' value='27' step='1').range__input.range__input--from
+                        input(type='range' min='27' max='84' value='84' step='1').range__input.range__input--to
                         .range__handler.range__handler--from
-                        .range__handler.range__handler--from
+                        .range__handler.range__handler--to
                         .range__line
                 // Range Area End
                 // Select House

@@ -78,6 +78,31 @@ button {
   &--transparent {
     background-color: transparent;
     box-shadow: none;
+
+    // States
+    // Default
+    &:link {
+    }
+    // Visited
+    &:visited {
+    }
+    // Hover
+    &:hover {
+      outline: none;
+      border: 0;
+      background-color: transparent;
+    }
+    // Focus
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+    // Active
+    &:active {
+      outline: none;
+      border: 0;
+      color: $gray;
+    }
   }
   // Round button
   &--round {

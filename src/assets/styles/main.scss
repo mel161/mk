@@ -1,7 +1,16 @@
-@import "normalize.css";
-@import "jquery.scrollbar/sass/jquery.scrollbar.scss";
-@import "perfect-scrollbar/css/perfect-scrollbar.css";
 @import "./vars.scss";
+
+@import "normalize.css";
+// @import "jquery.scrollbar/sass/jquery.scrollbar.scss";
+// @import "perfect-scrollbar/css/perfect-scrollbar.css";
+// @import "@glidejs/glide/src/assets/sass/_variables";
+// @import "@glidejs/glide/src/assets/sass/glide.core";
+// @import "@glidejs/glide/src/assets/sass/glide.theme";
+
+@import "animate.css/animate.min.css";
+
+@import "slick-carousel/slick/slick";
+
 @import "./mixin.scss";
 @import "./fonts.scss";
 @import "./layout/base.scss";

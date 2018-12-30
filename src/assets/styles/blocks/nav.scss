@@ -14,6 +14,7 @@
 
     // Modifiers
     &--horizontal {
+      @include clearfix();
     }
   }
   // Nav Item
@@ -106,6 +107,70 @@
       &:last-of-type {
         margin-right: 0;
       }
+    }
+  }
+  // Inner
+  &--inner {
+    // Style
+    .nav__list {
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .nav__item {
+      float: left;
+      box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+      color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      // State
+      // Hover
+      &:hover {
+        box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+
+        .link {
+          color: inherit;
+        }
+      }
+
+      &.is-active {
+        box-shadow: none;
+        background-color: $secondary-color;
+        color: $white;
+      }
+    }
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      margin: 30px auto;
+      text-align: center;
+
+      .nav__list {
+        display: inline-block;
+      }
+      .nav__item {
+        margin-right: 20px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .link {
+          padding: 16px 26px;
+          line-height: 1.36;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // Map
+  &--map {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: 960px;
+      margin: 0 auto 73px;
     }
   }
 }

@@ -11,10 +11,10 @@ html(lang="ru")
     body
         #up.page
             // Header
-            include ./common/header.pug
+            include ./common/header-inner.pug
             // Header End
             // Main
-            main.main
+            main.main(class=mainClass)
                 block content
             // Main End
             // Footer

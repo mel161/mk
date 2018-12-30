@@ -1,0 +1,121 @@
+extends ../inner.layout.pug
+
+block variables
+    - var title = 'О квартале'
+    - var mainClass = 'main--about'
+
+block content
+    // Header in Main
+    .header.header--main
+        h1.title.title--header= title
+    // Header in Main End
+    // Nav Inner
+    nav.nav.nav--inner
+        ul.nav__list.nav__list--horizontal
+            li.nav__item.is-active
+                a(href="./about-concept.html").link.link--nav.text.text--normal.text--fw500
+                    | Концепция квартала
+            li.nav__item
+                a(href="./about-infrastructure.html").link.link--nav.text.text--normal.text--fw500
+                    | Инфраструктура
+            li.nav__item
+                a(href="./about-gallery.html").link.link--nav.text.text--normal.text--fw500
+                    | Галерея
+            li.nav__item
+                a(href="./about-camera.html").link.link--nav.text.text--normal.text--fw500
+                    | Веб-камера
+            li.nav__item
+                a(href="./about-docs.html").link.link--nav.text.text--normal.text--fw500
+                    | Документы
+    // Nav Inner
+
+    .concept.row
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-fitness.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Просторный двор
+                .card__content
+                    .text.text--fw300.text--large
+                        | Во&nbsp;дворе комплекса жителей ждут детские
+                        | и&nbsp;спортивные площадки, футбольное поле,
+                        | которое на&nbsp;зиму заливают под каток,
+                        | велодорожки и&nbsp;зоны для прогулок.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-street-retail.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Безопасная среда
+                .card__content
+                    .text.text--fw300.text--large
+                        | Паркинг и&nbsp;приватный двор круглосуточно просматриваются службой охраны. О&nbsp;порядке&nbsp;внутри домов заботится консьерж&#8209;служба.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-designed-hall.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Фитнес-клуб во&nbsp;дворе
+                .card__content
+                    .text.text--fw300.text--large
+                        | Три этажа современных тренажеров, опытные&nbsp;тренеры, 25&#8209;ти метровый бассейн&nbsp;&mdash; и&nbsp;до&nbsp;всего этого два шага.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Зона стрит-ритейла
+                .card__content
+                    .text.text--fw300.text--large
+                        | Продуктовый гипермаркет, детский сад, салон красоты, зоомагазин и&nbsp;многое другое расположилось на&nbsp;первых этажах комплекса.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Паркинг
+                .card__content
+                    .text.text--fw300.text--large
+                        | Многоуровневый паркинг на&nbsp;362 места в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей, удобные&nbsp;и&nbsp;вместительные стоянки для&nbsp;гостей&nbsp;комплекса.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Детский сад прямо в&nbsp;доме
+                .card__content
+                    .text.text--fw300.text--large
+                        | На&nbsp;первых этажах малышей ждёт детский сад с&nbsp;собственной территорией для прогулок, качелями и&nbsp;внимательными воспитателями.
+        // Card End
+        // Card
+        .card.card--full-width
+            .card__image
+                .image-container
+                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    .title.title--card.text--fw700 Чистовая отделка
+                .card__content
+                    .text.text--fw300.text--large
+                        | Многоуровневый паркинг на&nbsp;362 места в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей, удобные&nbsp;и&nbsp;вместительные стоянки для&nbsp;гостей&nbsp;комплекса.
+        // Card End
+block scripts
+    script(src='assets/scripts/about.bundle.js')

@@ -1,36 +1,47 @@
 .header {
   @include clearfix();
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: $white;
-  box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
-  z-index: 10;
 
   @media screen and (min-width: 1000px) {
-    height: 135px;
-
-    > .btn {
-      margin-top: 0;
-    }
   }
   // Elements
   &__inner {
-    width: auto;
-    height: 100%;
-
-    @media screen and (min-width: 1000px) {
-      margin: 0 60px;
-      display: flex;
-      justify-content: space-between;
-
-      > .btn {
-        margin-top: 40px;
-      }
-    }
   }
 
   // Modifiers
+  &--top {
+    // Style
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+    z-index: 10;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      height: 135px;
+
+      > .btn {
+        margin-top: 0;
+      }
+    }
+
+    // Elements
+    .header__inner {
+      width: auto;
+      height: 100%;
+
+      @media screen and (min-width: 1000px) {
+        margin: 0 60px;
+        display: flex;
+        justify-content: space-between;
+
+        > .btn {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
   &--transparent {
     // background-color: transparent;
     background-color: rgba(66, 66, 66, 1);
@@ -68,6 +79,60 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#ffffff', GradientType=0 );
     box-shadow: none;
     color: $white;
+  }
+  &--main {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      height: 400px;
+      background-image: url(../images/hero-bg-about.jpg);
+      position: relative;
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        content: "";
+        background: -moz-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(66, 66, 66, 0.4) 100%
+        );
+        background: -webkit-gradient(
+          left top,
+          left bottom,
+          color-stop(0%, rgba(255, 255, 255, 0)),
+          color-stop(100%, rgba(66, 66, 66, 0.4))
+        );
+        background: -webkit-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(66, 66, 66, 0.4) 100%
+        );
+        background: -o-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(66, 66, 66, 0.4) 100%
+        );
+        background: -ms-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(66, 66, 66, 0.4) 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(66, 66, 66, 0.4) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#424242', GradientType=0 );
+        z-index: 1;
+      }
+    }
+
+    // Elements
   }
 }
 

@@ -30,8 +30,48 @@
       .card--half-width & {
         font-size: 24px;
       }
+      .card--full-width & {
+        font-size: 36px;
+        text-align: left;
+        line-height: 42px;
+        margin-bottom: 34px;
+        margin-left: -3px;
+        word-spacing: 5px;
+      }
     }
 
     // Modifiers
+  }
+  // Header Title
+  &--header {
+    // Style
+    color: $white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    margin: 0;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      font-size: 60px;
+      font-weight: 900;
+      margin: 0 0 49px;
+    }
+  }
+
+  // Main Title h1 in inner page
+  &--main {
+    // Style
+    text-align: center;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      margin: 41px 0 54px -12px;
+      font-size: 36px;
+      display: inline-block;
+      width: 100%;
+    }
   }
 }

@@ -20,6 +20,10 @@ $green: #2ecc71;
   box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
   position: relative;
 
+  &:hover {
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+  }
+
   //   margin-bottom: 1em; // Cosmetic value
 
   > .icon.icon--arrow {
