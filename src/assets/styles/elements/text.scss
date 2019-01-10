@@ -7,6 +7,14 @@
   }
   &--small {
     font-size: 12px;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      .card--base & {
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
   }
   &--normal {
     font-size: 14px;
@@ -91,6 +99,13 @@
   }
   &--mutted {
     color: $gray;
+  }
+  &--white {
+    color: $white;
+    fill: $white;
+  }
+  &--red {
+    color: $red;
   }
   // Currency
   &--currency {

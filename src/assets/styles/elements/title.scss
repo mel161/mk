@@ -38,6 +38,18 @@
         margin-left: -3px;
         word-spacing: 5px;
       }
+
+      .card--docs & {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .card--news & {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        letter-spacing: 0.24px;
+      }
     }
 
     // Modifiers
@@ -72,6 +84,20 @@
       font-size: 36px;
       display: inline-block;
       width: 100%;
+    }
+  }
+
+  // Modal Title
+  &--modal {
+    // Style
+    margin: 0;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      font-size: 36px;
+      text-align: center;
+      line-height: 43px;
+      margin-bottom: 35px;
     }
   }
 }

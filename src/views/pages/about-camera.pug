@@ -12,7 +12,7 @@ block content
     // Nav Inner
     nav.nav.nav--inner
         ul.nav__list.nav__list--horizontal
-            li.nav__item.is-active
+            li.nav__item
                 a(href="./about-concept.html").link.link--nav.text.text--normal.text--fw500
                     | Концепция квартала
             li.nav__item
@@ -21,7 +21,7 @@ block content
             li.nav__item
                 a(href="./about-gallery.html").link.link--nav.text.text--normal.text--fw500
                     | Галерея
-            li.nav__item
+            li.nav__item.is-active
                 a(href="./about-camera.html").link.link--nav.text.text--normal.text--fw500
                     | Веб-камера
             li.nav__item
@@ -29,93 +29,24 @@ block content
                     | Документы
     // Nav Inner
 
-    .concept.row
+    .camera.row
         // Card
         .card.card--full-width
             .card__image
+                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 500.99 501').icon.icon--play
+                    path(d='M467.34 125.3A248.75 248.75 0 0 0 315.3 8.64 251.81 251.81 0 0 0 250.09 0 250.49 250.49 0 0 0 33.65 375.69a248.76 248.76 0 0 0 152 116.66 248.89 248.89 0 0 0 190-25 250.39 250.39 0 0 0 91.65-342zm9.9 186a235 235 0 0 1-226.36 174.04 236 236 0 0 1-61.14-8.1 234.82 234.82 0 0 1 60.38-461.58 236.26 236.26 0 0 1 61.13 8.1 234.75 234.75 0 0 1 166 287.5z')
+                    path(d='M370.53 231.11L206 136.12a22.39 22.39 0 0 0-33.58 19.39v190a22.16 22.16 0 0 0 11.19 19.39 22.1 22.1 0 0 0 22.38 0l164.53-95a22.39 22.39 0 0 0 0-38.77zm-7.82 25.22l-164.53 95a6.56 6.56 0 0 1-6.75 0 6.57 6.57 0 0 1-3.36-5.83v-190a6.58 6.58 0 0 1 3.37-5.83 6.66 6.66 0 0 1 6.74 0l164.52 95a6.74 6.74 0 0 1 0 11.67zM276.36 58.93a8 8 0 0 0-1.08-.07 7.83 7.83 0 0 0-1 15.58 179.63 179.63 0 0 1 116.84 67.45 7.82 7.82 0 0 0 12.38-9.58 195.41 195.41 0 0 0-127.14-73.38z')
                 .image-container
-                    img(src="assets/images/spec-fitness.jpg", alt="").image.image--card
+                    img(src="assets/images/web-camera-preview.jpg", alt="").image.image--card
             .card__inner
                 .card__header
-                    .title.title--card.text--fw700 Просторный двор
+                    .title.title--card.text--fw700 Первые этажи готовы
                 .card__content
                     .text.text--fw300.text--large
-                        | Во&nbsp;дворе комплекса жителей ждут детские
-                        | и&nbsp;спортивные площадки, футбольное поле,
-                        | которое на&nbsp;зиму заливают под каток,
-                        | велодорожки и&nbsp;зоны для прогулок.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-street-retail.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Безопасная среда
-                .card__content
-                    .text.text--fw300.text--large
-                        | Паркинг и&nbsp;приватный двор круглосуточно просматриваются службой охраны. О&nbsp;порядке&nbsp;внутри домов заботится консьерж&#8209;служба.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-designed-hall.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Фитнес-клуб во&nbsp;дворе
-                .card__content
-                    .text.text--fw300.text--large
-                        | Три этажа современных тренажеров, опытные&nbsp;тренеры, 25&#8209;ти метровый бассейн&nbsp;&mdash; и&nbsp;до&nbsp;всего этого два шага.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Зона стрит-ритейла
-                .card__content
-                    .text.text--fw300.text--large
-                        | Продуктовый гипермаркет, детский сад, салон красоты, зоомагазин и&nbsp;многое другое расположилось на&nbsp;первых этажах комплекса.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Паркинг
-                .card__content
-                    .text.text--fw300.text--large
-                        | Многоуровневый паркинг на&nbsp;362 места в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей, удобные&nbsp;и&nbsp;вместительные стоянки для&nbsp;гостей&nbsp;комплекса.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Детский сад прямо в&nbsp;доме
-                .card__content
-                    .text.text--fw300.text--large
-                        | На&nbsp;первых этажах малышей ждёт детский сад с&nbsp;собственной территорией для прогулок, качелями и&nbsp;внимательными воспитателями.
-        // Card End
-        // Card
-        .card.card--full-width
-            .card__image
-                .image-container
-                    img(src="assets/images/spec-privete-yard.jpg", alt="").image.image--card
-            .card__inner
-                .card__header
-                    .title.title--card.text--fw700 Чистовая отделка
-                .card__content
-                    .text.text--fw300.text--large
-                        | Многоуровневый паркинг на&nbsp;362 места в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей, удобные&nbsp;и&nbsp;вместительные стоянки для&nbsp;гостей&nbsp;комплекса.
+                        | Многоуровневый паркинг на&nbsp;362 места
+                        | в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей,
+                        | удобные&nbsp;и&nbsp;вместительные стоянки
+                        | для&nbsp;гостей&nbsp;комплекса.
         // Card End
 block scripts
     script(src='assets/scripts/about.bundle.js')

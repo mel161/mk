@@ -2,8 +2,45 @@ extends ../main.layout.pug
 
 block variables
     - var title = 'Контакты'
+    - var mainClass = 'main--contacts'
 
 block content
+    // Header in Main
+    .header.header--main
+        h1.title.title--header= title
+    // Header in Main End
+
+    .contacts.row
+        // Card
+        .card.card--full-width
+            .card__image
+                #map.map.map--contacts
+            .card__inner
+                .card__content
+                    .block
+                        .text.text--fw700.text--xlarge Адрес:
+                        .text.text--fw300.text--large
+                            | Екатеринбург, ул.&nbsp;Ясная&nbsp;2, офис&nbsp;503 (ТРЦ&nbsp;Фан&nbsp;Фан)
+                    .block
+                        .text.text--fw700.text--xlarge Режим работы:
+                        .text.text--fw300.text--large
+                            dl.list.list--description
+                                dt.list__item.list__item--termin пн-пт:
+                                dd.list__item.list__item--description с 10 до 19
+                                dt.list__item.list__item--termin сб:
+                                dd.list__item.list__item--description с 11 до 15
+                                dt.list__item.list__item--termin вс:
+                                dd.list__item.list__item--description выходной
+
+                    .block
+                        .text.text--fw700.text--xlarge Телефон:
+                        .text.text--fw300.text--large
+                            | +7&nbsp;(343)&nbsp;302&nbsp;0704
+                    .block
+                        .text.text--fw700.text--xlarge E-mail:
+                        .text.text--fw300.text--large
+                            | info@ekbstroy.net
 
 block scripts
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
     script(src='assets/scripts/contacts.bundle.js')

@@ -22,6 +22,11 @@
     // Style
     // padding: 25px;
 
+    .btn {
+      margin-top: 41px;
+      margin-bottom: 0;
+    }
+
     // Media Queries
     @media screen and (min-width: 1000px) {
     }
@@ -34,6 +39,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
+
+    > .text {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
 
     > .btn {
       box-shadow: none;
@@ -48,6 +59,7 @@
   // Card Image
   &__image {
     // Style
+    position: relative;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -359,6 +371,19 @@
       .card__image {
         overflow: hidden;
         width: 50%;
+        position: relative;
+
+        .camera &,
+        .parking & {
+          &:hover {
+            .image-container {
+              transform: scale(1.2);
+              &::before {
+                // background-color: transparent;
+              }
+            }
+          }
+        }
       }
 
       .card__inner {
@@ -376,6 +401,18 @@
           left: 88px;
           top: 20px;
           letter-spacing: -13px;
+        }
+
+        .camera &::before {
+          content: "10 %";
+        }
+
+        .parking &::before {
+          content: "362";
+        }
+
+        .contacts &::before {
+          content: "503";
         }
       }
 
@@ -405,6 +442,126 @@
           margin-left: -2px;
         }
       }
+
+      .parking & {
+        .card__inner {
+          padding: 0 300px 0;
+        }
+      }
+
+      .contacts & {
+        .card__inner {
+          padding: 0 175px 105px 300px;
+        }
+      }
+    }
+  }
+
+  // Docs Card
+  &--docs {
+    // Style
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+    // Hover
+    &:hover {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: 336px;
+      height: 150px;
+      float: left;
+      padding: 30px 20px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+
+      .card__header {
+        margin: -4px 0 0 0;
+      }
+
+      .card__footer {
+        height: 49px;
+        padding: 0 73px;
+      }
+    }
+  }
+
+  // News Card
+  &--news {
+    // Style
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+    // Hover
+    &:hover {
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      width: 336px;
+      height: 524px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      float: left;
+
+      .card__inner {
+        position: relative;
+        padding: 20px 30px 0;
+      }
+
+      .card__header {
+        margin-bottom: 15px;
+      }
+
+      .card__footer {
+        width: auto;
+        position: relative;
+      }
+
+      .card__content {
+        letter-spacing: 0.24px;
+        line-height: 16px;
+        margin-bottom: 15px;
+        // margin-bottom: 32px;
+        min-height: 51px;
+        overflow: hidden;
+      }
+
+      &:first-of-type {
+        width: 702px;
+
+        .card__header {
+          width: 80%;
+        }
+
+        .card__content {
+        }
+      }
+
+      // &:nth-child(9 + 5) {
+      //   margin-right: 0;
+      // }
+
+      // &:nth-child(4) {
+      //   margin-right: 0;
+      // }
+
+      // &:nth-child(9) {
+      //   margin-right: 0;
+      // }
+
+      // &:nth-child(5) {
+      //   margin-right: 30px;
+      // }
+
+      // &:last-of-type {
+      //   margin-right: 0;
+      // }
     }
   }
 }

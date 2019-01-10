@@ -2,8 +2,164 @@ extends ../main.layout.pug
 
 block variables
     - var title = 'Новости и акции'
+    - var mainClass = 'main--news'
 
 block content
+    // Header in Main
+    .header.header--main
+        h1.title.title--header= title
+    // Header in Main End
+
+    // Row
+    .news.row
+        // Card
+        .card.card--news
+            .card__image
+                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 500.78').icon.icon--sale
+                        path(d='M256 72.3c-98.2 0-178.09 79.89-178.09 178.09S157.8 428.48 256 428.48s178.09-79.89 178.09-178.09S354.2 72.3 256 72.3zm0 333.91c-85.92 0-155.83-69.9-155.83-155.83S170.08 94.57 256 94.57s155.83 69.9 155.83 155.83S341.92 406.22 256 406.22z')
+                        path(d='M305 201.37a11.13 11.13 0 0 0-15.74 0L177.61 313a11.13 11.13 0 1 0 15.74 15.74L305 217.11a11.13 11.13 0 0 0 0-15.74zM326.82 190.7a11.1 11.1 0 0 0 7.87-3.26l.8-.8a11.13 11.13 0 0 0-15.75-15.74l-.8.8a11.13 11.13 0 0 0 7.87 19zM243.4 196.05a41.74 41.74 0 1 0-41.74 41.74 41.79 41.79 0 0 0 41.74-41.74zm-61.22 0a19.48 19.48 0 1 1 19.48 19.48 19.5 19.5 0 0 1-19.48-19.48zM310.34 263a41.74 41.74 0 1 0 41.74 41.74A41.79 41.79 0 0 0 310.34 263zm0 61.22a19.48 19.48 0 1 1 19.48-19.48 19.5 19.5 0 0 1-19.48 19.47z')
+                .image-container
+                    img(src="assets/images/news-1.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Скидка до 100 000 руб. на места в паркинге действует до конца ноября
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Приобрести машиноместо также можно в&nbsp;ипотеку или с&nbsp;рассрочкой. Оставить машину рядом с&nbsp;домом, знать, что она под круглосуточной охраной, а&nbsp;снег и&nbsp;дождь ей&nbsp;не&nbsp;страшны&nbsp;&mdash; не&nbsp;роскошь, а&nbsp;необходимость.
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-2.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Изменен график работы офиса продаж 9&nbsp;августа
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Получить личную консультацию можно до 12 часов либо по телефону ...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-3.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Детский сад и&nbsp;школа скоро&nbsp;откроются
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Посещать учреждения маленькие жители смогут с&nbsp;января 2019&nbsp;года...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-4.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Финальный дом комплекса сдан!
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Четвертый дом жилого комплекса готовится встречать новоселов...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-5.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Изменен график работы офиса продаж 9&nbsp;августа
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Получить личную консультацию можно до 12 часов либо по телефону ...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-6.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Детский сад и&nbsp;школа скоро&nbsp;откроются
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Посещать учреждения маленькие жители смогут с&nbsp;января 2019&nbsp;года...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-7.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Финальный дом комплекса сдан!
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | Четвертый дом жилого комплекса готовится встречать новоселов...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-8.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Четвертый дом комплекса заканчивает строительство
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | В&nbsp;финальном доме завершилась чистовая отделка и&nbsp;благоустройство...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+        // Card
+        .card.card--news
+            .card__image
+                .image-container
+                    img(src="assets/images/news-9.jpg", alt="").image.image--card
+            .card__inner
+                .card__header
+                    h5.title.title--card.text--fw900
+                        | Четвертый дом комплекса заканчивает строительство
+                .card__content
+                    span.text.text--normal.text--fw500.text--mutted
+                        | В&nbsp;финальном доме завершилась чистовая отделка и&nbsp;благоустройство...
+                .card__footer
+                    a(href="#", title="title").link.link--text.text.text--fw300.text--small.text--mutted Читать далее&emsp;&emsp;&emsp;&gt;
+        // Card End
+    // Row End
+
+    .row
+        // Button Submit
+        button(type="submit").btn.btn--more.btn--filter
+            | Показать ещё
+            svg.icon.icon--arrow.arrow--down(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                g
+                    path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+        // Button Submit End
 
 block scripts
     script(src='assets/scripts/news.bundle.js')
