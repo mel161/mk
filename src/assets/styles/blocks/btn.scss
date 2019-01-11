@@ -17,6 +17,7 @@ button {
   font-size: 14px;
   background-color: $gray;
   color: $white;
+  border: 0;
   text-transform: uppercase;
   box-sizing: border-box;
   box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
@@ -178,6 +179,21 @@ button {
 
     &:hover {
       background-color: $white;
+    }
+  }
+
+  // Submit Button
+  &--submit {
+    text-align: center;
+
+    &:disabled {
+      background-color: $white;
+      color: $black;
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      margin-top: 86px;
     }
   }
 }

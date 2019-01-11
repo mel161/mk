@@ -9,7 +9,6 @@ block content
     .header.header--main
         h1.title.title--header= title
     // Header in Main End
-    
     //
     .row
         .docs-info
@@ -34,13 +33,11 @@ block content
                     g
                         path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
             // Select House End
-
             //
             .text.text--large.text--fw500 Сайт застройщика
             a(href="http://mk.ekbstroy.net", title="title").link.link--text.text.text--normal.text--fw300.text--underline mk.ekbstroy.net
             //
     //
-
     .parking.row
         // Card
         .card.card--full-width
@@ -62,7 +59,6 @@ block content
                         | удобные&nbsp;и&nbsp;вместительные стоянки 
                         | для&nbsp;гостей&nbsp;комплекса.
                     button.btn.btn--base.modal__trigger Оставить заявку
-
     // Modal
     .modal
         .modal__bg
@@ -78,22 +74,31 @@ block content
             .text.text--fw100.text--large Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы забронировать понравившееся вам место или проконсультировать вас по&nbsp;любым вопросам.
 
             form.form(action="" method="POST")
-                .field
-                    label.field__label(for='field--name')
-                        input#field--name(type="text", name="name", required, autocomplete='off', minlength="2").field__input
-                        span.field__text.text.text--large.text--fw100 Представьтесь, пожалуйста *
-                        span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать цифры
-                        span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
-                .field
-                    label.field__label(for='field--phone')
-                        input#field--phone(type="text", name="phone", required, autocomplete='off', inputmode="tel", minlength="17", maxlength="17").field__input
-                        span.field__text.text.text--large.text--fw100 Ваш телефон *
-                        span.field__error.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
-                .field
-                    label.field__label(for='field--number')
-                        input#field--number(type="number", name="number", required, autocomplete='off',  minlength="1",maxlength="2").field__input
-                        span.field__text.text.text--large.text--fw100 Номер места
-                        span.field__error.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                .row
+                    .field.field--name
+                        label.field__label(for='field--name')
+                            input#field--name(type="text", name="name", required, autocomplete='off', minlength="2").field__input
+                            span.field__text.text.text--large.text--fw100 Представьтесь, пожалуйста *
+                            span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать цифры
+                            span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                    .field.field--phone
+                        label.field__label(for='field--phone')
+                            input#field--phone(type="text", name="phone", required, autocomplete='off', inputmode="tel", minlength="17", maxlength="17").field__input
+                            span.field__text.text.text--large.text--fw100 Ваш телефон *
+                            span.field__error.field__error--full.text.text--xsmall.text--fw100.text--red поле заполнено не полностью
+                            span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать буквы
+                            span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                    .field.field--number
+                        label.field__label(for='field--number')
+                            input#field--number(type="number", name="number", required, autocomplete='off',  minlength="1", maxlength="2").field__input
+                            span.field__text.text.text--large.text--fw100 Номер места
+                            span.field__error.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                    .text.text--xsmall.text--fw100
+                        | Нажимая на&nbsp;кнопку, вы&nbsp;подтверждаете, что принимаете&#32;
+                        a(href="#", title="title").link.link--text.text.text--brand.text--underline условия пользовательского соглашения
+                        | &#32;и&nbsp;согласны на&nbsp;обработку персональных данных
+                .row
+                    input(type="submit", value="Отправить заявку").btn.btn--secondary.btn--submit
     // Modal End
 
 block scripts

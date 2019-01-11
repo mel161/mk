@@ -1,113 +1,81 @@
+import 'jquery-mask-plugin'
+
 function isNumeric (value) {
-  return /^-{0,1}\d+$/.test(value)
+  var matches = value.match(/\d+/g)
+  if (matches != null) {
+    return true
+  }
+}
+
+function checkError () {
+  if ($('.field--name').is('.is-valid') && $('.field--phone').is('.is-valid')) {
+    $('.btn--submit').prop('disabled', false)
+
+    let formData = $('.form').serialize()
+
+    $('.btn--submit').click(function (e) {
+      e.preventDefault()
+      $.post(
+        '/form',
+        formData,
+        function (formData, textStatus, jqXHR) {},
+        'dataType'
+      ).done(function () {})
+    })
+  } else {
+    $('.btn--submit').prop('disabled', true)
+  }
 }
 
 function validField (value, obj) {
-  //   const minLenght = $(obj).attr('minlength')
-  //   $(obj)
-  //     .parents('.field')
-  //     .toggleClass('is-error', value.length < minLenght)
-
-  //   if ($(obj).attr('name') === 'name') {
-  //     $(obj)
-  //       .siblings('.field__error--char')
-  //       .addClass('.field__error--top', Number.isInteger(value))
-  //   }
   const input = $(obj)
   const minLength = input.attr('minlength')
 
-  switch (input.attr('name')) {
-    case 'name':
-      console.log('name')
+  let numeric = false
+  let required = false
+  input
+    .siblings('.field__error')
+    .removeClass('field__error--top')
+    .parents('.field')
+    .removeClass('is-valid is-error')
 
-      console.log(isNumeric(value))
+  if (!isNumeric(value)) {
+    numeric = true
+  } else {
+    numeric = false
+    input
+      .siblings('.field__error--char')
+      .addClass('field__error--top')
+      .parents('.field')
+      .removeClass('is-valid')
+      .addClass('is-error')
+  }
+  if (!(value.length < minLength)) {
+    required = true
+  } else {
+    required = false
+    input
+      .siblings('.field__error--required')
+      .addClass('field__error--top')
+      .parents('.field')
+      .removeClass('is-valid')
+      .addClass('is-error')
+  }
+  if (numeric && required) {
+    input
+      .siblings('.field__error')
+      .removeClass('field__error--top')
+      .parents('.field')
+      .removeClass('is-error')
+      .addClass('is-valid')
 
-      let numeric = false
-      let required = false
-
-      input
-        .siblings('.field__error')
-        .removeClass('field__error--top')
-        .parents('.field')
-        .removeClass('is-valid is-error')
-
-      if (!isNumeric(value)) {
-        numeric = true
-      } else {
-        numeric = false
-        input
-          .siblings('.field__error--char')
-          .addClass('field__error--top')
-          .parents('.field')
-          .removeClass('is-valid')
-          .addClass('is-error')
-      }
-      if (!(value.length < minLength)) {
-        required = true
-      } else {
-        required = false
-        input
-          .siblings('.field__error--required')
-          .addClass('field__error--top')
-          .parents('.field')
-          .removeClass('is-valid')
-          .addClass('is-error')
-      }
-
-      console.log(numeric)
-      console.log(required)
-
-      if (numeric && required) {
-        input
-          .siblings('.field__error')
-          .removeClass('field__error--top')
-          .parents('.field')
-          .removeClass('is-error')
-          .addClass('is-valid')
-      }
-
-      //   if (isNumeric(value)) {
-      //     input
-      //       .parents('.field')
-      //       .removeClass('is-valid')
-      //       .addClass('is-error')
-      //     console.log('numbers in name')
-      //   } else {
-      //     input
-      //       .parents('.field')
-      //       .removeClass('is-error')
-      //       .addClass('is-valid')
-      //   }
-
-      //   if (value.length < minLength) {
-      //     input
-      //       .parents('.field')
-      //       .removeClass('is-valid')
-      //       .addClass('is-error')
-      //     console.log('small name')
-      //   } else {
-      //     input
-      //       .parents('.field')
-      //       .removeClass('is-error')
-      //       .addClass('is-valid')
-      //   }
-      break
-
-    case 'phone':
-      console.log('phone')
-      break
-
-    case 'number':
-      console.log('number')
-      break
-
-    default:
-      console.log('default')
-      break
+    checkError()
   }
 }
 
 function formInit () {
+  let dataForm
+
   $('.field__input').focus(function (e) {
     e.preventDefault()
     $(this)
@@ -119,59 +87,80 @@ function formInit () {
     $(this)
       .parents('.field')
       .removeClass('is-active')
+    checkError()
   })
 
-  $('.field__input').on('blur keyup', function () {
-    validField($(this).val(), this)
+  $('#field--name').on('blur keyup', function () {
+    if ($(this).val().length !== 0) {
+      validField($(this).val(), this)
+    }
   })
+
+  $('#field--number').on('blur keyup', function (e) {
+    e.preventDefault()
+
+    if ($(this).val().length !== 0) {
+      if ($(this).val().length <= 2) {
+        $(this)
+          .parents('.field')
+          .addClass('is-valid')
+          .removeClass('is-error')
+      } else {
+        $(this)
+          .parents('.field')
+          .removeClass('is-valid')
+          .addClass('is-error')
+      }
+
+      checkError()
+    }
+  })
+
+  var options = {
+    onComplete: function (cep, event, currentField, options) {
+      currentField
+        .siblings('.field__error')
+        .removeClass('field__error--top')
+        .parents('.field')
+        .removeClass('is-error')
+        .addClass('is-valid')
+    },
+    onKeyPress: function (cep, event, currentField, options) {
+      if (cep.length === 0) {
+        currentField
+          .siblings('.field__error--required')
+          .addClass('field__error--top')
+          .parents('.field')
+          .removeClass('is-valid')
+          .addClass('is-error')
+      } else if (cep.length > 0) {
+        currentField
+          .siblings('.field__error--full')
+          .addClass('field__error--top')
+          .parents('.field')
+          .removeClass('is-valid')
+          .addClass('is-error')
+      }
+    },
+    onChange: function (cep, event, currentField, options) {
+      currentField
+        .siblings('.field__error')
+        .removeClass('field__error--top')
+        .parents('.field')
+        .removeClass('is-error')
+
+      checkError()
+    },
+    onInvalid: function (val, e, f, invalid, options) {
+      f.siblings('.field__error--char')
+        .addClass('field__error--top')
+        .parents('.field')
+        .removeClass('is-valid')
+        .addClass('is-error')
+    }
+  }
+
+  $('#field--phone').mask('+7 (000) 000-00-00', options)
 }
 
 export default formInit
-
-// if (!$('.flats').length) {
-//   $('.section--callback .btn').on('click', function (e) {
-//     e.preventDefault()
-//     var t = $(this).parents('.section--callback')
-
-//     t.find('.field__input')
-//       .not('.field__input--phone')
-//       .toggleClass(
-//         'err',
-//         t
-//           .find('.field__input')
-//           .not('.field__input--phone')
-//           .val().length < 2
-//       )
-//     t.find('.field__input--phone').toggleClass(
-//       'err',
-//       t.find('.field__input--phone').val().length < 17
-//     )
-
-//     if (
-//       t.find('.field__input--phone').val().length < 17 ||
-//       t
-//         .find('.field__input')
-//         .not('.field__input--phone')
-//         .val().length < 2
-//     ) {
-//       return false
-//     }
-
-//     $.post('/form', {
-//       _token: $('meta[name="csrf-token"]').attr('content'),
-//       name: t
-//         .find('.field__input')
-//         .not('.field__input--phone')
-//         .val(),
-//       phone: t.find('.field__input--phone').val()
-//     }).done(function () {
-//       // $('.popup-callback').fadeOut();
-//       // $('.popup-success').fadeIn();
-//       $('.section__form, .section__btn').hide()
-//       $('.section__text--callback p').text(
-//         'Спасибо за заявку, мы свяжемся с вами как можно быстрее.'
-//       )
-//     })
-//     return false
-//   })
-// }

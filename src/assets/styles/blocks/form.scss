@@ -5,6 +5,15 @@
   // Media Queries
   @media screen and (min-width: 1000px) {
     margin: 41px 0 0 0;
+
+    .row > .text {
+      color: $black;
+      width: 290px;
+      text-align: left;
+      float: left;
+      line-height: 12px;
+      margin-top: 19px;
+    }
   }
 
   // Modifiers

@@ -92,6 +92,9 @@
   // States
   &.is-active {
     // Style
+    .field__text {
+      display: none;
+    }
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -119,6 +122,10 @@
 
     .field__text {
       display: none;
+    }
+
+    .field__input {
+      border-color: $red;
     }
 
     // Media Queries
