@@ -76,6 +76,20 @@
     }
     // Media Queries
     @media screen and (min-width: 1000px) {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 40px;
+
+      > .nav__list--horizontal {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media screen and (min-width: 1900px) {
+      position: relative;
       width: 960px;
 
       > .nav__list--horizontal {

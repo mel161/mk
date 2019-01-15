@@ -19,6 +19,14 @@
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      height: 157px;
+
+      > .btn {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (min-width: 1900px) {
       height: 135px;
 
       > .btn {
@@ -32,7 +40,8 @@
       height: 100%;
 
       @media screen and (min-width: 1000px) {
-        margin: 0 60px;
+        // margin: 0 60px;
+        margin: 0 50px;
         display: flex;
         justify-content: space-between;
 

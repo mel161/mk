@@ -52,6 +52,7 @@
 
   &__close {
     // Style
+    cursor: pointer;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -61,6 +62,27 @@
   }
 
   // Modifiers
+  &--slider {
+    // Style
+    .modal__inner {
+      background-color: transparent;
+      padding: 69px 68px 76px 84px;
+      width: calc(100% - 320px);
+      height: calc(100% - 140px);
+    }
+
+    .modal__close {
+      .icon {
+        fill: $white;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+    }
+  }
 
   // State
   &.is-active {

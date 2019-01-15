@@ -28,6 +28,16 @@
         font-size: 18px;
         line-height: 1;
       }
+
+      &.link--nav {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (min-width: 1900px) {
+      &.link--nav {
+        font-size: 14px;
+      }
     }
   }
   &--large {

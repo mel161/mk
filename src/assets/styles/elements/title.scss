@@ -84,6 +84,11 @@
       font-size: 36px;
       display: inline-block;
       width: 100%;
+
+      .gallery & {
+        margin: 51px 0 45px -3px;
+        letter-spacing: 0.24px;
+      }
     }
   }
 
@@ -98,6 +103,17 @@
       text-align: center;
       line-height: 43px;
       margin-bottom: 35px;
+    }
+  }
+
+  // Slider Title
+  &--slider {
+    // Style
+    margin: 0;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      font-size: 24px;
     }
   }
 }

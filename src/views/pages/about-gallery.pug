@@ -2,7 +2,7 @@ extends ../inner.layout.pug
 
 block variables
     - var title = 'Галерея'
-    - var mainClass = 'main--about'
+    - var mainClass = 'main--about gallery'
 
 block content
     // Header in Main
@@ -29,58 +29,152 @@ block content
                     | Документы
     // Nav Inner
 
-    // Main Title
-    h2.title.title--main Дизайнерские холлы
-    // Main Title End
+    // Title
+    h4.title.title--main Дизайнерские холлы
+    // Title End
 
     // Slider
-    .slider
-        .slider__slide
+    .slider.slider--main
+        .slider__slide.modal__trigger(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
-                .title.title--slider
+                .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide
+        .slider__slide.modal__trigger(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
-                .title.title--slider
+                .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide
+        .slider__slide.modal__trigger(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
-                .title.title--slider
+                .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide
+        .slider__slide.modal__trigger(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
-                .title.title--slider
+                .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide
+        .slider__slide.modal__trigger(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
-                .title.title--slider
+                .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
     // Slider End
 
+    // Title
+    h4.title.title--main Чистовая отделка
+    // Title End
 
+    // Slider
+    .slider.slider--main
+        .slider__slide.modal__trigger(data-modal="js-modal-2")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-2")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-2")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-2")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-2")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+    // Slider End
+
+    // Title
+    h4.title.title--main Просторный двор
+    // Title End
+
+    // Slider
+    .slider.slider--main
+        .slider__slide.modal__trigger(data-modal="js-modal-3")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-3")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-3")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-3")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide.modal__trigger(data-modal="js-modal-3")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+    // Slider End
 
     // Modal
-    .modal
+    .modal.modal--slider#js-modal-1
         .modal__bg
         .modal__inner
             // Close Button
@@ -88,8 +182,138 @@ block content
                 svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 54.82 55.72').icon.icon--close
                     path(d='M54.18 52L30 27.86 54.18 3.73a2.18 2.18 0 0 0 0-3.09A2.16 2.16 0 0 0 52.64 0a2.17 2.17 0 0 0-1.54.64L27.41 24.33 3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L27.41 31.4l23.68 23.68A2.18 2.18 0 1 0 54.18 52z')
             // Close Button End
-
+            // Slider
+            .slider.slider--modal
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+            // Slider End
     // Modal End
+    
+    // Modal
+    .modal.modal--slider#js-modal-2
+        .modal__bg
+        .modal__inner
+            // Close Button
+            a(href="#close", title="Закрыть").modal__close.link.link--block
+                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 54.82 55.72').icon.icon--close
+                    path(d='M54.18 52L30 27.86 54.18 3.73a2.18 2.18 0 0 0 0-3.09A2.16 2.16 0 0 0 52.64 0a2.17 2.17 0 0 0-1.54.64L27.41 24.33 3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L27.41 31.4l23.68 23.68A2.18 2.18 0 1 0 54.18 52z')
+            // Close Button End
+            // Slider
+            .slider.slider--modal
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+            // Slider End
+    // Modal End
+
+    // Modal
+    .modal.modal--slider#js-modal-3
+        .modal__bg
+        .modal__inner
+            // Close Button
+            a(href="#close", title="Закрыть").modal__close.link.link--block
+                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 54.82 55.72').icon.icon--close
+                    path(d='M54.18 52L30 27.86 54.18 3.73a2.18 2.18 0 0 0 0-3.09A2.16 2.16 0 0 0 52.64 0a2.17 2.17 0 0 0-1.54.64L27.41 24.33 3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L27.41 31.4l23.68 23.68A2.18 2.18 0 1 0 54.18 52z')
+            // Close Button End
+            // Slider
+            .slider.slider--modal
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+                .slider__slide
+                    .image-container
+                        img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+            // Slider End
+    // Modal End
+    
 block scripts
     script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
     script(src='assets/scripts/aboutGallery.bundle.js')

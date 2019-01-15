@@ -3,7 +3,13 @@ function modalInit () {
 
   $('.modal__trigger').click(function (e) {
     e.preventDefault()
-    modal.addClass('is-active')
+    let id = '#' + $(this).attr('data-modal')
+    console.log(id)
+    if (id) {
+      modal.filter(id).addClass('is-active')
+    } else {
+      modal.addClass('is-active')
+    }
   })
 
   $('.modal__bg, .modal__close').click(function (e) {
