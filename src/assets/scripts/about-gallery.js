@@ -1,69 +1,22 @@
 // import Glide from '@glidejs/glide'
 import 'slick-carousel'
 
-// const sliderContainer = document.querySelector('.slider')
-// let slider = new Glide('.slider', {
-//   type: 'carousel',
-//   startAt: 0,
-//   focusAt: 'center',
-//   perView: 3,
-//   gap: -10,
-//   animationDuration: 600,
-//   animationTimingFunc: 'ease',
-//   classes: {
-//     slider: 'slider--slider',
-//     carousel: 'slider--carousel',
-//     swipeable: 'slider--swipeable',
-//     dragging: 'slider--dragging',
-//     cloneSlide: 'slider__slide--clone',
-//     activeNav: 'slider__bullet--active',
-//     activeSlide: 'slider__slide--active',
-//     disabledArrow: 'slider__arrow--disabled'
-//   }
-// })
-// slider.on(['build.after', 'run.after'], function (e) {
-//   let active = sliderContainer.querySelector('.slider__slide--active')
-//   //   active.classList.remove('next', 'prev')
-//   active.querySelector('.slider__header').classList.remove('fadeOutLeft')
-//   active.querySelector('.slider__header').classList.add('fadeInRight')
-//   //   active.previousElementSibling.classList.add('prev')
-//   //   active.nextElementSibling.classList.add('next')
-// })
-// slider.on(['run.before'], function (e) {
-//   let active = sliderContainer.querySelector('.slider__slide--active')
-//   active.querySelector('.slider__header').classList.remove('fadeInRight')
-//   active.querySelector('.slider__header').classList.add('fadeOutLeft')
-// })
-// slider.on(['translate.jump'], function () {
-//   let slides = sliderContainer.querySelectorAll('.slider__slide')
-//   slides.forEach(function (item, i, arr) {
-//     item.classList.remove('prev', 'next')
-//   })
-// })
-// slider.mount()
+import modalInit from './modules/modal'
 
-$('.slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: true,
-  dots: false,
-  centerMode: true,
-  variableWidth: true,
-  infinite: true,
-  focusOnSelect: true,
-  cssEase: 'linear',
-  touchMove: true,
-  rows: 0
+jQuery(document).ready(function () {
+  modalInit()
+
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    centerMode: true,
+    rows: 0,
+    centerPadding: 0,
+    variableWidth: true,
+    prevArrow: '<button type="button" class="slick-prev slick-btn"><svg class="icon icon--arrow arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>',
+    nextArrow: '<button type="button" class="slick-next slick-btn"><svg class="icon icon--arrow arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>'
+  })
+
 })
-
-// var imgs = $('.slider img')
-// imgs.each(function () {
-//   var item = $(this).closest('.item')
-//   item.css({
-//     'background-image': 'url(' + $(this).attr('src') + ')',
-//     'background-position': 'center',
-//     '-webkit-background-size': 'cover',
-//     'background-size': 'cover'
-//   })
-//   $(this).hide()
-// })

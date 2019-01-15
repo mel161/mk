@@ -1,122 +1,106 @@
 // @import "../vendors/glide.core.scss";
 // @import "../vendors/glide.theme.scss";
 
-// .slider {
-//   // Style
-//   //   Media Queries
-//   @media screen and (min-width: 1000px) {
-//   }
-//   // Elements
-//   &__slide {
-//     // Style
-//     transition: all ease 0.3s;
-//     // transform: scale(0.7);
-//     .slider__header {
-//       display: none;
-//     }
-//     &.prev {
-//       //   transform: scale(1);
-//     }
-//     &.next {
-//       //   transform: scale(1);
-//     }
-//     //   Media Queries
-//     @media screen and (min-width: 1000px) {
-//       //   width: 956px;
-//       //   min-width: 956px;
-//     }
-//     // Modifiers
-//     &--active {
-//       transform: scale(1);
-//       .slider__header {
-//         display: block;
-//       }
-//       .slider__header.animated {
-//         animation-duration: 0.5s;
-//       }
-//     }
-//   }
-//   // Modifiers
-// }
-
 .slider {
-  position: relative;
-  z-index: 200;
-  padding: 0 0px;
-  margin: 5rem auto;
-  // max-width: 800px;
-  width: calc(100%-120px);
-}
+  // Style
+  transition: all ease 300ms;
+  //   Media Queries
+  @media screen and (min-width: 1000px) {
+  }
+  // Elements
+  &__slide {
+    // Style
+    width: 736px;
+    height: 100%;
+    position: relative;
+    // left: 6%;
+    transform: translate(72%, 16%);
+    z-index: 1;
+    transition: all ease 300ms;
 
-.slick-arrow {
-  position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 50px;
-  line-height: 50px;
-  margin-top: -25px;
-  border: none;
-  background: transparent;
-  color: #fff;
-  font-family: monospace;
-  font-size: 5rem;
-  z-index: 300;
-  outline: none;
-}
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-.slick-prev {
-  left: -50px;
-  text-align: left;
-}
+    .slider__header {
+      display: none;
+    }
 
-.slick-next {
-  right: -50px;
-  text-align: right;
-}
+    .image-container {
+      width: 100%;
+      height: 100%;
+      &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: 47.07%;
+      }
 
-.item.slider__slide {
-  // width: 400px;
-  // height: 400px !important;
-  transition: transform 0.4s;
-  position: relative;
-}
+      .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-.slider__slide:after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  // background-color: rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s;
-}
 
-.item.slider__slide {
-  transform: scale(0.7) translate(640px);
-}
+    }
 
-.item.slider__slide.slick-center + .slider__slide {
-  transform: scale(0.8) translate(-250px);
-  z-index: 10;
-}
+    //   Media Queries
+    @media screen and (min-width: 1000px) {
+        // width: 956px;
+        // min-width: 956px;
 
-.item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
-  transform: scale(0.7) translate(-640px);
-  z-index: 5;
-}
+        &.slick-current {
+          width: 956px;
+          z-index: 2;
+          transition: all ease 300ms;
+          transform: translate(0, 0);
 
-.item.slick-slide.slick-active {
-  transform: scale(0.8) translate(250px);
-}
+          &::before {
+            z-index: -1;
+          }
 
-.item.slick-slide.slick-center {
-  /* margin: 0 -10%; */
-  transform: scale(1);
-  z-index: 30;
-}
+          .slider__header {
+            display: block;
+          }
 
-.slick-center:after {
-  opacity: 0;
+          + .slider__slide {
+                transform: translate(-72%, 16%);
+          }
+        }
+    }
+    // Modifiers
+    &--active {
+    }
+  }
+
+  .slick-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    .icon {
+      height: 39px;
+      width: 22px;
+    }
+
+    &.slick-prev {
+      left: 10%;
+    }
+
+    &.slick-next {
+      right: 10%;
+    }
+  }
+  // Modifiers
 }

@@ -156,6 +156,10 @@
     //  Arrow right
     &.arrow--right {
     }
+    // Arrow Left
+    &.arrow--left {
+      transform: scale(-1, -1);
+    }
     //  Arrow down
     &.arrow--down {
       transform: rotate(90deg);
