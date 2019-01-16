@@ -3,7 +3,7 @@ function init () {
   var myMap = new ymaps.Map('map', {
     center: [56.799972, 60.594181],
     zoom: 16.5,
-    controls: []
+    controls: ['zoomControl']
   })
 
   var myPlacemark = new ymaps.Placemark(
@@ -22,4 +22,4 @@ function init () {
   // myMap.setBounds(myMap.geoObjects.getBounds())
 }
 
-export default init //#endregion
+export default init // #endregion

@@ -148,6 +148,47 @@
     top: 30px;
     right: 30px;
   }
+
+  &--phone {
+    width: 12px;
+    height: 12px;
+    fill: $white;
+  }
+
+  &--hamburger {
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .line {
+      fill: none;
+      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+      stroke: $white;
+      stroke-width: 5.5;
+      stroke-linecap: round;
+
+      &.top {
+        stroke-dasharray: 40 82;
+      }
+
+      &.bottom {
+        stroke-dasharray: 40 82;
+      }
+
+      .is-active &.top {
+        stroke-dasharray: 14 82;
+        stroke-dashoffset: -72px;
+      }
+
+      .is-active &.bottom {
+        stroke-dasharray: 14 82;
+        stroke-dashoffset: -72px;
+      }
+    }
+  }
   // Arrows
   &--arrow {
     width: 7px;
@@ -173,4 +214,19 @@
       }
     }
   }
+}
+
+.ham5 .top {
+  stroke-dasharray: 40 82;
+}
+.ham5 .bottom {
+  stroke-dasharray: 40 82;
+}
+.ham5.active .top {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px;
+}
+.ham5.active .bottom {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px;
 }

@@ -1,9 +1,11 @@
 // import Glide from '@glidejs/glide'
 import 'slick-carousel'
-
+import headerInit from './modules/header'
 import modalInit from './modules/modal'
 
 jQuery(document).ready(function () {
+  headerInit()
+
   modalInit()
 
   $('.slider--main').slick({

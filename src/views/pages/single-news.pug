@@ -1,0 +1,81 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Финальный дом комплекса сдан!'
+    - var mainClass = 'main--news single'
+
+block content
+    // Header
+    .header.header--single-news
+        h1.title.title--news= title
+    // Header End
+
+    // Slider
+    .slider.slider--news
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+        .slider__slide
+            .image-container
+                img(src="./assets/images/gallery-inner-1-1.jpg", alt="").image.image--slider
+    // Slider End
+
+    // Text
+    .text.text--large.text--fw300
+        p Получено разрешение на&nbsp;ввод в&nbsp;эксплуатацию четвертого дома жилого комплекса &laquo;Московский квартал&raquo;. Этот дом является финальным в&nbsp;проекте клубных домов, поэтому с&nbsp;радостью и&nbsp;гордостью заявляем&nbsp;&mdash; жилой комплекс &laquo;Московский квартал&raquo; сдан в&nbsp;полном объеме!
+
+        p
+            | Комплекс состоит из&nbsp;4-х домов, украшающих собой Юго-Западный район, один из&nbsp;самых экологически чистых районов города. По&nbsp;ул. Московской за&nbsp;7&nbsp;минут можно добраться в&nbsp;центр. А&nbsp;можно никуда не&nbsp;выезжать&nbsp;&mdash; в&nbsp;комплексе есть буквально всё для жизни: 3-х этажный фитнес-клуб с&nbsp;бассейном, волейбольная площадка и&nbsp;зоны для ворк-аута,
+            | несколько детских площадок, салон красоты, зоомагазин, гипермаркет и&nbsp;многое другое. В&nbsp;скором времени на&nbsp;территории &laquo;Московского квартала&raquo; откроется и&nbsp;детский сад.
+
+        p Безопасная жизнь&nbsp;&mdash; кредо комплекса. Видеонаблюдение, регулярный мониторинг территории, консьерж-служба, следящая за&nbsp;порядком внутри домов, пост охраны на&nbsp;въезде&nbsp;&mdash; в&nbsp;&laquo;Московском квартале&raquo; чувствуешь себя под безупречной защитой.
+
+        p
+            | Внутри&nbsp;же домов жителей наполняет ощущение комфорта и&nbsp;эстетического удовольствия. Холлы с&nbsp;дизайнерским ремонтом сразу приковывают к&nbsp;себе взгляды. За&nbsp;эффектной стойкой консьерж непринужденно общается с&nbsp;жителями.
+            | Квартиры в&nbsp;домах светлые и&nbsp;просторные, с&nbsp;отделкой &laquo;под ключ&raquo;&nbsp;&mdash; можно заезжать и&nbsp;жить, не&nbsp;думая о&nbsp;хлопотах ремонта.
+
+        p Удивительно, но&nbsp;ЖК&nbsp;&laquo;Московский квартал&raquo; удалось сделать практически невозможное&nbsp;&mdash; создать среду, обладающую всеми преимуществами клубного дома, но&nbsp;с&nbsp;доступными ценами на&nbsp;жилье. Стоимость квартир начинается от&nbsp;3,3&nbsp;млн&nbsp;рублей. Стать жителем &laquo;Московского квартала&raquo; можно уже сейчас&nbsp;&mdash; узнайте подробную информацию по&nbsp;телефону офиса продаж: (343)&nbsp;302&nbsp;13&nbsp;93. Посмотреть планировки можно в&nbsp;разделе &laquo;Планировки и&nbsp;цены&raquo;.
+
+        p Предложение не&nbsp;является публичной офертой.
+    // Text End
+
+    .row
+        // Button Submit
+        a(href="news.html", title="title").btn.btn--back
+            svg.icon.icon--arrow.arrow--left(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+            | Назад к новостям
+        // Button Submit End
+
+
+
+
+block scripts
+    script(src='assets/scripts/news.bundle.js')

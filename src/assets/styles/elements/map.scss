@@ -29,7 +29,21 @@
   &--hero {
     width: 1032px;
     height: 654px;
-    position: relative;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      position: absolute;
+      top: 57%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and (min-width: 1700px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
 
     .btn {
       position: absolute;

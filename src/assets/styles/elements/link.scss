@@ -39,6 +39,11 @@
     // Styles
 
     @media screen and (min-width: 1000px) {
+      font-size: 12px;
+      line-height: 45px;
+    }
+
+    @media screen and (min-width: 1700px) {
       font-size: 14px;
       line-height: 55px;
     }

@@ -405,6 +405,7 @@
 
         .camera &::before {
           content: "10 %";
+          font-size: 200px;
         }
 
         .parking &::before {
@@ -426,7 +427,7 @@
         }
         .card__inner {
           float: right;
-          padding: 0 300px 97px;
+          padding: 0 70px 80px 105px;
         }
       }
       &:nth-child(even) {
@@ -435,11 +436,61 @@
         }
         .card__inner {
           float: left;
-          padding: 0 289px 97px 317px;
+          padding: 0 70px 80px 105px;
         }
 
         .title--card {
           margin-left: -2px;
+        }
+      }
+
+      .parking & {
+        .card__inner {
+          padding: 0 70px 0 105px;
+        }
+      }
+
+      .contacts & {
+        .card__inner {
+          padding: 0 0 0 100px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1700px) {
+      .card__inner {
+        &::before {
+          font-size: 260px;
+          line-height: 1;
+          font-weight: 900;
+          left: 88px;
+          top: 20px;
+          letter-spacing: -13px;
+        }
+
+        .camera &::before {
+          font-size: 260px;
+        }
+
+        .parking &::before {
+          content: "362";
+        }
+
+        .contacts &::before {
+          content: "503";
+        }
+      }
+
+      &:nth-child(odd) {
+        .card__inner {
+          float: right;
+          padding: 0 300px 97px;
+        }
+      }
+      &:nth-child(even) {
+        .card__inner {
+          float: left;
+          padding: 0 289px 97px 317px;
         }
       }
 
@@ -469,6 +520,28 @@
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      width: 336px;
+      height: 150px;
+      float: left;
+      padding: 30px 20px;
+      margin-right: 8px;
+      margin-bottom: 30px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .card__header {
+        margin: -4px 0 0 0;
+      }
+
+      .card__footer {
+        height: 49px;
+        padding: 0 73px;
+      }
+    }
+
+    @media screen and (min-width: 1700px) {
       width: 336px;
       height: 150px;
       float: left;

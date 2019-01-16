@@ -50,9 +50,13 @@ button {
   }
 
   //  Media Queries
-  @media screen and (max-width: 999px) {
-  }
   @media screen and (min-width: 1000px) {
+    width: 230px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 25px;
+  }
+  @media screen and (min-width: 1700px) {
     width: 250px;
     height: 55px;
     line-height: 55px;
@@ -194,6 +198,36 @@ button {
     // Media Queries
     @media screen and (min-width: 1000px) {
       margin-top: 86px;
+    }
+  }
+
+  // Back Button
+  &--back {
+    // Style
+    background-color: $white;
+    color: $black;
+    text-align: right;
+
+    .icon.icon--arrow {
+      position: absolute;
+      top: 48%;
+      transform: translateY(-50%) scale(-1);
+      left: 26px;
+    }
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+
+      .icon {
+        fill: $brand-color;
+      }
+    }
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      display: block;
+      margin: 84px auto 9px;
     }
   }
 }

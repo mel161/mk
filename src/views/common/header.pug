@@ -7,47 +7,81 @@
 .header.header--top(class=headerClass)
     // Header Inner
     .header__inner
-        // Logo
-        h1.logo
+        // Call Button
+        a(href="tel:73433020668", title="title").link.link--btn.btn.btn--round.btn--base.btn--call
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 406.35 387.31').icon.icon--phone
+                path(d='M396.8 289.32l-70.8-38c-23.6-12.8-24.4-4.4-49.2 22-6 6.4-17.2 23.2-30.4 20-27.6-6.8-79.2-47.2-96-65.6-8-8.8-42.4-50.8-42.8-64.4-.8-20.8 44.8-31.2 30-70.8L106 21.72C76.4-46.28-6.4 62.52.4 113.32 18 238.52 237.6 440.92 360 374.12c27.2-15.2 64-68.4 36.8-84.8z')
+        // Call Button End
+
+        // Logo Small
+        .logo.logo--small
             a(href="./").logo__link.link.link--block
-                img(src=logoImageUrl, alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").logo__image.image.image--logo
-        // Logo End
-        // Button to Select Flats
-        a.btn.btn--base.link.link--btn(href="")
-            | Выбрать квартиру
-        // Button to Select Flats End
-        // Nav Main
-        include ./menu.pug
-        // Nav Main End
-        // Info
-        .info
-            // Info Contacts
-            .info__contacts
-                // Link Phone
-                a(href="tel:+73433020668").link.link--text.text--large
-                    | +7 (343) 302 06 68
-                // Link Phone End
-                // Link Call Me
-                a(href="tel:+73433020668").link.link--text.text.text--underline.text--normal
-                    | Перезвоните мне
-                // Link Call Me End
-            // Info Contacts End
-            .info__socials
-                // Socials
-                nav.nav.nav--socials
-                    ul.nav__list.nav__list--horizontal
-                        li.nav__item
-                            a(href="").link.link--nav.btn.btn--round
-                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 117.67 226.58').icon.icon--fb
-                                    path(d='M76.38 226.58V123.23h34.69l5.19-40.28H76.38V57.23c0-11.66 3.24-19.61 20-19.61h21.33v-36A285.42 285.42 0 0 0 86.59 0C55.84 0 34.78 18.77 34.78 53.24v29.71H0v40.28h34.78v103.35z')
-                        li.nav__item
-                            a(href="").link.link--nav.btn.btn--round
-                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 272.13 159.33').icon.icon--vk
-                                    path(d='M226.06 78.12s35.86-50.58 39.42-67.2c1.19-5.94-1.43-9.26-7.6-9.26h-31.11c-7.12 0-9.74 3.09-11.87 7.6 0 0-16.82 35.83-37.28 58.42-6.57 7.3-9.91 9.5-13.54 9.5-2.92 0-4.27-2.44-4.27-9V10.45c0-8.07-.95-10.45-7.6-10.45h-49.87c-3.8 0-6.17 2.21-6.17 5.22 0 7.6 11.64 9.32 11.64 29.92v42.5c0 8.55-.48 11.87-4.51 11.87-10.69.01-36.1-36.79-50.3-78.59C50.1 2.38 47 0 38.94 0H7.84C3.32 0 0 3.09 0 7.6c0 8.31 9.74 46.78 48 98.31 25.64 34.67 59.36 53.43 89.76 53.43 18.52 0 23-3.09 23-10.92v-26.6c0-6.65 2.61-9.5 6.41-9.5 4.27 0 11.82 1.37 29.44 18.76 20.9 19.95 22.32 28.26 33.72 28.26h34.91c3.56 0 6.89-1.66 6.89-7.6 0-7.84-10.21-21.85-25.88-38.47-6.41-8.55-16.86-17.81-20.18-22.08-4.76-4.99-3.34-7.84-.01-13.07z')
-                        li.nav__item
-                            a(href="").link.link--nav.btn.btn--round
-                                svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100.17 100.17').icon.icon--insta
-                                    path(d='M12.86 0h74.45a12.89 12.89 0 0 1 12.86 12.86v74.45a12.89 12.89 0 0 1-12.86 12.85H12.86A12.89 12.89 0 0 1 0 87.31V12.86A12.9 12.9 0 0 1 12.86 0zM73 11.12a4.53 4.53 0 0 0-4.51 4.52v10.79A4.52 4.52 0 0 0 73 30.94h11.29a4.52 4.52 0 0 0 4.51-4.51V15.64a4.53 4.53 0 0 0-4.51-4.52zm15.85 31.24H80A29.33 29.33 0 0 1 81.32 51c0 16.66-13.95 30.17-31.14 30.17S19 67.62 19 51a29.4 29.4 0 0 1 1.29-8.6h-9.2v42.28a4 4 0 0 0 4 4h69.78a4 4 0 0 0 4-4zm-38.67-12c-11.11 0-20.12 8.72-20.12 19.5s9 19.49 20.12 19.49S70.3 60.63 70.3 49.87s-9.01-19.5-20.12-19.5z')
-                // Socials End
-        // Info End
+                img(src='./assets/images/logo-small-black.png', alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").logo__image.image.image--logo
+        // Logo Small End
+
+        // Nav Trigger Button
+        a(href="#", title="title").link.link--btn.btn.btn--round.btn--base.btn--nav-trigger
+            svg.icon.icon--hamburger(viewbox='0 0 100 100')
+                path.line.top(d='m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429')
+                path.line.middle(d='m 70,50 h -40')
+                path.line.bottom(d='m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429')
+        // Nav Trigger Button End
     // Header Inner End
+
+    // Header Slide
+    .header__slide
+        .header__container
+            // Logo Full
+            h1.logo.logo--full
+                a(href="./").logo__link.link.link--block
+                    img(src=logoImageUrl, alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").logo__image.image.image--logo
+            // Logo Full End
+
+            // Nav Main
+            include ./menu.pug
+            // Nav Main End
+
+            // Button to Select Flats
+            a.link.link--btn.btn.btn--base.btn--select(href="")
+                | Выбрать квартиру
+            // Button to Select Flats End
+
+            // Info
+            .info.info--header
+                // Info Contacts
+                .info__contacts
+                    // Link Phone
+                    a(href="tel:+73433020668").link.link--text.text--large
+                        | +7 (343) 302 06 68
+                    // Link Phone End
+                    // Link Call Me
+                    a(href="tel:+73433020668").link.link--text.text.text--underline.text--normal
+                        | Перезвоните мне
+                    // Link Call Me End
+                // Info Contacts End
+                .info__socials
+                    // Socials
+                    nav.nav.nav--socials
+                        ul.nav__list.nav__list--horizontal
+                            li.nav__item
+                                a(href="").link.link--nav.btn.btn--round
+                                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 117.67 226.58').icon.icon--fb
+                                        path(d='M76.38 226.58V123.23h34.69l5.19-40.28H76.38V57.23c0-11.66 3.24-19.61 20-19.61h21.33v-36A285.42 285.42 0 0 0 86.59 0C55.84 0 34.78 18.77 34.78 53.24v29.71H0v40.28h34.78v103.35z')
+                            li.nav__item
+                                a(href="").link.link--nav.btn.btn--round
+                                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 272.13 159.33').icon.icon--vk
+                                        path(d='M226.06 78.12s35.86-50.58 39.42-67.2c1.19-5.94-1.43-9.26-7.6-9.26h-31.11c-7.12 0-9.74 3.09-11.87 7.6 0 0-16.82 35.83-37.28 58.42-6.57 7.3-9.91 9.5-13.54 9.5-2.92 0-4.27-2.44-4.27-9V10.45c0-8.07-.95-10.45-7.6-10.45h-49.87c-3.8 0-6.17 2.21-6.17 5.22 0 7.6 11.64 9.32 11.64 29.92v42.5c0 8.55-.48 11.87-4.51 11.87-10.69.01-36.1-36.79-50.3-78.59C50.1 2.38 47 0 38.94 0H7.84C3.32 0 0 3.09 0 7.6c0 8.31 9.74 46.78 48 98.31 25.64 34.67 59.36 53.43 89.76 53.43 18.52 0 23-3.09 23-10.92v-26.6c0-6.65 2.61-9.5 6.41-9.5 4.27 0 11.82 1.37 29.44 18.76 20.9 19.95 22.32 28.26 33.72 28.26h34.91c3.56 0 6.89-1.66 6.89-7.6 0-7.84-10.21-21.85-25.88-38.47-6.41-8.55-16.86-17.81-20.18-22.08-4.76-4.99-3.34-7.84-.01-13.07z')
+                            li.nav__item
+                                a(href="").link.link--nav.btn.btn--round
+                                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100.17 100.17').icon.icon--insta
+                                        path(d='M12.86 0h74.45a12.89 12.89 0 0 1 12.86 12.86v74.45a12.89 12.89 0 0 1-12.86 12.85H12.86A12.89 12.89 0 0 1 0 87.31V12.86A12.9 12.9 0 0 1 12.86 0zM73 11.12a4.53 4.53 0 0 0-4.51 4.52v10.79A4.52 4.52 0 0 0 73 30.94h11.29a4.52 4.52 0 0 0 4.51-4.51V15.64a4.53 4.53 0 0 0-4.51-4.52zm15.85 31.24H80A29.33 29.33 0 0 1 81.32 51c0 16.66-13.95 30.17-31.14 30.17S19 67.62 19 51a29.4 29.4 0 0 1 1.29-8.6h-9.2v42.28a4 4 0 0 0 4 4h69.78a4 4 0 0 0 4-4zm-38.67-12c-11.11 0-20.12 8.72-20.12 19.5s9 19.49 20.12 19.49S70.3 60.63 70.3 49.87s-9.01-19.5-20.12-19.5z')
+                    // Socials End
+            // Info End
+
+            // Copyright
+            .copyright.copyright--header
+                span.text.text--fw300.text--normal
+                    | Сделано в&nbsp;
+                    a(href="http://radigital.ru/", title="RADIGITAL").link.link--text.text--underline RADIGITAL
+            // Copyright End
+    // Header Slide End

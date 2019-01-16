@@ -1,5 +1,6 @@
 import './modules/select'
 import btnGroup from './modules/btn-group'
+import headerInit from './modules/header'
 import mapInit from './modules/map-home'
 import mapHeroInit from './modules/map-hero'
 import RangeSlider from './modules/range'
@@ -52,4 +53,5 @@ jQuery(document).ready(function () {
   /* global ymaps */
   ymaps.ready(mapInit)
   mapHeroInit()
+  headerInit()
 })
