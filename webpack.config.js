@@ -12,10 +12,12 @@ const config = {
     aboutGallery: './src/assets/scripts/about-gallery.js',
     aboutCamera: './src/assets/scripts/about-camera.js',
     aboutDocs: './src/assets/scripts/about-docs.js',
+    action: './src/assets/scripts/action.js',
     commercial: './src/assets/scripts/commercial.js',
     contacts: './src/assets/scripts/contacts.js',
     news: './src/assets/scripts/news.js',
-    parking: './src/assets/scripts/parking.js'
+    parking: './src/assets/scripts/parking.js',
+    singleNews: './src/assets/scripts/single-news.js'
   },
   output: {
     filename: '[name].bundle.js'

@@ -8,8 +8,7 @@
   left: 0;
 
   // Media Queries
-  @media screen and (min-width: 1000px) {
-  }
+  @media screen and (min-width: 1000px) {}
 
   // Elements
   &__bg {
@@ -20,8 +19,7 @@
     height: 100%;
 
     // Media Queries
-    @media screen and (min-width: 1000px) {
-    }
+    @media screen and (min-width: 1000px) {}
 
     // Modifiers
   }
@@ -29,25 +27,65 @@
   &__inner {
     // Style
 
+    .btn.modal__close {
+      display: none;
+    }
+
     // Media Queries
     @media screen and (min-width: 1000px) {
       width: 960px;
-      height: 664px;
+      height: calc(100% - 218px);
+      min-height: 550px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $white;
-      padding: 93px 170px;
+      padding: 50px 170px;
       box-sizing: border-box;
       text-align: center;
 
-      > .text {
+      >.text {
         line-height: 19px;
       }
     }
 
+    @media screen and (min-width: 1300px) {
+      min-height: 600px;
+      padding: 70px 150px;
+
+    }
+
+    @media screen and (min-width: 1600px) {
+      min-height: 664px;
+      padding: 93px 170px;
+    }
+
     // Modifiers
+
+    &--thanks {
+      // Style
+
+      // Media Queries
+      @media screen and (min-width: 1000px) {
+        min-height: 480px;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 8px;
+
+        .btn.modal__close {
+          display: inline-block;
+          text-align: center;
+          font-weight: 100;
+          line-height: 55px;
+          color: #ffffff;
+        }
+      }
+
+      @media screen and (min-width: 1300px) {}
+
+      @media screen and (min-width: 1600px) {}
+    }
   }
 
   &__close {
@@ -55,14 +93,14 @@
     cursor: pointer;
 
     // Media Queries
-    @media screen and (min-width: 1000px) {
-    }
+    @media screen and (min-width: 1000px) {}
 
     // Modifiers
   }
 
   // Modifiers
   &--slider {
+
     // Style
     .modal__inner {
       background-color: transparent;
@@ -81,6 +119,22 @@
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      .modal__inner {
+        background-color: transparent;
+        padding: 69px 68px 76px 84px;
+        width: 960px;
+        min-width: 960px;
+        height: auto;
+      }
+    }
+
+    @media screen and (min-width: 1300px) {
+      .modal__inner {
+        background-color: transparent;
+        padding: 69px 68px 76px 84px;
+        width: calc(100% - 320px);
+        height: calc(100% - 140px);
+      }
     }
   }
 
@@ -91,7 +145,6 @@
     z-index: 100;
 
     // Media Queries
-    @media screen and (min-width: 1000px) {
-    }
+    @media screen and (min-width: 1000px) {}
   }
 }

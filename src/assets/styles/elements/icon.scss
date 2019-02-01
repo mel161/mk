@@ -1,6 +1,7 @@
 .icon {
   //  Styles
   fill: $base-color;
+
   .btn--round & {
     position: absolute;
     top: 50%;
@@ -22,16 +23,19 @@
     width: 5px;
     height: 10px;
   }
+
   // VK
   &--vk {
     width: 12px;
     height: 7px;
   }
+
   // Instagram
   &--insta {
     width: 11px;
     height: 11px;
   }
+
   // City Icon (Infrastructure Show All)
   &--city {
     width: 38px;
@@ -41,6 +45,7 @@
       left: 72px;
     }
   }
+
   //
   &--transport {
     width: 40px;
@@ -50,6 +55,7 @@
       left: 75px;
     }
   }
+
   //
   &--school {
     width: 36px;
@@ -60,6 +66,7 @@
       top: 43%;
     }
   }
+
   //
   &--aid {
     width: 44px;
@@ -70,6 +77,7 @@
       top: 52%;
     }
   }
+
   //
   &--fun {
     width: 46px;
@@ -81,6 +89,7 @@
       transform: scale(-1, 1) translate(0, -50%);
     }
   }
+
   //
   &--shops {
     width: 42px;
@@ -90,6 +99,7 @@
       left: 58px;
     }
   }
+
   //
   &--play {
     width: 114px;
@@ -189,18 +199,20 @@
       }
     }
   }
+
   // Arrows
   &--arrow {
     width: 7px;
     height: 12px;
 
     //  Arrow right
-    &.arrow--right {
-    }
+    &.arrow--right {}
+
     // Arrow Left
     &.arrow--left {
       transform: scale(-1, -1);
     }
+
     //  Arrow down
     &.arrow--down {
       transform: rotate(90deg);
@@ -213,19 +225,26 @@
         fill: $brand-color;
       }
     }
+
+    &.arrow--up {
+      transform: rotate(-90deg);
+    }
   }
 }
 
 .ham5 .top {
   stroke-dasharray: 40 82;
 }
+
 .ham5 .bottom {
   stroke-dasharray: 40 82;
 }
+
 .ham5.active .top {
   stroke-dasharray: 14 82;
   stroke-dashoffset: -72px;
 }
+
 .ham5.active .bottom {
   stroke-dasharray: 14 82;
   stroke-dashoffset: -72px;

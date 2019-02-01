@@ -2,38 +2,61 @@
 import 'slick-carousel'
 import headerInit from './modules/header'
 import modalInit from './modules/modal'
+import formInit from './modules/form'
+import scrollInit from './modules/scroll'
+
+function sliderButtonPosition() {
+  var offset = $('.slick-current')
+    .eq(1)
+    .offset()
+  var top = offset.top
+  var left = offset.left
+
+  $('.slider--main .slick-btn.slick-prev').css('left', left - 38 + 'px')
+  $('.slider--main .slick-btn.slick-next').css('right', left - 38 + 'px')
+}
+
+$(window).resize(function () {
+  sliderButtonPosition()
+  $('.slider--main').slick('resize')
+})
 
 jQuery(document).ready(function () {
   headerInit()
 
   modalInit()
+  formInit()
+
+  scrollInit()
 
   $('.slider--main').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
     centerMode: true,
-    rows: 0,
-    centerPadding: 0,
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    speed: 250,
     variableWidth: true,
-    prevArrow:
-      '<button type="button" class="slick-prev slick-btn"><svg class="icon icon--arrow arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>',
-    nextArrow:
-      '<button type="button" class="slick-next slick-btn"><svg class="icon icon--arrow arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>'
+    centerPadding: 0,
+    rows: 0,
+    prevArrow: '<button type="button" class="slick-prev slick-btn"><svg class="icon icon--arrow arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.04 55.72"><g><path d="M3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L29.41 29.4a2.18 2.18 0 0 0 0-3.08z"/></g></svg></span></button>',
+    nextArrow: '<button type="button" class="slick-next slick-btn"><svg class="icon icon--arrow arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.04 55.72"><g><path d="M3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L29.41 29.4a2.18 2.18 0 0 0 0-3.08z"/></g></svg></span></button>'
   })
 
-  $('.slider--modal').slick({
-    slidesToShow: 1,
-    dots: true,
-    rows: 0,
-    centerMode: true,
-    centerPadding: 0,
-    // variableWidth: true,
-    // adaptiveHeight: true,
-    prevArrow:
-      '<button type="button" class="slick-prev slick-btn"><svg class="icon icon--arrow arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>',
-    nextArrow:
-      '<button type="button" class="slick-next slick-btn"><svg class="icon icon--arrow arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.04 59.72"><g><path d="M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0"></path></g></svg></span></button>'
-  })
+  sliderButtonPosition()
+
+  $('.slider__slide').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('slick-current')) {
+      let id = '#' + $(this).attr('data-modal')
+      $('.modal').filter(id).find('.slider--modal').slick({
+        slidesToShow: 1,
+        dots: true,
+        rows: 0,
+        centerMode: true,
+        centerPadding: 0,
+        prevArrow: '<button type="button" class="slick-prev slick-btn"><svg class="icon icon--arrow arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.04 55.72"><g><path d="M3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L29.41 29.4a2.18 2.18 0 0 0 0-3.08z"/></g></svg></span></button>',
+        nextArrow: '<button type="button" class="slick-next slick-btn"><svg class="icon icon--arrow arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.04 55.72"><g><path d="M3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L29.41 29.4a2.18 2.18 0 0 0 0-3.08z"/></g></svg></span></button>'
+      })
+    }
+  });
 })

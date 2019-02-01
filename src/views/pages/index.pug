@@ -9,7 +9,7 @@ block content
     .hero
         .hero__inner
             .map.map--hero
-                a(href="#", title="title").btn.btn--square.map__btn-1 1
+                a(href="#").btn.btn--square.map__btn-1 1
                 .map_info.map_info--house-1
                     .map__inner
                         .text.text--large.text--fw-500.text--uppercase дом 1
@@ -17,7 +17,7 @@ block content
                         .text.text--small.text--fw300 25 этажей
                         .text.text--small.text--fw300
                             | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-2 2
+                a(href="#").btn.btn--square.map__btn-2 2
                 .map_info.map_info--house-2
                     .map__inner
                         .text.text--large.text--fw-500.text--uppercase дом 2
@@ -25,7 +25,7 @@ block content
                         .text.text--small.text--fw300 25 этажей
                         .text.text--small.text--fw300
                             | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-3 3
+                a(href="#").btn.btn--square.map__btn-3 3
                 .map_info.map_info--house-3
                     .map__inner
                             .text.text--large.text--fw-500.text--uppercase дом 3
@@ -33,7 +33,7 @@ block content
                             .text.text--small.text--fw300 25 этажей
                             .text.text--small.text--fw300
                                 | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-4 4
+                a(href="#").btn.btn--square.map__btn-4 4
                 .map_info.map_info--house-4
                     .map__inner
                             .text.text--large.text--fw-500.text--uppercase дом 4
@@ -41,7 +41,7 @@ block content
                             .text.text--small.text--fw300 25 этажей
                             .text.text--small.text--fw300
                                 | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-5 5
+                a(href="#").btn.btn--square.map__btn-5 5
                 .map_info.map_info--house-5
                     .map__inner
                         .text.text--large.text--fw-500.text--uppercase дом 5
@@ -49,7 +49,7 @@ block content
                         .text.text--small.text--fw300 25 этажей
                         .text.text--small.text--fw300
                             | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-6 6
+                a(href="#").btn.btn--square.map__btn-6 6
                 .map_info.map_info--house-6
                     .map__inner
                         .text.text--large.text--fw-500.text--uppercase дом 6
@@ -57,7 +57,7 @@ block content
                         .text.text--small.text--fw300 25 этажей
                         .text.text--small.text--fw300
                             | 1-2-3-комнатные квартиры
-                a(href="#", title="title").btn.btn--square.map__btn-7 7
+                a(href="#").btn.btn--square.map__btn-7 7
                 .map_info.map_info--house-7
                     .map__inner
                             .text.text--large.text--fw-500.text--uppercase дом 7
@@ -65,10 +65,13 @@ block content
                             .text.text--small.text--fw300 25 этажей
                             .text.text--small.text--fw300
                                 | 1-2-3-комнатные квартиры
+        a.btn.btn--transparent.link.link--btn(href="#search")
+            svg.icon.icon--arrow.arrow--down(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
+                path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
     // Hero End
 
     // Section Flats Selection
-    .section
+    .section#search
         // Section Inner
         .section__inner
             // Section Header
@@ -238,7 +241,7 @@ block content
         .section__inner
             // Section Header
             h2.title.title--section.section__title
-                | Расположение квартала
+                | Расположение комплекса
             // Section Header End
         // Section Inner End
         // Map
@@ -249,7 +252,7 @@ block content
             .features
                 .card.card--base
                     .card__content
-                        .text.text--xlarge.text--fw-500 15
+                        .text.text--xlarge.text--fw-500 10
                         .text.text--large.text--fw-500 минут
                         .text.text--normal.text--fw-300.text--brand до центра
                 .card.card--base
@@ -264,9 +267,9 @@ block content
                         .text.text--normal.text--fw-300.text--brand рядом с домом
                 .card.card--base
                     .card__content
-                        .text.text--xlarge.text--fw-500 2
-                        .text.text--large.text--fw-500 уровня
-                        .text.text--normal.text--fw-300.text--brand паркинга
+                        .text.text--xlarge.text--fw-500 1
+                        .text.text--large.text--fw-500 фитнес
+                        .text.text--normal.text--fw-300.text--brand клуб
         // Section Inner End
     // Section Flats Selection End
 

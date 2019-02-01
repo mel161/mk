@@ -2,6 +2,7 @@
   // Styles
   @include clearfix();
   height: 100%;
+
   //Elements
   // Nav List
   &__list {
@@ -17,6 +18,7 @@
       @include clearfix();
     }
   }
+
   // Nav Item
   &__item {
     //  Styles
@@ -29,19 +31,18 @@
     }
 
     // Media Queries
-    @media screen and (min-width: 1000px) {
-    }
+    @media screen and (min-width: 1000px) {}
 
     // Modifiers
     &--divider {
       height: 10px;
-      margin-right: 0;
-      margin-left: -43px;
+      // margin-right: 0;
+      // margin-left: -43px;
 
       @media screen and (min-width: 1000px) {
-        width: 287px;
-        margin-right: 0;
-        margin-left: -53px;
+        // width: 287px;
+        // margin-right: 0;
+        // margin-left: -53px;
       }
 
       @media screen and (min-width: 1700px) {
@@ -51,9 +52,9 @@
       }
     }
   }
+
   // Media Queries
-  @media screen and (min-width: 1000px) {
-  }
+  @media screen and (min-width: 1000px) {}
 
   // Modifiers
   // Main
@@ -61,7 +62,7 @@
     // Styles
     float: left;
 
-    > .nav__list--horizontal {
+    >.nav__list--horizontal {
       // display: flex;
       // justify-content: space-between;
     }
@@ -69,29 +70,57 @@
     // Media Queries
     @media screen and (min-width: 1000px) {
       position: absolute;
-      width: 100%;
-      bottom: 0;
-      height: 68px;
+      width: 455px;
+      left: 269px;
+      top: 21px;
 
-      > .nav__list--horizontal {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+      >.nav__list--horizontal {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // // width: 1000px;
       }
 
       .nav__item {
-        margin-right: 53px;
-
-        &:last-of-type {
-          margin-right: 0;
-        }
+        // margin-right: 53px;
+        // &:last-of-type {
+        //   margin-right: 0;
+        // }
+        // &.nav__item--divider {
+        //   margin-right: 0;
+        //   +.nav__item {
+        //     margin-right: 93px;
+        //   }
+        // }
+        float: none;
+        position: relative;
+        width: 120px;
 
         &.nav__item--divider {
-          margin-right: 0;
+          display: none;
+        }
 
-          + .nav__item {
-            margin-right: 93px;
-          }
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          float: left;
+          display: block;
+          clear: left;
+          margin-top: 2px;
+        }
+
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2) {
+          float: right;
+          display: block;
+          clear: right;
+          text-align: right;
+        }
+
+        &:nth-last-of-type(2) {
+          margin-top: -43px;
+          line-height: 15px;
         }
       }
     }
@@ -100,24 +129,62 @@
       position: relative;
       width: 960px;
       height: 100%;
+      top: 0;
+      left: 0;
 
-      > .nav__list--horizontal {
+      >.nav__list--horizontal {
         position: absolute;
         top: 50%;
+        left: 0;
         transform: translateY(-50%);
       }
 
       .nav__item {
         margin-right: 42px;
+        width: auto;
 
         &.nav__item--divider {
-          + .nav__item {
+          display: block;
+          width: 298px;
+          margin-right: 0;
+          margin-left: -43px;
+          float: left;
+
+          +.nav__item {
             margin-right: 68px;
           }
+        }
+
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          float: left;
+          display: block;
+          clear: none;
+          margin-top: 2px;
+        }
+
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2) {
+          float: left;
+          display: block;
+          clear: none;
+          text-align: left;
+        }
+
+        &:nth-last-of-type(2) {
+          margin-top: 0;
+          line-height: 15px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
         }
       }
     }
   }
+
   // Socials
   &--socials {
     // width: 100%;
@@ -125,9 +192,11 @@
 
     .info__socials & {
       float: right;
+
       @media screen and (min-width: 1000px) {
-        margin-top: 30px;
+        margin-top: 38px;
       }
+
       @media screen and (min-width: 1700px) {
         margin-top: 50px;
       }
@@ -145,8 +214,10 @@
       }
     }
   }
+
   // Inner
   &--inner {
+
     // Style
     .nav__list {
       width: auto;
@@ -175,6 +246,7 @@
         color: $white;
       }
     }
+
     // Media Queries
     @media screen and (min-width: 1000px) {
       margin: 30px auto;
@@ -183,6 +255,7 @@
       .nav__list {
         display: inline-block;
       }
+
       .nav__item {
         margin-right: 20px;
 

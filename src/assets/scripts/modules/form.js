@@ -1,13 +1,13 @@
 import 'jquery-mask-plugin'
 
-function isNumeric (value) {
+function isNumeric(value) {
   var matches = value.match(/\d+/g)
   if (matches != null) {
     return true
   }
 }
 
-function checkError () {
+function checkError() {
   if ($('.field--name').is('.is-valid') && $('.field--phone').is('.is-valid')) {
     $('.btn--submit').prop('disabled', false)
 
@@ -15,19 +15,23 @@ function checkError () {
 
     $('.btn--submit').click(function (e) {
       e.preventDefault()
-      $.post(
-        '/form',
-        formData,
-        function (formData, textStatus, jqXHR) {},
-        'dataType'
-      ).done(function () {})
+      // $.post(
+      //   '/form',
+      //   formData,
+      //   function (formData, textStatus, jqXHR) {},
+      //   'dataType'
+      // ).done(function () {})
+      $('.title--modal').html('Спасибо!');
+      $('.modal__inner .text--large').toggleClass('text--hide')
+      $('.modal__inner .form').addClass('form--hide')
+      $('.modal__inner').addClass('modal__inner--thanks')
     })
   } else {
     $('.btn--submit').prop('disabled', true)
   }
 }
 
-function validField (value, obj) {
+function validField(value, obj) {
   const input = $(obj)
   const minLength = input.attr('minlength')
 
@@ -73,7 +77,7 @@ function validField (value, obj) {
   }
 }
 
-function formInit () {
+function formInit() {
   let dataForm
 
   $('.field__input').focus(function (e) {
@@ -99,17 +103,41 @@ function formInit () {
   $('#field--number').on('blur keyup', function (e) {
     e.preventDefault()
 
-    if ($(this).val().length !== 0) {
-      if ($(this).val().length <= 2) {
+    let value = $(this).val()
+
+    if ($(this).prop('validity')['badInput']) {
+      $(this)
+        .siblings('.field__error--char')
+        .addClass('field__error--top')
+        .parents('.field')
+        .removeClass('is-valid')
+        .addClass('is-error')
+    }
+
+    if (value.length !== 0) {
+      if ($(this).val().length > 0) {
         $(this)
+          .siblings('.field__error')
+          .removeClass('field__error--top')
           .parents('.field')
-          .addClass('is-valid')
           .removeClass('is-error')
+          .addClass('is-valid')
       } else {
         $(this)
+          .siblings('.field__error--required')
+          .addClass('field__error--top')
           .parents('.field')
           .removeClass('is-valid')
           .addClass('is-error')
+      }
+
+      if ($(this).prop('validity')['valid']) {
+        $(this)
+          .siblings('.field__error')
+          .removeClass('field__error--top')
+          .parents('.field')
+          .addClass('is-valid')
+          .removeClass('is-error')
       }
 
       checkError()

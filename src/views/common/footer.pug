@@ -6,9 +6,56 @@ footer.footer
             span.text.text--fw300.text--small
                 | Екатеринбург, ул. Ясная 2, офис
                 | 503 (ТРЦ Фан Фан)
+            a(href="tel:+73433020668").link.link--text.text--small.text--fw300
+                | +7 (343) 302 06 68
         .copyright
             span.text.text--fw300.text--normal
                 | Сделано в&nbsp;
                 a(href="http://radigital.ru/", title="RADIGITAL").link.link--text.text--underline RADIGITAL
         a.btn.btn--transparent.link.link--btn(href="#up")
-            img(src="./assets/images/arrow-up.png", alt="Стрелка вверх")
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 30.04 55.72').icon.icon--arrow.arrow--up
+                path(d='M3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L29.41 29.4a2.18 2.18 0 0 0 0-3.08z' data-name='Layer 1')
+
+
+// Modal
+.modal#js-modal-recall
+    .modal__bg
+    .modal__inner
+        // Close Button
+        a(href="#close", title="Закрыть").modal__close.link.link--block
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 54.82 55.72').icon.icon--close
+                path(d='M54.18 52L30 27.86 54.18 3.73a2.18 2.18 0 0 0 0-3.09A2.16 2.16 0 0 0 52.64 0a2.17 2.17 0 0 0-1.54.64L27.41 24.33 3.73.64A2.17 2.17 0 0 0 2.18 0 2.19 2.19 0 0 0 0 2.19a2.17 2.17 0 0 0 .64 1.54l24.13 24.13L.64 52a2.18 2.18 0 1 0 3.09 3.08L27.41 31.4l23.68 23.68A2.18 2.18 0 1 0 54.18 52z')
+        // Close Button End
+
+        h3.title.title--modal.text--fw700 Выбрали место или хотите консультацию специалиста?
+
+        .text.text--fw100.text--large Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы забронировать понравившееся вам место или проконсультировать вас по&nbsp;любым вопросам.
+
+        .text.text--fw100.text--large.text--hide Ваши контактные данные успешно отправлены!
+            br
+            |Мы&nbsp;свяжемся с&nbsp;вами, чтобы забронировать понравившееся вам место или проконсультировать вас по&nbsp;любым вопросам.
+
+        a(href='#close').btn.btn--secondary.link.ink--btn.modal__close ВЕРНУТЬСЯ НА САЙТ
+
+        form.form(action="" method="POST" novalidate)
+            .row
+                .field.field--name
+                    label.field__label(for='field--name')
+                        input#field--name(type="text", name="name", required, autocomplete='off', minlength="2").field__input
+                        span.field__text.text.text--large.text--fw100 Представьтесь, пожалуйста *
+                        span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать цифры
+                        span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                .field.field--phone
+                    label.field__label(for='field--phone')
+                        input#field--phone(type="text", name="phone", required, autocomplete='off', inputmode="tel", minlength="17", maxlength="17").field__input
+                        span.field__text.text.text--large.text--fw100 Ваш телефон *
+                        span.field__error.field__error--full.text.text--xsmall.text--fw100.text--red поле заполнено не полностью
+                        span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать буквы
+                        span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                .text.text--xsmall.text--fw100
+                    | Нажимая на&nbsp;кнопку, вы&nbsp;подтверждаете, что принимаете&#32;
+                    a(href="#").link.link--text.text.text--brand.text--underline условия пользовательского соглашения
+                    | &#32;и&nbsp;согласны на&nbsp;обработку персональных данных
+            .row
+                input(type="submit", value="Отправить заявку").btn.btn--secondary.btn--submit
+// Modal End

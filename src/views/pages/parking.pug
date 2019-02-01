@@ -6,7 +6,7 @@ block variables
 
 block content
     // Header in Main
-    .header.header--main
+    .header.header--main.header--parking
         h1.title.title--header= title
     // Header in Main End
     //
@@ -16,13 +16,11 @@ block content
             dl.dropdown
                 dt
                     a
-                        span Дом
+                        span.selected Дом № 1
                 dd
                     ul
                         li
-                            a.default Дом
-                        li
-                            a Дом № 1
+                            a.selected Дом № 1
                         li
                             a Дом № 2
                         li
@@ -35,7 +33,7 @@ block content
             // Select House End
             //
             .text.text--large.text--fw500 Сайт застройщика
-            a(href="http://mk.ekbstroy.net", title="title").link.link--text.text.text--normal.text--fw300.text--underline mk.ekbstroy.net
+            a(href="http://mk.ekbstroy.net", target="_blank").link.link--text.text.text--normal.text--fw300.text--underline mk.ekbstroy.net
             //
     //
     .parking.row
@@ -58,9 +56,9 @@ block content
                         | в&nbsp;двух&nbsp;шагах от&nbsp;дома для жителей, 
                         | удобные&nbsp;и&nbsp;вместительные стоянки 
                         | для&nbsp;гостей&nbsp;комплекса.
-                    button.btn.btn--base.modal__trigger Оставить заявку
+                    button.btn.btn--base.modal__trigger(data-modal="js-modal-1") Оставить заявку
     // Modal
-    .modal
+    .modal#js-modal-1
         .modal__bg
         .modal__inner
             // Close Button
@@ -73,7 +71,13 @@ block content
 
             .text.text--fw100.text--large Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы забронировать понравившееся вам место или проконсультировать вас по&nbsp;любым вопросам.
 
-            form.form(action="" method="POST")
+            .text.text--fw100.text--large.text--hide Ваши контактные данные успешно отправлены!
+                br
+                |Мы&nbsp;свяжемся с&nbsp;вами, чтобы забронировать понравившееся вам место или проконсультировать вас по&nbsp;любым вопросам.
+
+            a(href='#close').btn.btn--secondary.link.ink--btn.modal__close ВЕРНУТЬСЯ НА САЙТ
+
+            form.form(action="" method="POST" novalidate)
                 .row
                     .field.field--name
                         label.field__label(for='field--name')
@@ -90,12 +94,13 @@ block content
                             span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
                     .field.field--number
                         label.field__label(for='field--number')
-                            input#field--number(type="number", name="number", required, autocomplete='off',  minlength="1", maxlength="2").field__input
+                            input#field--number(type="number", name="number", required, autocomplete='off',  minlength="1", maxlength="2", pattern="[0-9]*").field__input
                             span.field__text.text.text--large.text--fw100 Номер места
-                            span.field__error.text.text--xsmall.text--fw100.text--red поле должно быть заполнено
+                            span.field__error.field__error--required.text.text--xsmall.text--fw100.text--red Несуществующий номер места
+                            span.field__error.field__error--char.text.text--xsmall.text--fw100.text--red поле не должно содержать буквы
                     .text.text--xsmall.text--fw100
                         | Нажимая на&nbsp;кнопку, вы&nbsp;подтверждаете, что принимаете&#32;
-                        a(href="#", title="title").link.link--text.text.text--brand.text--underline условия пользовательского соглашения
+                        a(href="#").link.link--text.text.text--brand.text--underline условия пользовательского соглашения
                         | &#32;и&nbsp;согласны на&nbsp;обработку персональных данных
                 .row
                     input(type="submit", value="Отправить заявку").btn.btn--secondary.btn--submit

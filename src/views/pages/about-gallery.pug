@@ -6,7 +6,7 @@ block variables
 
 block content
     // Header in Main
-    .header.header--main()
+    .header.header--main.header--gallery
         .title.title--header О квартале
     // Header in Main End
     // Nav Inner
@@ -35,7 +35,7 @@ block content
 
     // Slider
     .slider.slider--main
-        .slider__slide.modal__trigger(data-modal="js-modal-1")
+        .slider__slide(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -43,7 +43,23 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-1")
+        .slider__slide(data-modal="js-modal-1")
+            .image-container
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide(data-modal="js-modal-1")
+            .image-container
+                img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
+            .slider__header.animated
+                .title.title--slider.text--fw700
+                    | Фитнес-клуб во дворе
+                .text.text--fw300.text--xlarge
+                    | 25-ти метровый бассейн и три этажа современных тренажеров.
+        .slider__slide(data-modal="js-modal-1")
             .image-container
                 img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -51,25 +67,9 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-1")
+        .slider__slide(data-modal="js-modal-1")
             .image-container
-                img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
-            .slider__header.animated
-                .title.title--slider.text--fw700
-                    | Фитнес-клуб во дворе
-                .text.text--fw300.text--xlarge
-                    | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-1")
-            .image-container
-                img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
-            .slider__header.animated
-                .title.title--slider.text--fw700
-                    | Фитнес-клуб во дворе
-                .text.text--fw300.text--xlarge
-                    | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-1")
-            .image-container
-                img(src="./assets/images/gallery-1-1.jpg", alt="").image.image--slider
+                img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
                 .title.title--slider.text--fw700
                     | Фитнес-клуб во дворе
@@ -83,7 +83,7 @@ block content
 
     // Slider
     .slider.slider--main
-        .slider__slide.modal__trigger(data-modal="js-modal-2")
+        .slider__slide(data-modal="js-modal-2")
             .image-container
                 img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -91,7 +91,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-2")
+        .slider__slide(data-modal="js-modal-2")
             .image-container
                 img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -99,7 +99,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-2")
+        .slider__slide(data-modal="js-modal-2")
             .image-container
                 img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -107,7 +107,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-2")
+        .slider__slide(data-modal="js-modal-2")
             .image-container
                 img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -115,7 +115,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-2")
+        .slider__slide(data-modal="js-modal-2")
             .image-container
                 img(src="./assets/images/gallery-2-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -131,7 +131,7 @@ block content
 
     // Slider
     .slider.slider--main
-        .slider__slide.modal__trigger(data-modal="js-modal-3")
+        .slider__slide(data-modal="js-modal-3")
             .image-container
                 img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -139,7 +139,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-3")
+        .slider__slide(data-modal="js-modal-3")
             .image-container
                 img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -147,7 +147,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-3")
+        .slider__slide(data-modal="js-modal-3")
             .image-container
                 img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -155,7 +155,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-3")
+        .slider__slide(data-modal="js-modal-3")
             .image-container
                 img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -163,7 +163,7 @@ block content
                     | Фитнес-клуб во дворе
                 .text.text--fw300.text--xlarge
                     | 25-ти метровый бассейн и три этажа современных тренажеров.
-        .slider__slide.modal__trigger(data-modal="js-modal-3")
+        .slider__slide(data-modal="js-modal-3")
             .image-container
                 img(src="./assets/images/gallery-3-1.jpg", alt="").image.image--slider
             .slider__header.animated
@@ -315,5 +315,4 @@ block content
     // Modal End
     
 block scripts
-    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
     script(src='assets/scripts/aboutGallery.bundle.js')

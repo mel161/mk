@@ -139,8 +139,16 @@
 
     // Map Inner
     .map__inner {
-      padding: 20px;
+      padding: 16px 20px;
       display: none;
+
+      .text--mutted {
+        margin: 2px 0 13px;
+      }
+      .text--fw300 {
+        margin-bottom: 2px;
+        line-height: 16px;
+      }
     }
   }
 

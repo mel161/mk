@@ -31,7 +31,7 @@ $green: #2ecc71;
 
   //   margin-bottom: 1em; // Cosmetic value
 
-  > .icon.icon--arrow {
+  >.icon.icon--arrow {
     position: absolute;
     top: 46%;
     transform: rotate(90deg) translate(-50%);
@@ -41,7 +41,7 @@ $green: #2ecc71;
   }
 
   &:hover {
-    > .icon {
+    >.icon {
       fill: $brand-color;
     }
   }
@@ -51,6 +51,8 @@ $green: #2ecc71;
       display: block;
       height: $height;
       width: 100%;
+      text-transform: uppercase;
+      font-size: 12px;
 
       // border: 1px solid $grey;
       border-radius: $radius;
@@ -79,6 +81,7 @@ $green: #2ecc71;
   dd {
     position: relative;
     width: 100%;
+    z-index: 2;
 
     ul {
       display: none;
@@ -115,15 +118,17 @@ $green: #2ecc71;
       line-height: $height;
       text-decoration: none;
       cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
 
       &:hover {
         box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
       }
 
-      //   &.default {
-      //     background-color: $brand-color;
-      //     color: #fff;
-      //   }
+      // &.default {
+      //   background-color: $brand-color;
+      //   color: #fff;
+      // }
     }
   }
 }
@@ -135,4 +140,74 @@ $green: #2ecc71;
     background-color: $brand-color;
     color: #fff;
   }
+}
+
+
+.select {
+  // Style
+  position: relative;
+  float: left;
+  width: 230px;
+  margin: 0 30px 0 0;
+  box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+
+  >.icon {
+    position: absolute;
+    top: 46%;
+    transform: rotate(90deg) translate(-50%);
+    right: 22px;
+    fill: $base-color;
+    z-index: 2;
+  }
+
+  // States
+  &:hover {
+    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+
+    >.icon {
+      fill: $brand-color;
+    }
+  }
+
+  // Media Queries
+  @media screen and (min-width: 1000px) {}
+
+  // Elements
+  &__selected {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {}
+
+    // Modifiers
+  }
+
+  &__options {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {}
+
+    // Modifiers
+  }
+
+  &__list {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {}
+
+    // Modifiers
+  }
+
+  &__item {
+    // Style
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {}
+
+    // Modifiers
+  }
+
+  // Modifiers
 }

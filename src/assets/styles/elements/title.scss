@@ -1,10 +1,10 @@
 .title {
   // Style
   color: $base-color;
+  letter-spacing: 0.24px;
 
   //  Media Queries
-  @media screen and (min-width: 1000px) {
-  }
+  @media screen and (min-width: 1000px) {}
 
   //  Modifiers
   // Section Title
@@ -13,6 +13,7 @@
     font-size: 36px;
     line-height: 44px;
     font-weight: 700;
+    letter-spacing: 0.63px;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -21,6 +22,7 @@
 
     // Modifiers
   }
+
   // Card Title
   &--card {
     // Style
@@ -30,13 +32,19 @@
       .card--half-width & {
         font-size: 24px;
       }
+
       .card--full-width & {
-        font-size: 36px;
+        font-size: 26px;
         text-align: left;
         line-height: 42px;
         margin-bottom: 34px;
         margin-left: -3px;
         word-spacing: 5px;
+      }
+
+      .camera .card--full-width &,
+      .concept .card--full-width:nth-child(4) & {
+        white-space: nowrap;
       }
 
       .card--docs & {
@@ -50,10 +58,24 @@
         margin: 0;
         letter-spacing: 0.24px;
       }
+
+      .card--actions & {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+        letter-spacing: 0.24px;
+      }
+    }
+
+    @media screen and (min-width: 1700px) {
+      .card--full-width & {
+        font-size: 36px;
+      }
     }
 
     // Modifiers
   }
+
   // Header Title
   &--header {
     // Style
@@ -67,9 +89,13 @@
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      font-size: 60px;
+      font-size: 48px;
       font-weight: 900;
       margin: 0 0 49px;
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 60px;
     }
   }
 
@@ -87,7 +113,6 @@
 
       .gallery & {
         margin: 51px 0 45px -3px;
-        letter-spacing: 0.24px;
       }
     }
   }

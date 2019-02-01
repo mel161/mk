@@ -14,6 +14,7 @@
   &--xsmall {
     font-size: 10px;
   }
+
   &--small {
     font-size: 12px;
 
@@ -25,11 +26,11 @@
       }
     }
   }
+
   &--normal {
     font-size: 14px;
 
-    .card--base & {
-    }
+    .card--base & {}
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -38,13 +39,9 @@
         line-height: 1;
       }
 
-      &.link--nav {
-        font-size: 12px;
-      }
-
-      .info__contacts & {
-        font-size: 12px;
-      }
+      // .info__contacts & {
+      //   font-size: 12px;
+      // }
     }
 
     @media screen and (min-width: 1900px) {
@@ -57,11 +54,11 @@
       }
     }
   }
+
   &--large {
     font-size: 16px;
 
-    .card--base & {
-    }
+    .card--base & {}
 
     // Media Queries
     @media screen and (min-width: 1000px) {
@@ -87,12 +84,12 @@
       }
     }
   }
+
   &--xlarge {
     // Style
     font-size: 18px;
 
-    .card--base & {
-    }
+    .card--base & {}
 
     .card--half-width & {
       line-height: 21px;
@@ -106,47 +103,69 @@
       }
     }
   }
+
   // Font Weight
   &--fw100 {
     font-weight: 100;
   }
+
   &--fw300 {
     font-weight: 300;
   }
+
   &--fw500 {
     font-weight: 500;
   }
+
   &--fw700 {
     font-weight: 700;
   }
+
   &--fw900 {
     font-weight: 900;
   }
+
   // Uppercase
   &--uppercase {
     text-transform: uppercase;
   }
+
   // Underline
   &--underline {
     text-decoration: underline;
   }
+
   // Colors
   &--brand {
     color: $brand-color;
   }
+
   &--mutted {
     color: $gray;
   }
+
   &--white {
     color: $white;
     fill: $white;
   }
+
   &--red {
     color: $red;
   }
+
   // Currency
   &--currency {
     font-family: "ALSRubl";
+  }
+
+  // Hide
+  &--hide {
+    display: none;
+
+    &+.text {
+      margin-top: -7px;
+      margin-bottom: 102px;
+    }
   }
 }
 
@@ -154,6 +173,7 @@
 address {
   font-style: normal;
 }
+
 .address {
   // Style
   font-style: normal;
@@ -170,6 +190,7 @@ address {
       line-height: 20px;
       margin-bottom: 8px;
     }
+
     .text--small {
       line-height: 14px;
     }
@@ -182,6 +203,7 @@ address {
 
   // Media Queries
   @media screen and (min-width: 1000px) {
+
     // width: 200px;
     .text {
       line-height: 23px;

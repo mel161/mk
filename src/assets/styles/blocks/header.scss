@@ -1,14 +1,14 @@
 .header {
   @include clearfix();
 
-  @media screen and (min-width: 1000px) {
-  }
+  @media screen and (min-width: 1000px) {}
+
   // Elements
   &__inner {
+    position: relative;
   }
 
-  &__slide {
-  }
+  &__slide {}
 
   // Modifiers
   &--top {
@@ -24,7 +24,7 @@
     @media screen and (min-width: 1000px) {
       height: 135px;
 
-      > .btn {
+      >.btn {
         margin-top: 0;
       }
 
@@ -36,7 +36,7 @@
     }
 
     @media screen and (min-width: 1700px) {
-      > .btn {
+      >.btn {
         margin-top: 0;
       }
     }
@@ -48,77 +48,100 @@
 
       @media screen and (min-width: 1000px) {
         // margin: 0 60px;
-        margin: 0 50px;
+        margin: 0 auto;
+        max-width: 1014px;
         display: flex;
         justify-content: space-between;
 
-        > .btn {
-          margin-top: 26px;
+
+
+        >.btn {
+          margin-top: 36px;
         }
+      }
+
+      @media screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+        padding-right: 14px;
+        width: 1000px;
       }
 
       @media screen and (min-width: 1700px) {
         margin: 0 60px;
+        max-width: none;
+        width: auto;
 
-        > .btn {
+        >.btn {
           margin-top: 40px;
         }
+      }
+
+      @media screen and (min-width: 1700px) and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+        padding-right: 0;
+        width: auto;
       }
     }
 
     .header__slide {
+
       // Media Queries
       @media screen and (min-width: 1000px) {
         display: none;
       }
     }
   }
+
   &--transparent {
     // background-color: transparent;
     background-color: rgba(66, 66, 66, 1);
-    background: -moz-linear-gradient(
-      top,
+    background: linear-gradient(180deg,
       rgba(66, 66, 66, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background: -webkit-gradient(
-      left top,
-      left bottom,
-      color-stop(0%, rgba(66, 66, 66, 1)),
-      color-stop(100%, rgba(255, 255, 255, 0))
-    );
-    background: -webkit-linear-gradient(
-      top,
-      rgba(66, 66, 66, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background: -o-linear-gradient(
-      top,
-      rgba(66, 66, 66, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background: -ms-linear-gradient(
-      top,
-      rgba(66, 66, 66, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      rgba(66, 66, 66, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#ffffff', GradientType=0 );
+      rgba(66, 66, 66, 0.5) 70%,
+      rgba(255, 255, 255, 0) 100%);
     box-shadow: none;
     color: $white;
   }
+
   &--main {
     // Style
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      height: 400px;
+      height: 320px;
       background-image: url(../images/hero-bg-about.jpg);
       position: relative;
+      background-size: cover;
+
+      &.header--action {
+        background-image: url(../images/hero-bg-action.jpg);
+      }
+
+      &.header--news {
+        background-image: url(../images/hero-bg-news.jpg);
+      }
+
+      &.header--infrastructure {
+        background-image: url(../images/hero-bg-infrastructure.jpg);
+      }
+
+      &.header--gallery {
+        background-image: url(../images/hero-bg-gallery.jpg);
+      }
+
+      &.header--camera {
+        background-image: url(../images/hero-bg-camera.jpg);
+      }
+
+      &.header--docs {
+        background-image: url(../images/hero-bg-docs.jpg);
+      }
+
+      &.header--parking {
+        background-image: url(../images/hero-bg-parking.jpg);
+      }
+
+      &.header--contacts {
+        background-image: url(../images/hero-bg-contacts.jpg);
+      }
 
       &:after {
         position: absolute;
@@ -127,44 +150,37 @@
         width: 100%;
         height: 60%;
         content: "";
-        background: -moz-linear-gradient(
-          top,
+        background: -moz-linear-gradient(top,
           rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%
-        );
-        background: -webkit-gradient(
-          left top,
+          rgba(66, 66, 66, 0.4) 100%);
+        background: -webkit-gradient(left top,
           left bottom,
           color-stop(0%, rgba(255, 255, 255, 0)),
-          color-stop(100%, rgba(66, 66, 66, 0.4))
-        );
-        background: -webkit-linear-gradient(
-          top,
+          color-stop(100%, rgba(66, 66, 66, 0.4)));
+        background: -webkit-linear-gradient(top,
           rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%
-        );
-        background: -o-linear-gradient(
-          top,
+          rgba(66, 66, 66, 0.4) 100%);
+        background: -o-linear-gradient(top,
           rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%
-        );
-        background: -ms-linear-gradient(
-          top,
+          rgba(66, 66, 66, 0.4) 100%);
+        background: -ms-linear-gradient(top,
           rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%
-        );
-        background: linear-gradient(
-          to bottom,
+          rgba(66, 66, 66, 0.4) 100%);
+        background: linear-gradient(to bottom,
           rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%
-        );
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#424242', GradientType=0 );
+          rgba(66, 66, 66, 0.4) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#424242', GradientType=0);
         z-index: 1;
       }
     }
 
+    @media screen and (min-width: 1600px) {
+      height: 400px;
+    }
+
     // Elements
   }
+
   &--single-news {
     // Style
     @include clearfix();
@@ -189,29 +205,37 @@
   @media screen and (min-width: 1000px) {
     width: 291px;
     margin-left: -41px;
+    position: absolute;
+    right: 0;
+  }
+
+  @media screen and (min-width: 1000px) {
+    position: relative;
+    right: auto;
   }
 
   // Elements
   &__contacts {
-    width: 51%;
+    width: 56%;
     float: left;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
       text-align: right;
-      margin-top: 26px;
+      margin-top: 38px;
 
       .link {
-        line-height: 23px;
+        line-height: 18px;
       }
     }
+
     @media screen and (min-width: 1700px) {
       margin-top: 45px;
     }
   }
 
   &__socials {
-    width: 49%;
+    width: 44%;
     float: right;
 
     // Media Queries

@@ -9,21 +9,22 @@
 
   // States
   // Default
-  &:link {
-  }
+  &:link {}
+
   // Visited
-  &:visited {
-  }
+  &:visited {}
+
   // Hover
   &:hover {
     color: $brand-color;
   }
+
   // Focus
-  &:focus {
-  }
+  &:focus {}
+
   // Active
-  &:active {
-  }
+  &:active {}
+
   // Modifiers
   // Nav Link
   &--nav {
@@ -31,16 +32,17 @@
     font-size: inherit;
     line-height: inherit;
   }
+
   // Text link
-  &--text {
-  }
+  &--text {}
+
   // Button Link
   &--btn {
     // Styles
 
     @media screen and (min-width: 1000px) {
       font-size: 12px;
-      line-height: 45px;
+      line-height: 40px;
     }
 
     @media screen and (min-width: 1700px) {
@@ -53,21 +55,24 @@
     &:link {
       color: $white;
     }
+
     // Visited
     &:visited {
       color: $white;
     }
+
     // Hover
     &:hover {
       color: $white;
     }
+
     // Focus
-    &:focus {
-    }
+    &:focus {}
+
     // Active
-    &:active {
-    }
+    &:active {}
   }
+
   // Block Link
   &--block {
     display: block;

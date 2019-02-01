@@ -12,7 +12,7 @@ function init () {
     {
       iconLayout: 'default#image',
       iconImageHref: './assets/images/point-home.png',
-      iconImageSize: [48, 60],
+      iconImageSize: [62, 73],
       iconImageOffset: [-24, -30]
     }
   )

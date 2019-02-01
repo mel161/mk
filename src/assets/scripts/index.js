@@ -4,8 +4,14 @@ import headerInit from './modules/header'
 import mapInit from './modules/map-home'
 import mapHeroInit from './modules/map-hero'
 import RangeSlider from './modules/range'
+import scrollInit from './modules/scroll'
+import modalInit from './modules/modal'
+import formInit from './modules/form'
 
 jQuery(document).ready(function () {
+  scrollInit()
+  modalInit()
+  formInit()
   var rangeSliderPrice = new RangeSlider('.range--price')
   var rangeSliderArea = new RangeSlider('.range--area')
 

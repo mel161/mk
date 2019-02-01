@@ -2,13 +2,13 @@
   position: relative;
 
   &::before {
-    display: block;
+    display: block !important;
     content: '';
     width: 100%;
-    padding-top: ( $height / $width ) * 100%;
+    padding-top: calc(($height / $width) * 100%);
   }
 
-  > .content {
+  >.content {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +16,7 @@
     bottom: 0;
   }
 }
+
 @mixin clearfix {
   &::after {
     content: '';

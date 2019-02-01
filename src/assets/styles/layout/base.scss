@@ -1,6 +1,7 @@
 html {
   overflow-x: hidden;
 }
+
 body,
 html {
   background-color: $white;
@@ -22,6 +23,11 @@ body {
   min-height: 100%;
   height: auto;
   position: relative;
+}
+
+.row {
+  @include clearfix();
+  width: 100%;
 }
 
 .main {
@@ -47,8 +53,12 @@ body {
   @include clearfix();
   margin-bottom: 50px;
 
-  > .filter {
+  >.filter {
     margin-right: 10px;
+  }
+
+  .btn-group {
+    box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, .13);
   }
 }
 
@@ -56,7 +66,7 @@ body {
 .result {
   @include clearfix();
 
-  > .card {
+  >.card {
     margin-right: 10px;
 
     &:last-of-type {
@@ -69,7 +79,7 @@ body {
 .features {
   @include clearfix();
 
-  > .card {
+  >.card {
     margin-right: 8px;
 
     &:last-of-type {
@@ -92,34 +102,84 @@ body {
 .docs {
   &-info {
     width: 460px;
-    margin: 94px auto 66px;
+    margin: 94px auto 55px;
+
+    .text--large {
+      float: left;
+      margin: 4px 0 7px;
+    }
 
     .main--parking & {
-      margin: 94px auto 72px;
+      margin: 94px auto 55px;
+
+      .text--large {
+        float: left;
+        margin: 10px 0 7px;
+      }
     }
   }
 
   // Media Queries
+  // Media Queries
   @media screen and (min-width: 1000px) {
-    margin: 0 20px;
+    width: 702px;
+    margin: 0 auto;
   }
 
-  @media screen and (min-width: 1700px) {
-    margin: 0 60px;
+  @media screen and (min-width: 1200px) {
+    width: 1068px;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 1434px;
+  }
+
+  @media screen and (min-width: 1860px) {
+    width: 1800px;
   }
 }
 
 .news {
-  margin: 101px 60px 0;
+  margin: 94px 60px 0;
+
+  // Media Queries
+  @media screen and (min-width: 1000px) {
+    width: 702px;
+    margin: 94px auto 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1068px;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 1434px;
+  }
+
+  @media screen and (min-width: 1860px) {
+    width: 1800px;
+  }
 }
 
 .contacts {
   margin-top: 100px;
 }
 
-.row {
-  @include clearfix();
-  width: 100%;
+.actions {
+  margin: 94px auto 0;
+
+  @media screen and (min-width: 1000px) {
+    width: 885px;
+    margin: 94px auto 0;
+  }
+
+  @media screen and (min-width: 1860px) {
+    width: 1800px;
+  }
+}
+
+.camera {
+  margin: 94px 0 0;
 }
 
 .block {
