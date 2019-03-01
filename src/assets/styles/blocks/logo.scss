@@ -1,15 +1,34 @@
 .logo {
   // Styles
+  transition: all 600ms ease;
 
   // Media Queries
   @media screen and (min-width: 1000px) {
     position: absolute;
     left: 50%;
-    margin: 27px 0 0 -69px;
     z-index: 2;
+    margin: 27px 0 0 -69px;
   }
 
   @media screen and (min-width: 1900px) {
-    margin: 27px 0 0 -72px;
+    margin: 5px 0 0 -63px;
+  }
+
+  &--small {
+    opacity: 1;
+
+    .is-active & {
+      opacity: 0;
+    }
+  }
+
+  &--full {
+    margin: -10px 0 0;
+    display: block;
+    text-align: center;
+
+    .link--block {
+      display: inline-block;
+    }
   }
 }

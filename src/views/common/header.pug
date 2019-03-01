@@ -34,7 +34,9 @@
             // Logo Full
             h1.logo.logo--full
                 a(href="./").logo__link.link.link--block
-                    img(src=logoImageUrl, alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").logo__image.image.image--logo
+                    picture.logo__image
+                        source(media="(min-width: 1000px)", srcset=logoImageUrl)
+                        img(src='./assets/images/logo-full-black.png', alt="Логотип ЖК&nbsp;&laquo;Московский квартал&raquo;").image.image--logo
             // Logo Full End
 
             // Nav Main

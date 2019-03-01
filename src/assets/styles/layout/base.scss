@@ -1,64 +1,125 @@
-html {
-  overflow-x: hidden;
-}
-
 body,
 html {
   background-color: $white;
 }
 
+html * {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Museo Sans", Helvetica, sans-serif;
-  font-size: 16px;
+  // overflow: hidden;
+  overflow-x: hidden;
   line-height: 1.42;
   color: $base-color;
+  font-family: 'Museo Sans', Helvetica, sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // overflow: hidden;
+
+  &.no-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 .page {
-  width: 100vw;
-  overflow: hidden;
-  min-height: 100%;
-  height: auto;
   position: relative;
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .row {
-  @include clearfix();
   width: 100%;
+
+  @include clearfix();
 }
 
 .main {
   //
   @include clearfix();
 
+  @media screen and (min-width: 1000px) {
+    &--about,
+    &--news,
+    &--parking,
+    &--contacts {
+      margin-top: 135px;
+    }
+
+    &--news.single {
+      margin: 135px auto 0;
+      width: 960px;
+    }
+
+    &--error {
+      display: flex;
+      align-items: center;
+      margin-top: 135px;
+      height: calc(100vh - 135px - 180px);
+    }
+  }
+
   &--about,
   &--news,
   &--parking,
   &--contacts {
-    margin-top: 135px;
+    margin-top: 61px;
   }
 
   &--news.single {
-    width: 960px;
-    margin: 135px auto 0;
+    margin: 115px auto 0;
+
+    @media screen and (min-width: 1000px) {
+      margin: 135px auto 0;
+      width: 960px;
+    }
+
+    .text {
+      padding: 0 20px;
+    }
+
+    .row {
+      text-align: center;
+    }
+  }
+
+  &--error {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 100%;
   }
 }
 
 // Filters
 .filters {
   // Style
-  @include clearfix();
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 
-  >.filter {
-    margin-right: 10px;
+  @include clearfix();
+
+  @media screen and (min-width: 1000px) {
+    margin-bottom: 50px;
+
+    > .filter {
+      margin-right: 10px;
+    }
+  }
+
+  > .filter {
+    float: none;
+    margin-bottom: 20px;
+
+    &.range {
+      margin-bottom: 24px;
+    }
   }
 
   .btn-group {
-    box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, .13);
+    box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
   }
 }
 
@@ -66,64 +127,79 @@ body {
 .result {
   @include clearfix();
 
-  >.card {
-    margin-right: 10px;
-
-    &:last-of-type {
-      margin-right: 0;
+  @media screen and (min-width: 1000px) {
+    .card:not(:last-of-type) {
+      margin-right: 10px;
     }
   }
 }
 
 // Features
 .features {
+  margin-top: -12px;
+  margin-bottom: 13px;
+  padding: 0 15px;
+
   @include clearfix();
 
-  >.card {
-    margin-right: 8px;
+  @media screen and (min-width: 1000px) {
+    padding: 0;
+  }
 
-    &:last-of-type {
-      margin-right: 0;
+  @media screen and (min-width: 1000px) {
+    .card {
+      &::before {
+        display: none;
+      }
     }
+
+    .card:not(:last-of-type) {
+      margin-right: 8px;
+    }
+  }
+
+  .card {
+    margin-bottom: 10px;
+    width: calc(50% - 5px);
+
+    @include aspect-ratio(27, 22);
+
+    .card__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card:not(:nth-of-type(2n)) {
+    margin-right: 10px;
   }
 }
 
 .specific {
+  margin-top: -1px;
+
   @include clearfix();
-  margin-top: -8px;
+
+  @media screen and (min-width: 1000px) {
+    margin-top: -8px;
+  }
 }
 
 .concept {
   margin-top: 94px;
-
   counter-reset: section;
 }
 
 .docs {
-  &-info {
-    width: 460px;
-    margin: 94px auto 55px;
-
-    .text--large {
-      float: left;
-      margin: 4px 0 7px;
-    }
-
-    .main--parking & {
-      margin: 94px auto 55px;
-
-      .text--large {
-        float: left;
-        margin: 10px 0 7px;
-      }
-    }
-  }
-
-  // Media Queries
+  padding: 0 20px;
   // Media Queries
   @media screen and (min-width: 1000px) {
-    width: 702px;
     margin: 0 auto;
+    width: 702px;
+    padding: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -137,15 +213,54 @@ body {
   @media screen and (min-width: 1860px) {
     width: 1800px;
   }
+
+  &-info {
+    margin: 0 auto 37px;
+    width: 230px;
+
+    @media screen and (min-width: 1000px) {
+      margin: 94px auto 55px;
+      width: 460px;
+
+      .text--large {
+        float: left;
+        margin: 4px 0 7px;
+      }
+
+      .main--parking & {
+        margin: 94px auto 55px;
+
+        .text--large {
+          float: left;
+          margin: 10px 0 7px;
+        }
+      }
+    }
+
+    .main--parking & {
+      margin: 53px auto 37px;
+    }
+
+    .text {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+
+      &.text--large {
+        margin: 25px 0 7px;
+      }
+    }
+  }
 }
 
 .news {
-  margin: 94px 60px 0;
+  margin: 50px 0 0;
+  padding: 0 20px;
 
   // Media Queries
   @media screen and (min-width: 1000px) {
-    width: 702px;
     margin: 94px auto 0;
+    width: 702px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -162,15 +277,20 @@ body {
 }
 
 .contacts {
-  margin-top: 100px;
+  margin-top: 59px;
+
+  @media screen and (min-width: 1000px) {
+    margin-top: 100px;
+  }
 }
 
 .actions {
-  margin: 94px auto 0;
+  margin: 50px 0 0;
+  padding: 0 20px;
 
   @media screen and (min-width: 1000px) {
-    width: 885px;
     margin: 94px auto 0;
+    width: 885px;
   }
 
   @media screen and (min-width: 1860px) {
@@ -179,17 +299,25 @@ body {
 }
 
 .camera {
-  margin: 94px 0 0;
+  margin: 49px 0 0;
+
+  @media screen and (min-width: 1000px) {
+    margin: 94px 0 0;
+  }
 }
 
 .block {
   // Style
+  margin-bottom: 30px;
+  width: 150px;
+
+  @include clearfix();
 
   @media screen and (min-width: 1000px) {
+    float: left;
+    margin-right: 40px;
     width: 162px;
     height: 65px;
-    margin-right: 40px;
-    float: left;
 
     .text--xlarge {
       margin-bottom: 28px;
@@ -197,12 +325,33 @@ body {
 
     &:nth-child(1),
     &:nth-child(2) {
-      height: 98px;
       margin-bottom: 60px;
+      height: 98px;
     }
   }
 
   @media screen and (min-width: 1700px) {
     margin-right: 80px;
   }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--wide {
+    width: 195px;
+    margin-bottom: 19px;
+
+    & + & {
+      margin-bottom: 23px;
+    }
+
+    .text--large {
+      width: 100%;
+    }
+  }
+}
+
+.error {
+  margin: 0 0 0;
 }

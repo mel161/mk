@@ -1,63 +1,47 @@
-import './modules/select'
-import btnGroup from './modules/btn-group'
-import headerInit from './modules/header'
-import mapInit from './modules/map-home'
-import mapHeroInit from './modules/map-hero'
-import RangeSlider from './modules/range'
-import scrollInit from './modules/scroll'
-import modalInit from './modules/modal'
-import formInit from './modules/form'
+import './modules/select';
+import btnGroup from './modules/btn-group';
+import headerInit from './modules/header';
+import mapInit from './modules/map-home';
+import mapHeroInit from './modules/map-hero';
+import RangeSlider from './modules/range';
+import scrollInit from './modules/scroll';
+import modalInit from './modules/modal';
+import formInit from './modules/form';
 
-jQuery(document).ready(function () {
-  scrollInit()
-  modalInit()
-  formInit()
-  var rangeSliderPrice = new RangeSlider('.range--price')
-  var rangeSliderArea = new RangeSlider('.range--area')
+jQuery(document).ready(function() {
+  scrollInit();
+  modalInit();
+  formInit();
+  var rangeSliderPrice = new RangeSlider('.range--price');
+  var rangeSliderArea = new RangeSlider('.range--area');
 
-  rangeSliderPrice.onChange = function (min, max) {
-    this.slider.querySelector(
-      '.range__from .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(min)
+  rangeSliderPrice.onChange = function(min, max) {
+    this.slider.querySelector('.range__from .text').innerHTML = new Intl.NumberFormat('ru-RU').format(min);
 
-    this.slider.querySelector(
-      '.range__to .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(max)
-  }
+    this.slider.querySelector('.range__to .text').innerHTML = new Intl.NumberFormat('ru-RU').format(max);
+  };
 
-  rangeSliderPrice.didChanged = function (min, max) {
-    this.slider.querySelector(
-      '.range__from .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(min)
+  rangeSliderPrice.didChanged = function(min, max) {
+    this.slider.querySelector('.range__from .text').innerHTML = new Intl.NumberFormat('ru-RU').format(min);
 
-    this.slider.querySelector(
-      '.range__to .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(max)
-  }
+    this.slider.querySelector('.range__to .text').innerHTML = new Intl.NumberFormat('ru-RU').format(max);
+  };
 
-  rangeSliderArea.onChange = function (min, max) {
-    this.slider.querySelector(
-      '.range__from .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(min)
+  rangeSliderArea.onChange = function(min, max) {
+    this.slider.querySelector('.range__from .text').innerHTML = new Intl.NumberFormat('ru-RU').format(min);
 
-    this.slider.querySelector(
-      '.range__to .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(max)
-  }
+    this.slider.querySelector('.range__to .text').innerHTML = new Intl.NumberFormat('ru-RU').format(max);
+  };
 
-  rangeSliderArea.didChanged = function (min, max) {
-    this.slider.querySelector(
-      '.range__from .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(min)
+  rangeSliderArea.didChanged = function(min, max) {
+    this.slider.querySelector('.range__from .text').innerHTML = new Intl.NumberFormat('ru-RU').format(min);
 
-    this.slider.querySelector(
-      '.range__to .text'
-    ).innerHTML = new Intl.NumberFormat('ru-RU').format(max)
-  }
+    this.slider.querySelector('.range__to .text').innerHTML = new Intl.NumberFormat('ru-RU').format(max);
+  };
 
-  btnGroup()
+  btnGroup();
   /* global ymaps */
-  ymaps.ready(mapInit)
-  mapHeroInit()
-  headerInit()
-})
+  ymaps.ready(mapInit);
+  mapHeroInit();
+  headerInit();
+});

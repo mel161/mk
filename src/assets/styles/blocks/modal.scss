@@ -1,51 +1,59 @@
 .modal {
+  display: none;
   // Style
   position: fixed;
-  width: 100%;
-  height: 100%;
-  display: none;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 
   // Media Queries
-  @media screen and (min-width: 1000px) {}
+  @media screen and (min-width: 1000px) {
+  }
 
   // Elements
   &__bg {
-    // Style
-    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     width: 100%;
     height: 100%;
+    // Style
+    background-color: rgba(0, 0, 0, 0.8);
 
     // Media Queries
-    @media screen and (min-width: 1000px) {}
+    @media screen and (min-width: 1000px) {
+    }
 
     // Modifiers
   }
 
   &__inner {
     // Style
-
-    .btn.modal__close {
-      display: none;
-    }
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: auto;
+    background-color: $white;
+    padding: 85px 20px 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      box-sizing: border-box;
+      top: 50%;
+      left: 50%;
       width: 960px;
       height: calc(100% - 218px);
       min-height: 550px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $white;
       padding: 50px 170px;
-      box-sizing: border-box;
-      text-align: center;
+      transform: translate(-50%, -50%);
 
-      >.text {
+      > .text {
         line-height: 19px;
       }
     }
@@ -53,12 +61,20 @@
     @media screen and (min-width: 1300px) {
       min-height: 600px;
       padding: 70px 150px;
-
     }
 
     @media screen and (min-width: 1600px) {
       min-height: 664px;
       padding: 93px 170px;
+    }
+
+    > .text {
+      line-height: 17px;
+      font-size: 14px;
+    }
+
+    .btn.modal__close {
+      display: none;
     }
 
     // Modifiers
@@ -68,72 +84,125 @@
 
       // Media Queries
       @media screen and (min-width: 1000px) {
-        min-height: 480px;
-        height: auto;
         margin-top: 5px;
         margin-left: 8px;
+        height: auto;
+        min-height: 480px;
 
         .btn.modal__close {
           display: inline-block;
           text-align: center;
-          font-weight: 100;
           line-height: 55px;
-          color: #ffffff;
+          color: #fff;
+          font-weight: 100;
         }
       }
 
-      @media screen and (min-width: 1300px) {}
+      @media screen and (min-width: 1300px) {
+      }
 
-      @media screen and (min-width: 1600px) {}
+      @media screen and (min-width: 1600px) {
+      }
+
+      .btn.modal__close {
+        display: inline-block;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        line-height: 55px;
+        color: #fff;
+        font-weight: 100;
+        top: auto;
+        bottom: 60px;
+      }
     }
   }
 
   &__close {
+    display: block;
     // Style
+    position: absolute;
+    top: 20px;
+    left: 50%;
     cursor: pointer;
+    transform: translateX(-50%);
+
+    @include clearfix();
 
     // Media Queries
-    @media screen and (min-width: 1000px) {}
+    @media screen and (min-width: 1000px) {
+    }
+
+    > .icon {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+    }
 
     // Modifiers
   }
 
   // Modifiers
   &--slider {
-
-    // Style
-    .modal__inner {
-      background-color: transparent;
-      padding: 69px 68px 76px 84px;
-      width: calc(100% - 320px);
-      height: calc(100% - 140px);
-    }
-
-    .modal__close {
-      .icon {
-        fill: $white;
-        top: 0;
-        right: 0;
-      }
-    }
-
     // Media Queries
     @media screen and (min-width: 1000px) {
       .modal__inner {
-        background-color: transparent;
-        padding: 69px 68px 76px 84px;
         width: 960px;
         min-width: 960px;
         height: auto;
+        background-color: transparent;
+        padding: 69px 68px 76px 84px;
       }
     }
 
     @media screen and (min-width: 1300px) {
       .modal__inner {
-        background-color: transparent;
-        padding: 69px 68px 76px 84px;
         width: calc(100% - 320px);
         height: calc(100% - 140px);
+        background-color: transparent;
+        padding: 69px 68px 76px 84px;
+      }
+    }
+    // Style
+    .modal__inner {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      padding: 0;
+
+      @media screen and (min-width: 1000px) {
+        width: calc(100% - 320px);
+        height: calc(100% - 140px);
+        padding: 69px 68px 76px 84px;
+      }
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+
+      @include clearfix();
+
+      @media screen and (min-width: 1000px) {
+        .icon {
+          top: 0;
+          right: 0;
+          fill: $white;
+        }
+      }
+
+      .icon {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        fill: $white;
       }
     }
   }
@@ -145,6 +214,7 @@
     z-index: 100;
 
     // Media Queries
-    @media screen and (min-width: 1000px) {}
+    @media screen and (min-width: 1000px) {
+    }
   }
 }

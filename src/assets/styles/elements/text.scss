@@ -3,10 +3,17 @@
   font-family: inherit;
 
   .single & {
-    line-height: 20px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
 
     p {
-      margin: 0 0 18px;
+      margin: 0 0 21px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      p {
+        margin: 0 0 18px;
+      }
     }
   }
 
@@ -21,8 +28,8 @@
     // Media Queries
     @media screen and (min-width: 1000px) {
       .card--base & {
-        font-size: 14px;
         line-height: 1;
+        font-size: 14px;
       }
     }
   }
@@ -30,13 +37,11 @@
   &--normal {
     font-size: 14px;
 
-    .card--base & {}
-
     // Media Queries
     @media screen and (min-width: 1000px) {
       .card--base & {
-        font-size: 18px;
         line-height: 1;
+        font-size: 18px;
       }
 
       // .info__contacts & {
@@ -53,23 +58,29 @@
         font-size: 14px;
       }
     }
+
+    .card--base & {
+      font-size: 12px;
+    }
+
+    .address & {
+      font-size: 16px;
+    }
   }
 
   &--large {
     font-size: 16px;
 
-    .card--base & {}
-
     // Media Queries
     @media screen and (min-width: 1000px) {
       .card--base & {
-        font-size: 28px;
-        line-height: 1;
         margin-top: 28px;
+        line-height: 1;
+        font-size: 28px;
 
         .nav--map & {
-          font-size: 16px;
           line-height: 19px;
+          font-size: 16px;
         }
       }
 
@@ -83,24 +94,48 @@
         font-size: 16px;
       }
     }
+
+    .card--base & {
+      font-size: 12px;
+    }
+
+    .card--full-width & {
+      font-size: 14px;
+    }
+
+    .contacts & {
+      margin-bottom: 6px;
+    }
   }
 
   &--xlarge {
     // Style
     font-size: 18px;
 
-    .card--base & {}
-
-    .card--half-width & {
-      line-height: 21px;
-    }
-
     // Media Queries
     @media screen and (min-width: 1000px) {
       .card--base & {
-        font-size: 50px;
         line-height: 110px;
+        font-size: 50px;
       }
+
+      .card--half-width & {
+        line-height: 21px;
+      }
+    }
+
+    .card--base & {
+      line-height: 1;
+      font-size: 36px;
+    }
+
+    .card--half-width & {
+      line-height: 17px;
+      font-size: 14px;
+    }
+
+    .contacts & {
+      margin-bottom: 18px;
     }
   }
 
@@ -145,8 +180,8 @@
   }
 
   &--white {
-    color: $white;
     fill: $white;
+    color: $white;
   }
 
   &--red {
@@ -155,14 +190,14 @@
 
   // Currency
   &--currency {
-    font-family: "ALSRubl";
+    font-family: 'ALSRubl';
   }
 
   // Hide
   &--hide {
     display: none;
 
-    &+.text {
+    & + .text {
       margin-top: -7px;
       margin-bottom: 102px;
     }
@@ -177,36 +212,61 @@ address {
 .address {
   // Style
   font-style: normal;
-
-  .text {
-    display: block;
-  }
+  text-align: center;
+  margin: 46px 70px 22px;
 
   // Media Queries
   @media screen and (min-width: 1000px) {
     width: 200px;
+    margin: 0;
+    text-align: left;
 
     .text--normal {
-      line-height: 20px;
       margin-bottom: 8px;
+      line-height: 20px;
     }
 
     .text--small {
       line-height: 14px;
     }
   }
+
+  .text {
+    display: block;
+  }
+
+  .text--normal {
+    margin-bottom: 7px;
+  }
+
+  .text--small {
+    line-height: 14px;
+  }
+
+  .link {
+    display: none;
+  }
 }
 
 // Copyright
 .copyright {
   // Style
+  margin: 24px 0 56px;
+  padding: 0 30px;
 
   // Media Queries
   @media screen and (min-width: 1000px) {
-
     // width: 200px;
+    padding: 0;
+
     .text {
       line-height: 23px;
     }
+  }
+
+  .footer & {
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 }

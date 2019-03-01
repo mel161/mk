@@ -1,30 +1,48 @@
 .header {
   @include clearfix();
 
-  @media screen and (min-width: 1000px) {}
+  // @media screen and (min-width: 1000px) {
+  // }
 
   // Elements
   &__inner {
     position: relative;
   }
 
-  &__slide {}
+  &__slide {
+    display: block;
+    position: fixed;
+    // opacity: 0;
+    height: 0;
+    transition: all 800ms ease;
+  }
+
+  &__container {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 600ms ease;
+  }
 
   // Modifiers
   &--top {
     // Style
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
-    background-color: $white;
-    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+    left: 0;
     z-index: 10;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+    background-color: $white;
+    overflow: hidden;
+    transition: all 600ms ease;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
       height: 135px;
 
-      >.btn {
+      > .btn {
         margin-top: 0;
       }
 
@@ -36,79 +54,182 @@
     }
 
     @media screen and (min-width: 1700px) {
-      >.btn {
+      > .btn {
         margin-top: 0;
+      }
+
+      .logo--small {
+        display: block;
+      }
+    }
+
+    &.is-active {
+      height: 100%;
+      transition: all 600ms ease;
+
+      .header__inner {
+        position: relative;
+        top: 0;
+        z-index: 2;
+        // width: 100%;
+      }
+
+      .header__slide {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // opacity: 1;
+        z-index: 1;
+        height: auto;
+        padding: 60px 0 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: all 300ms ease;
+
+        .header__container {
+          height: 100%;
+
+          &.header__container--height-auto {
+            height: auto;
+          }
+        }
       }
     }
 
     // Elements
     .header__inner {
+      // Style
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 20px;
       width: auto;
-      height: 100%;
+      height: 60px;
 
       @media screen and (min-width: 1000px) {
-        // margin: 0 60px;
         margin: 0 auto;
         max-width: 1014px;
-        display: flex;
-        justify-content: space-between;
+        height: 100%;
 
-
-
-        >.btn {
+        > .btn {
           margin-top: 36px;
         }
       }
 
-      @media screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-        padding-right: 14px;
+      @media screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
         width: 1000px;
+        padding-right: 14px;
       }
 
       @media screen and (min-width: 1700px) {
         margin: 0 60px;
-        max-width: none;
         width: auto;
+        max-width: none;
 
-        >.btn {
-          margin-top: 40px;
+        > .btn {
+          margin-top: 2px;
         }
       }
 
-      @media screen and (min-width: 1700px) and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-        padding-right: 0;
+      @media screen and (min-width: 1700px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
         width: auto;
+        margin: 0 43px 0 60px;
+        padding: 0;
+      }
+
+      .btn {
+        margin-top: -2px;
+      }
+
+      .logo--small {
+        margin-top: 8px;
       }
     }
 
     .header__slide {
-
       // Media Queries
       @media screen and (min-width: 1000px) {
         display: none;
       }
+      // Style
     }
   }
 
   &--transparent {
-    // background-color: transparent;
-    background-color: rgba(66, 66, 66, 1);
-    background: linear-gradient(180deg,
-      rgba(66, 66, 66, 1) 0%,
-      rgba(66, 66, 66, 0.5) 70%,
-      rgba(255, 255, 255, 0) 100%);
-    box-shadow: none;
-    color: $white;
+    @media screen and (min-width: 1000px) {
+      box-shadow: none;
+      // background-color: transparent;
+      background: rgba(66, 66, 66, 1);
+      background: linear-gradient(180deg, rgba(66, 66, 66, 1) 0%, rgba(66, 66, 66, 0.5) 70%, rgba(255, 255, 255, 0) 100%);
+      color: $white;
+    }
   }
 
   &--main {
     // Style
+    position: relative;
+    background-image: url(../images/hero-bg-about.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+    &.header--action {
+      background-image: url(../images/hero-bg-action.jpg);
+    }
+
+    &.header--news {
+      background-image: url(../images/hero-bg-news.jpg);
+    }
+
+    &.header--infrastructure {
+      background-image: url(../images/hero-bg-infrastructure.jpg);
+    }
+
+    &.header--gallery {
+      background-image: url(../images/hero-bg-gallery.jpg);
+    }
+
+    &.header--camera {
+      background-image: url(../images/hero-bg-camera.jpg);
+    }
+
+    &.header--docs {
+      background-image: url(../images/hero-bg-docs.jpg);
+    }
+
+    &.header--parking {
+      background-image: url(../images/hero-bg-parking.jpg);
+    }
+
+    &.header--contacts {
+      background-image: url(../images/hero-bg-contacts.jpg);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 60%;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(66, 66, 66, 0.4)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+      background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#424242', GradientType=0);
+      content: '';
+    }
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      position: relative;
       height: 320px;
       background-image: url(../images/hero-bg-about.jpg);
-      position: relative;
       background-size: cover;
 
       &.header--action {
@@ -143,34 +264,21 @@
         background-image: url(../images/hero-bg-contacts.jpg);
       }
 
-      &:after {
+      &::after {
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 1;
         width: 100%;
         height: 60%;
-        content: "";
-        background: -moz-linear-gradient(top,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%);
-        background: -webkit-gradient(left top,
-          left bottom,
-          color-stop(0%, rgba(255, 255, 255, 0)),
-          color-stop(100%, rgba(66, 66, 66, 0.4)));
-        background: -webkit-linear-gradient(top,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%);
-        background: -o-linear-gradient(top,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%);
-        background: -ms-linear-gradient(top,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%);
-        background: linear-gradient(to bottom,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(66, 66, 66, 0.4) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#424242', GradientType=0);
-        z-index: 1;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(66, 66, 66, 0.4)));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+        background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(66, 66, 66, 0.4) 100%);
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#424242', GradientType=0);
+        content: '';
       }
     }
 
@@ -183,46 +291,54 @@
 
   &--single-news {
     // Style
-    @include clearfix();
     height: auto;
     text-align: center;
+    margin-bottom: 39px;
+
+    @include clearfix();
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      padding-top: 88px;
       margin-bottom: 39px;
+      padding-top: 88px;
       letter-spacing: 0.63px;
     }
   }
 }
 
 .info {
+  margin-top: 33px;
+  padding: 0 30px;
+  color: inherit;
   // Styles
   @include clearfix();
-  color: inherit;
 
   // Media Queries
   @media screen and (min-width: 1000px) {
-    width: 291px;
-    margin-left: -41px;
     position: absolute;
     right: 0;
+    margin-top: 0;
+    margin-left: -41px;
+    width: 291px;
+    padding: 0;
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1700px) {
     position: relative;
     right: auto;
+    margin: 0;
   }
 
   // Elements
   &__contacts {
-    width: 56%;
-    float: left;
+    width: auto;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      text-align: right;
+      float: left;
       margin-top: 38px;
+      width: 56%;
+      text-align: right;
 
       .link {
         line-height: 18px;
@@ -230,18 +346,44 @@
     }
 
     @media screen and (min-width: 1700px) {
-      margin-top: 45px;
+      margin-top: 0;
+      padding-right: 14px;
+
+      .text--large {
+        margin-bottom: 6px;
+      }
     }
   }
 
   &__socials {
-    width: 44%;
-    float: right;
+    margin-top: 28px;
+    width: auto;
 
+    @include clearfix();
     // Media Queries
+    @media screen and (min-width: 1000px) {
+      float: right;
+      margin-top: 0;
+      width: 44%;
+    }
   }
 
   .link {
     display: block;
+
+    &.text--large {
+      font-size: 20px;
+
+      @media screen and (min-width: 1700px) {
+        font-size: 16px;
+      }
+    }
+
+    &.text--normal {
+    }
+
+    &.text--underline {
+      margin-top: 3px;
+    }
   }
 }

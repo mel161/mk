@@ -1,37 +1,65 @@
 button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
   outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
 }
 
 .btn {
+  box-sizing: border-box;
   // Styles
   display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  margin: 2px 0;
-  padding: 0 1em;
-  font-size: 12px;
-  background-color: $gray;
-  color: $white;
-  border: 0;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
   position: relative;
+  margin: 0;
   outline: none;
+  border: 0;
+  box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
+  background-color: $gray;
+  padding: 0 1em;
   cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  font-size: 12px;
+
+  //  Media Queries
+  @media screen and (min-width: 1000px) {
+    margin: 2px 0;
+    width: 230px;
+    height: 40px;
+    padding: 0 25px;
+    line-height: 40px;
+  }
+
+  @media screen and (min-width: 1700px) {
+    width: 250px;
+    height: 55px;
+    padding: 0 25px;
+    line-height: 55px;
+    font-size: 14px;
+  }
+
+  .header__slide & {
+    width: 100%;
+    height: 55px;
+    padding: 0 30px;
+    text-align: left;
+    line-height: 55px;
+    font-size: 14px;
+  }
 
   // States
   // Default
-  &:link {}
+  &:link {
+  }
 
   // Visited
-  &:visited {}
+  &:visited {
+  }
 
   // Hover
   &:hover {
@@ -57,27 +85,21 @@ button {
     cursor: not-allowed;
   }
 
-  //  Media Queries
-  @media screen and (min-width: 1000px) {
-    width: 230px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 25px;
-  }
-
-  @media screen and (min-width: 1700px) {
-    font-size: 14px;
-    width: 250px;
-    height: 55px;
-    line-height: 55px;
-    padding: 0 25px;
-  }
-
   // Modifiers
   // Base button
   &--base {
     background-color: $brand-color;
     color: $white;
+
+    .card__content & {
+      padding: 20px 61px;
+      line-height: 1.1;
+      font-size: 14px;
+
+      .error & {
+        padding: 20px 0;
+      }
+    }
 
     &:hover {
       background-color: $accent;
@@ -87,22 +109,22 @@ button {
   // Secondary button
   &--secondary {
     background-color: $secondary-color;
-    color: $white;
     text-align: left;
+    color: $white;
   }
 
   // Transparent button
   &--transparent {
-    background-color: transparent;
     box-shadow: none;
+    background-color: transparent;
 
     .hero & {
       position: absolute;
       bottom: 18px;
       left: 50%;
-      transform: translateX(-50%);
       width: auto;
       height: auto;
+      transform: translateX(-50%);
 
       .icon {
         width: 54px;
@@ -120,10 +142,12 @@ button {
 
     // States
     // Default
-    &:link {}
+    &:link {
+    }
 
     // Visited
-    &:visited {}
+    &:visited {
+    }
 
     // Hover
     &:hover {
@@ -152,28 +176,40 @@ button {
 
   // Round button
   &--round {
-    background-color: $brand-color;
-    width: 31px;
-    height: 31px;
-    border-radius: 500px;
-    padding: 0;
+    margin: 0;
+    width: 35.09px;
+    height: 35px;
     min-height: 0;
+    border-radius: 500px;
+    background-color: $brand-color;
+    padding: 0;
+
+    @media screen and (min-width: 1000px) {
+      width: 50px;
+      height: 50px;
+    }
 
     &:hover {
       background-color: $accent;
+    }
+
+    .nav--socials & {
+      width: 31px;
+      height: 31px;
+      padding: 0;
     }
   }
 
   // Square button
   &--square {
+    margin: 0;
     width: 40px;
     height: 40px;
     background-color: $brand-color;
+    padding: 0;
+    line-height: 40px;
     color: $white;
     font-size: 16px;
-    line-height: 40px;
-    margin: 0;
-    padding: 0;
   }
 
   // Full-width button
@@ -184,46 +220,52 @@ button {
       height: 60px;
       padding: 0 19px;
 
-      >.icon {
-        fill: $white;
+      > .icon {
         position: absolute;
         top: 50%;
-        margin-top: -6px;
         right: 27px;
+        margin-top: -6px;
+        fill: $white;
       }
     }
   }
 
   // Filter Button
   &--filter {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
     height: 60px;
-    width: 210px;
+    box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
     padding: 0 25px;
-    margin: 0;
-    box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.13);
 
-    >.icon {
-      fill: $white;
+    @media screen and (min-width: 1000px) {
+      display: inline-block;
+      width: 210px;
+    }
+
+    > .icon {
       position: absolute;
       top: 50%;
-      margin-top: -6px;
       right: 18px;
+      margin-top: -6px;
+      fill: $white;
     }
 
     &:hover {
-      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+      box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
     }
   }
 
   // Load More Button
   &--more {
+    display: block;
+    margin: 20px auto 10px;
     // Style
     width: 230px;
-    margin: 20px auto 10px;
     background-color: $white;
-    color: $black;
-    display: block;
     text-align: left;
+    color: $black;
 
     &:hover {
       background-color: $white;
@@ -232,8 +274,18 @@ button {
 
   // Submit Button
   &--submit {
-    text-align: center;
     background-color: $base-color;
+    text-align: center;
+    height: 55px;
+    min-width: 250px;
+    line-height: 55px;
+    font-size: 14px;
+    margin: 40px 0;
+
+    // Media Queries
+    @media screen and (min-width: 1000px) {
+      margin-top: 86px;
+    }
 
     &:hover {
       background-color: $secondary-color;
@@ -243,40 +295,45 @@ button {
       background-color: $white;
       color: $black;
     }
-
-    // Media Queries
-    @media screen and (min-width: 1000px) {
-      margin-top: 86px;
-    }
   }
 
   // Back Button
   &--back {
     // Style
+    margin: 40px 0 10px;
     background-color: $white;
-    color: $black;
+    padding: 23px 20px 23px 77px;
     text-align: right;
-
-    .icon.icon--arrow {
-      position: absolute;
-      top: 48%;
-      transform: translateY(-50%) scale(-1);
-      left: 26px;
-    }
-
-    &:hover {
-      background-color: $white;
-      box-shadow: 0px 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
-
-      .icon {
-        fill: $brand-color;
-      }
-    }
+    line-height: 1;
+    letter-spacing: 0.24px;
+    color: $black;
+    font-size: 14px;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
       display: block;
       margin: 84px auto 9px;
+    }
+
+    .icon.icon--arrow {
+      position: absolute;
+      top: 51%;
+      left: 20px;
+      transform: translateY(-50%) scale(-1);
+
+      @media screen and (min-width: 1000px) {
+        top: 48%;
+        left: 26px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
+      background-color: $white;
+
+      .icon {
+        fill: $brand-color;
+      }
     }
   }
 }

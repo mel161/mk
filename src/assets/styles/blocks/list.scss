@@ -17,6 +17,11 @@
     &--termin {
       float: left;
       width: 50px;
+      text-transform: uppercase;
+
+      .block--wide & {
+        width: 90px;
+      }
     }
 
     &--description {
@@ -29,7 +34,9 @@
   // Modifiers
   &--description {
     // Style
+    line-height: 20px;
 
+    @include clearfix();
     // Media Queries
     @media screen and (min-width: 1000px) {
     }

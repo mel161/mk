@@ -9,20 +9,20 @@
   // Elements
   &__inner {
     // Style
-    @include clearfix();
-    padding: 31px 0 0;
+    padding: 31px 5px 0;
 
-    &:first-of-type {
-      padding: 93px 0 0;
-    }
+    @include clearfix();
+
     // Media Queries
     @media screen and (min-width: 1000px) {
-      width: 960px;
       margin: 0 auto;
+      width: 960px;
+      padding: 31px 0 0;
     }
 
     // Modifiers
   }
+
   &__title {
     // Style
 
@@ -33,6 +33,15 @@
 
     // Modifiers
   }
-
   // Modifiers
+}
+
+#search {
+  .section__inner {
+    padding: 54px 0 0;
+
+    @media screen and (min-width: 1000px) {
+      padding: 93px 0 0;
+    }
+  }
 }

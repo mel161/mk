@@ -7,15 +7,16 @@ $tundora: #434343;
 $gray: #808080;
 $boulder: #787878;
 $kabul: #685244;
+$french-gray: #c6c5c7;
 $zest: #e48132;
 $prairie-sand: #9b471f;
-$red: #ff0000;
+$red: #f00;
 //
 $brand-color: $zest;
 $secondary-color: $kabul;
 $base-color: $tundora;
 $accent: $prairie-sand;
 
-$glide-class: "glide" !default;
-$glide-element-separator: "__" !default;
-$glide-modifier-separator: "--" !default;
+$glide-class: 'glide' !default;
+$glide-element-separator: '__' !default;
+$glide-modifier-separator: '--' !default;

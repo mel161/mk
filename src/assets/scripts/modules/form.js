@@ -1,20 +1,20 @@
-import 'jquery-mask-plugin'
+import 'jquery-mask-plugin';
 
 function isNumeric(value) {
-  var matches = value.match(/\d+/g)
+  var matches = value.match(/\d+/g);
   if (matches != null) {
-    return true
+    return true;
   }
 }
 
 function checkError() {
   if ($('.field--name').is('.is-valid') && $('.field--phone').is('.is-valid')) {
-    $('.btn--submit').prop('disabled', false)
+    $('.btn--submit').prop('disabled', false);
 
-    let formData = $('.form').serialize()
+    let formData = $('.form').serialize();
 
-    $('.btn--submit').click(function (e) {
-      e.preventDefault()
+    $('.btn--submit').click(function(e) {
+      e.preventDefault();
       // $.post(
       //   '/form',
       //   formData,
@@ -22,48 +22,48 @@ function checkError() {
       //   'dataType'
       // ).done(function () {})
       $('.title--modal').html('Спасибо!');
-      $('.modal__inner .text--large').toggleClass('text--hide')
-      $('.modal__inner .form').addClass('form--hide')
-      $('.modal__inner').addClass('modal__inner--thanks')
-    })
+      $('.modal__inner .text').toggleClass('text--hide');
+      $('.modal__inner .form').addClass('form--hide');
+      $('.modal__inner').addClass('modal__inner--thanks');
+    });
   } else {
-    $('.btn--submit').prop('disabled', true)
+    $('.btn--submit').prop('disabled', true);
   }
 }
 
 function validField(value, obj) {
-  const input = $(obj)
-  const minLength = input.attr('minlength')
+  const input = $(obj);
+  const minLength = input.attr('minlength');
 
-  let numeric = false
-  let required = false
+  let numeric = false;
+  let required = false;
   input
     .siblings('.field__error')
     .removeClass('field__error--top')
     .parents('.field')
-    .removeClass('is-valid is-error')
+    .removeClass('is-valid is-error');
 
   if (!isNumeric(value)) {
-    numeric = true
+    numeric = true;
   } else {
-    numeric = false
+    numeric = false;
     input
       .siblings('.field__error--char')
       .addClass('field__error--top')
       .parents('.field')
       .removeClass('is-valid')
-      .addClass('is-error')
+      .addClass('is-error');
   }
   if (!(value.length < minLength)) {
-    required = true
+    required = true;
   } else {
-    required = false
+    required = false;
     input
       .siblings('.field__error--required')
       .addClass('field__error--top')
       .parents('.field')
       .removeClass('is-valid')
-      .addClass('is-error')
+      .addClass('is-error');
   }
   if (numeric && required) {
     input
@@ -71,39 +71,39 @@ function validField(value, obj) {
       .removeClass('field__error--top')
       .parents('.field')
       .removeClass('is-error')
-      .addClass('is-valid')
+      .addClass('is-valid');
 
-    checkError()
+    checkError();
   }
 }
 
 function formInit() {
-  let dataForm
+  let dataForm;
 
-  $('.field__input').focus(function (e) {
-    e.preventDefault()
+  $('.field__input').focus(function(e) {
+    e.preventDefault();
     $(this)
       .parents('.field')
-      .addClass('is-active')
-  })
-  $('.field__input').blur(function (e) {
-    e.preventDefault()
+      .addClass('is-active');
+  });
+  $('.field__input').blur(function(e) {
+    e.preventDefault();
     $(this)
       .parents('.field')
-      .removeClass('is-active')
-    checkError()
-  })
+      .removeClass('is-active');
+    checkError();
+  });
 
-  $('#field--name').on('blur keyup', function () {
+  $('#field--name').on('blur keyup', function() {
     if ($(this).val().length !== 0) {
-      validField($(this).val(), this)
+      validField($(this).val(), this);
     }
-  })
+  });
 
-  $('#field--number').on('blur keyup', function (e) {
-    e.preventDefault()
+  $('#field--number').on('blur keyup', function(e) {
+    e.preventDefault();
 
-    let value = $(this).val()
+    let value = $(this).val();
 
     if ($(this).prop('validity')['badInput']) {
       $(this)
@@ -111,7 +111,7 @@ function formInit() {
         .addClass('field__error--top')
         .parents('.field')
         .removeClass('is-valid')
-        .addClass('is-error')
+        .addClass('is-error');
     }
 
     if (value.length !== 0) {
@@ -121,14 +121,14 @@ function formInit() {
           .removeClass('field__error--top')
           .parents('.field')
           .removeClass('is-error')
-          .addClass('is-valid')
+          .addClass('is-valid');
       } else {
         $(this)
           .siblings('.field__error--required')
           .addClass('field__error--top')
           .parents('.field')
           .removeClass('is-valid')
-          .addClass('is-error')
+          .addClass('is-error');
       }
 
       if ($(this).prop('validity')['valid']) {
@@ -137,58 +137,58 @@ function formInit() {
           .removeClass('field__error--top')
           .parents('.field')
           .addClass('is-valid')
-          .removeClass('is-error')
+          .removeClass('is-error');
       }
 
-      checkError()
+      checkError();
     }
-  })
+  });
 
   var options = {
-    onComplete: function (cep, event, currentField, options) {
+    onComplete: function(cep, event, currentField, options) {
       currentField
         .siblings('.field__error')
         .removeClass('field__error--top')
         .parents('.field')
         .removeClass('is-error')
-        .addClass('is-valid')
+        .addClass('is-valid');
     },
-    onKeyPress: function (cep, event, currentField, options) {
+    onKeyPress: function(cep, event, currentField, options) {
       if (cep.length === 0) {
         currentField
           .siblings('.field__error--required')
           .addClass('field__error--top')
           .parents('.field')
           .removeClass('is-valid')
-          .addClass('is-error')
+          .addClass('is-error');
       } else if (cep.length > 0) {
         currentField
           .siblings('.field__error--full')
           .addClass('field__error--top')
           .parents('.field')
           .removeClass('is-valid')
-          .addClass('is-error')
+          .addClass('is-error');
       }
     },
-    onChange: function (cep, event, currentField, options) {
+    onChange: function(cep, event, currentField, options) {
       currentField
         .siblings('.field__error')
         .removeClass('field__error--top')
         .parents('.field')
-        .removeClass('is-error')
+        .removeClass('is-error');
 
-      checkError()
+      checkError();
     },
-    onInvalid: function (val, e, f, invalid, options) {
+    onInvalid: function(val, e, f, invalid, options) {
       f.siblings('.field__error--char')
         .addClass('field__error--top')
         .parents('.field')
         .removeClass('is-valid')
-        .addClass('is-error')
+        .addClass('is-error');
     }
-  }
+  };
 
-  $('#field--phone').mask('+7 (000) 000-00-00', options)
+  $('#field--phone').mask('+7 (000) 000-00-00', options);
 }
 
-export default formInit
+export default formInit;

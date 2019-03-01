@@ -1,23 +1,29 @@
 .title {
   // Style
+  letter-spacing: 0;
   color: $base-color;
-  letter-spacing: 0.24px;
 
   //  Media Queries
-  @media screen and (min-width: 1000px) {}
+  @media screen and (min-width: 1000px) {
+    letter-spacing: 0.24px;
+  }
 
   //  Modifiers
   // Section Title
   &--section {
     // Style
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 700;
+    margin: 0 0 39px;
+    text-align: center;
+    line-height: 29px;
     letter-spacing: 0.63px;
+    font-size: 24px;
+    font-weight: 700;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
       margin: 0 250px 46px 230px;
+      line-height: 44px;
+      font-size: 36px;
     }
 
     // Modifiers
@@ -25,8 +31,6 @@
 
   // Card Title
   &--card {
-    // Style
-
     // Media Queries
     @media screen and (min-width: 1000px) {
       .card--half-width & {
@@ -34,12 +38,12 @@
       }
 
       .card--full-width & {
-        font-size: 26px;
-        text-align: left;
-        line-height: 42px;
         margin-bottom: 34px;
         margin-left: -3px;
+        text-align: left;
+        line-height: 42px;
         word-spacing: 5px;
+        font-size: 26px;
       }
 
       .camera .card--full-width &,
@@ -48,22 +52,22 @@
       }
 
       .card--docs & {
-        font-size: 16px;
         line-height: 19px;
+        font-size: 16px;
       }
 
       .card--news & {
-        font-size: 18px;
-        line-height: 22px;
         margin: 0;
+        line-height: 22px;
         letter-spacing: 0.24px;
+        font-size: 18px;
       }
 
       .card--actions & {
-        font-size: 24px;
-        line-height: 29px;
         margin: 0;
+        line-height: 29px;
         letter-spacing: 0.24px;
+        font-size: 24px;
       }
     }
 
@@ -73,25 +77,59 @@
       }
     }
 
+    .card--full-width & {
+      text-align: left;
+      line-height: 29px;
+      word-spacing: 1px;
+      font-size: 24px;
+      letter-spacing: 0.24px;
+    }
+    // Style
+    .card--flats & {
+      line-height: 22px;
+      font-size: 17.81px;
+    }
+
+    .card--half-width & {
+      font-size: 18px;
+    }
+
+    .card--docs & {
+      line-height: 19px;
+      font-size: 16px;
+    }
+
+    .card--news &,
+    .card--actions & {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .card--actions & {
+      letter-spacing: 0.24px;
+    }
+
     // Modifiers
   }
 
   // Header Title
   &--header {
     // Style
-    color: $white;
-    text-align: center;
-    width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 2;
-    margin: 0;
+    margin: 0 0 34px;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    font-size: 36px;
+    font-weight: 900;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      font-size: 48px;
-      font-weight: 900;
       margin: 0 0 49px;
+      font-size: 48px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -102,18 +140,28 @@
   // Main Title h1 in inner page
   &--main {
     // Style
+    display: inline-block;
+    margin: 19px 0 37px 0;
+    width: 100%;
     text-align: center;
+    font-size: 24px;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
       margin: 41px 0 54px -12px;
       font-size: 36px;
-      display: inline-block;
-      width: 100%;
 
       .gallery & {
         margin: 51px 0 45px -3px;
       }
+    }
+
+    .about--docs & {
+      margin: 19px 0 31px;
+    }
+
+    .main--about.gallery & {
+      margin: 19px 0 36px;
     }
   }
 
@@ -121,13 +169,20 @@
   &--modal {
     // Style
     margin: 0;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 22px;
+
+    .modal__inner--thanks & {
+      margin-bottom: 33px;
+    }
 
     // Media Queries
     @media screen and (min-width: 1000px) {
-      font-size: 36px;
+      margin-bottom: 35px;
       text-align: center;
       line-height: 43px;
-      margin-bottom: 35px;
+      font-size: 36px;
     }
   }
 
@@ -145,6 +200,9 @@
   &--news {
     // Style
     margin: 0;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.24px;
 
     // Media Queries
     @media screen and (min-width: 1000px) {

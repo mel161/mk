@@ -1,13 +1,13 @@
 extends ../inner.layout.pug
 
 block variables
-    - var title = 'О квартале'
-    - var mainClass = 'main--about'
+    - var title = 'Документы'
+    - var mainClass = 'main--about about--docs'
 
 block content
     // Header in Main
     .header.header--main.header--docs
-        h1.title.title--header= title
+        .title.title--header О квартале
     // Header in Main End
     // Nav Inner
     nav.nav.nav--inner
@@ -28,6 +28,10 @@ block content
                 a(href="./about-docs.html").link.link--nav.text.text--normal.text--fw500
                     | Документы
     // Nav Inner End
+    
+    // Main Title
+    h1.title.title--main= title
+    // Main Title End
 
     //
     .row

@@ -133,28 +133,31 @@ block content
                         .range__line
                 // Range Area End
                 // Select House
-                dl.dropdown.filter
-                    dt
-                        a
-                            span Дом
-                    dd
-                        ul
-                            li
-                                a.default Дом
-                            li
-                                a Дом № 1
-                            li
-                                a Дом № 2
-                            li
-                                a Дом № 3
-                            li
-                                a Дом № 4
+                dl.select.filter
+                    // Selected Item
+                    dt.select__selected
+                        a.link.link--text
+                            span.text.text--normal.text--fw500.text--uppercase.selected Дом № 1
+                    // Selected Item End
+                    // Selected Items
+                    dd.select__options
+                        ul.select__list
+                            li.select__item
+                                span.text.text--normal.text--fw500.text--uppercase.selected Дом № 1
+                            li.select__item
+                                span.text.text--normal.text--fw500.text--uppercase Дом № 2
+                            li.select__item
+                                span.text.text--normal.text--fw500.text--uppercase Дом № 3
+                            li.select__item
+                                span.text.text--normal.text--fw500.text--uppercase Дом № 4
+                    // Selected Items End
+                    // Selected Icon
                     svg.icon.icon--arrow.arrow--down(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
-                        g
-                            path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+                        path(d='M32.82 32.82L7.14 58.5a4.183 4.183 0 0 1-5.92-5.91l22.73-22.73L1.23 7.14a4.18 4.18 0 0 1 5.91-5.91l25.68 25.68a4.18 4.18 0 0 1 0 5.91zm0 0')
+                    // Selected Icon End
                 // Select House End
                 // Button Submit
-                button(type="submit").btn.btn--secondary.btn--filter
+                button(type="submit").btn.btn--secondary.btn--filter.filter
                     | Найти квартиру
                     svg.icon.icon--arrow.arrow--right(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 34.04 59.72')
                         g
@@ -293,7 +296,7 @@ block content
                         .title.title--card.text--fw700 Фитнес-клуб во дворе
                     .card__content
                         .text.text--fw300.text--xlarge
-                            | 25-ти метровый бассейн и три этажа
+                            | 25-ти метровый бассейн и&nbsp;три этажа
                             br
                             | современных тренажеров
             .card.card--half-width
@@ -305,9 +308,9 @@ block content
                         .title.title--card.text--fw700 Зона стрит-ритейла
                     .card__content
                         .text.text--fw300.text--xlarge
-                            | на первых этажах: от гипермаркета
+                            | на&nbsp;первых этажах: от&nbsp;гипермаркета
                             br
-                            | до салона красоты
+                            | до&nbsp;салона красоты
             .card.card--half-width
                 .card__image
                     .image-container
@@ -317,7 +320,7 @@ block content
                         .title.title--card.text--fw700 Дизайнерские холлы
                     .card__content
                         .text.text--fw300.text--xlarge
-                            | с высокими потолками и приветливой
+                            | с&nbsp;высокими потолками и&nbsp;приветливой
                             br
                             | консьерж-службой
             .card.card--half-width
@@ -329,9 +332,8 @@ block content
                         .title.title--card.text--fw700 Приватный двор
                     .card__content
                         .text.text--fw300.text--xlarge
-                            | с видеонаблюдением, детским городком
-                            br
-                            | и ворк-аут площадками
+                            | с&nbsp;видеонаблюдением, детским городком
+                            | и&nbsp;ворк-аут площадками
         // Specific End
     // Section Flats Selection End
 

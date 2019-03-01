@@ -2,5 +2,10 @@
   "plugins": [
     "stylelint-scss"
   ],
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
+    }]
+  }
 }
