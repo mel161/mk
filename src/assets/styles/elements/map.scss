@@ -22,6 +22,10 @@
     // Media Queries
     @media screen and (min-width: 1000px) {
       height: 350px;
+
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -63,6 +67,12 @@
 
       &:not(:nth-of-type(-n + 3)) {
         display: none;
+      }
+
+      @media screen and (min-width: 1000px) {
+        &:not(:nth-of-type(-n + 3)) {
+          display: block;
+        }
       }
     }
 

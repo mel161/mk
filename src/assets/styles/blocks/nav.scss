@@ -72,7 +72,7 @@
       top: 21px;
       left: 269px;
       width: 455px;
-      margin: 0;
+      margin: 36px 0 0;
 
       > .nav__list--horizontal {
       }
@@ -113,6 +113,7 @@
 
         .text--fw500 {
           padding: 0;
+          line-height: 1.2;
         }
       }
     }
@@ -262,6 +263,10 @@
 
       .nav__item {
         margin-right: 20px;
+
+        &:nth-last-child(odd) {
+          margin-right: 20px;
+        }
 
         &:last-of-type {
           margin-right: 0;
