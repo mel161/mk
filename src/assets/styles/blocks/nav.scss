@@ -72,7 +72,7 @@
       top: 21px;
       left: 269px;
       width: 455px;
-      margin: 36px 0 0;
+      margin: 0 0 0;
 
       > .nav__list--horizontal {
       }
@@ -107,13 +107,14 @@
         }
 
         &:nth-last-of-type(2) {
-          margin-top: -43px;
+          margin-top: -40px;
+          margin-bottom: 9px;
           line-height: 15px;
         }
 
         .text--fw500 {
           padding: 0;
-          line-height: 1.2;
+          line-height: 20px;
         }
       }
     }
@@ -220,7 +221,7 @@
     .info__socials & {
       @media screen and (min-width: 1000px) {
         float: right;
-        margin-top: 38px;
+        margin-top: 0;
       }
 
       @media screen and (min-width: 1700px) {

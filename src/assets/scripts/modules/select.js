@@ -36,6 +36,7 @@ dropdowns
     } else {
       leSpan.addClass('selected')
       $(this).addClass('selected')
+      dropdowns.data('selected', $(this).parent().index()).trigger('changeData')
     }
 
     // Close dropdown

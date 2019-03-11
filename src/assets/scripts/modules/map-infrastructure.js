@@ -30,7 +30,7 @@ function init () {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
       // Своё изображение иконки метки.
-      iconImageHref: './assets/images/point-other.png',
+      iconImageHref: './assets/images/point-other.svg',
       // Размеры метки.
       iconImageSize: [43, 49],
       // Смещение левого верхнего угла иконки относительно
@@ -103,7 +103,7 @@ function init () {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
       // Своё изображение иконки метки.
-      iconImageHref: './assets/images/point-home.png',
+      iconImageHref: './assets/images/point-home.svg',
       // Размеры метки.
       iconImageSize: [77, 91],
       // Смещение левого верхнего угла иконки относительно

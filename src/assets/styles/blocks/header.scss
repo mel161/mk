@@ -113,9 +113,10 @@
         margin: 0 auto;
         max-width: 1014px;
         height: 100%;
+        width: 100%;
 
         > .btn {
-          margin-top: 36px;
+          margin-top: -21px;
         }
       }
 
@@ -316,6 +317,7 @@
   // Media Queries
   @media screen and (min-width: 1000px) {
     position: absolute;
+    top: 37px;
     right: 0;
     margin-top: 0;
     margin-left: -41px;
@@ -336,7 +338,7 @@
     // Media Queries
     @media screen and (min-width: 1000px) {
       float: left;
-      margin-top: 38px;
+      margin-top: 0px;
       width: 60%;
       text-align: right;
 
@@ -375,6 +377,10 @@
       font-size: 20px;
 
       @media screen and (min-width: 1000px) {
+        font-size: 14px;
+      }
+
+      @media screen and (min-width: 1700px) {
         font-size: 16px;
       }
     }
