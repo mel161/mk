@@ -52,6 +52,7 @@
       min-height: 550px;
       padding: 50px 170px;
       transform: translate(-50%, -50%);
+      overflow: hidden;
 
       > .text {
         line-height: 19px;
@@ -131,6 +132,9 @@
 
     // Media Queries
     @media screen and (min-width: 1000px) {
+      left: auto;
+      right: 20px;
+      transform: none;
     }
 
     > .icon {
@@ -189,6 +193,10 @@
       @include clearfix();
 
       @media screen and (min-width: 1000px) {
+        left: auto;
+        right: 20px;
+        transform: none;
+
         .icon {
           top: 0;
           right: 0;

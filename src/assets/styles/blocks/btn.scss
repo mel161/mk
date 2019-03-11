@@ -100,8 +100,10 @@ button {
         padding: 20px 0;
       }
 
-      .parking & {
-        padding: 0 25px;
+      @media screen and (min-width: 1000px) {
+        .parking & {
+          padding: 0 25px;
+        }
       }
     }
 
@@ -220,6 +222,14 @@ button {
       height: 40px;
       padding: 0;
     }
+
+    @media screen and (min-width: 1700px) {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      line-height: 40px;
+    }
   }
 
   // Full-width button
@@ -229,6 +239,10 @@ button {
     .card__footer & {
       height: 60px;
       padding: 0 19px;
+
+      @media screen and (min-width: 1000px) {
+        width: 100%;
+      }
 
       > .icon {
         position: absolute;
@@ -251,9 +265,17 @@ button {
 
     @media screen and (min-width: 1000px) {
       display: inline-block;
+      margin-right: 0;
       width: 200px;
       height: 60px;
-      margin-right: 0;
+    }
+
+    @media screen and (min-width: 1700px) {
+      &.filter {
+        margin-right: 0;
+        width: 210px;
+        height: 60px;
+      }
     }
 
     > .icon {
@@ -286,13 +308,13 @@ button {
 
   // Submit Button
   &--submit {
+    margin: 40px 0;
+    min-width: 250px;
+    height: 55px;
     background-color: $base-color;
     text-align: center;
-    height: 55px;
-    min-width: 250px;
     line-height: 55px;
     font-size: 14px;
-    margin: 40px 0;
 
     // Media Queries
     @media screen and (min-width: 1000px) {
