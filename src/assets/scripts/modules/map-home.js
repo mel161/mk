@@ -11,9 +11,9 @@ function init () {
     {},
     {
       iconLayout: 'default#image',
-      iconImageHref: './assets/images/point-home.png',
-      iconImageSize: [62, 73],
-      iconImageOffset: [-24, -30]
+      iconImageHref: './assets/images/point-home.svg',
+      iconImageSize: [77, 91],
+      iconImageOffset: [-30, -40]
     }
   )
 

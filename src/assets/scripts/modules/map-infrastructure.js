@@ -96,18 +96,12 @@ function init () {
     [56.799972, 60.594181],
     {
       // Свойства.
-      hintContent: 'ЖК&nbsp;&laquo;Геометрия&raquo;'
+      hintContent: 'ЖК&nbsp;&laquo;Московский квартал&raquo;'
     },
     {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
-      // Своё изображение иконки метки.
       iconImageHref: './assets/images/point-home.svg',
-      // Размеры метки.
       iconImageSize: [77, 91],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
       iconImageOffset: [-30, -40]
     }
   )

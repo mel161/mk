@@ -379,7 +379,7 @@
 
       .card__inner {
         bottom: 0;
-        width: calc(100% - 60px);
+        // width: calc(100% - 60px);
         height: 60%;
         padding-bottom: 60px;
         padding-left: 60px;
@@ -932,6 +932,7 @@
         background-color: $white;
         text-align: center;
         line-height: 28px;
+        padding: 0 10px;
       }
 
       .card__header {
@@ -992,7 +993,7 @@
     &:hover {
       box-shadow: 0 8px 8.82px 0.18px rgba(4, 4, 5, 0.35);
 
-      .card__image .text {
+      .card__image .card__date {
         background-color: $brand-color;
         color: $white;
       }

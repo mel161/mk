@@ -140,6 +140,10 @@ button {
     }
 
     .footer & {
+      // Media Queries
+      @media screen and (max-width: 999px) {
+        display: none;
+      }
       .icon {
         width: 22px;
         height: 39px;

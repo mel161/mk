@@ -416,6 +416,10 @@
     @media screen and (min-width: 1000px) {
       margin-bottom: 52px;
 
+      .image-container {
+        @include aspect-ratio(715, 401);
+      }
+
       .slick-dots {
         margin: 40px 0 0 40px;
         padding: 0;
@@ -448,6 +452,8 @@
     }
 
     .slider__slide {
+      cursor: auto;
+
       &::before {
         display: none;
       }
@@ -511,6 +517,13 @@
         .icon {
           width: 22px;
           height: 39px;
+        }
+      }
+
+      // Hover
+      &:hover {
+        .icon {
+          fill: $brand-color;
         }
       }
     }
